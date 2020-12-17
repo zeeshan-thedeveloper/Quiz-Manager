@@ -1,0 +1,10 @@
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\bin\Debug\SignInSignUpScreen.exe.config
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\bin\Debug\SignInSignUpScreen.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\bin\Debug\SignInSignUpScreen.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.csprojAssemblyReference.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.Form1.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.Properties.Resources.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.csproj.GenerateResource.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.csproj.CoreCompileInputs.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\SignInSignUpModule\SignInSignUpScreen\SignInSignUpScreen\obj\Debug\SignInSignUpScreen.pdb
