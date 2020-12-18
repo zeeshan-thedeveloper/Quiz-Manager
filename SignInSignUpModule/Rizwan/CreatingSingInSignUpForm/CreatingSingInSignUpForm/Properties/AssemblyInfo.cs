@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SignInSignUpScreen")]
+[assembly: AssemblyTitle("CreatingSingInSignUpForm")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SignInSignUpScreen")]
+[assembly: AssemblyProduct("CreatingSingInSignUpForm")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4cd68796-fbc8-4aa8-b477-07345aa9c036")]
+[assembly: Guid("44c8784f-570f-4a41-9429-5ce4b72d50ee")]
 
 // Version information for an assembly consists of the following four values:
 //

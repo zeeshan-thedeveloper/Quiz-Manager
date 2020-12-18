@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SignInSignUpScreen.Properties
+namespace CreatingSingInSignUpForm.Properties
 {
 
 

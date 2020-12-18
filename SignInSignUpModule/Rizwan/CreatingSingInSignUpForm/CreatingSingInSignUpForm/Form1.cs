@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SignInSignUpScreen
+namespace CreatingSingInSignUpForm
 {
     public partial class Form1 : Form
     {
