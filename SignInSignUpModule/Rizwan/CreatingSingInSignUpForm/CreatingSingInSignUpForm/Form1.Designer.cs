@@ -82,7 +82,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(85, 232);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 32);
+            this.button1.Size = new System.Drawing.Size(111, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "SignIn";
             this.button1.UseVisualStyleBackColor = true;

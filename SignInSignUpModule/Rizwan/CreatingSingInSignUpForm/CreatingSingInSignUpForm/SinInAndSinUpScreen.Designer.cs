@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.panelSinIn = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonSignIn = new System.Windows.Forms.Button();
+            this.radioButtonStudent = new System.Windows.Forms.RadioButton();
+            this.radioButtonTeacher = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxUserPass = new System.Windows.Forms.TextBox();
+            this.textUserName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panelSininUpOption = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelCreateAccount = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.buttonCreateAccount = new System.Windows.Forms.Button();
+            this.radioButtonNewStudent = new System.Windows.Forms.RadioButton();
+            this.radioButtonNewTeacher = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxClinetLName = new System.Windows.Forms.TextBox();
+            this.textBoxClientFName = new System.Windows.Forms.TextBox();
             this.panelSinIn.SuspendLayout();
             this.panelSininUpOption.SuspendLayout();
             this.panelCreateAccount.SuspendLayout();
@@ -61,40 +61,49 @@
             // 
             // panelSinIn
             // 
-            this.panelSinIn.Controls.Add(this.button1);
-            this.panelSinIn.Controls.Add(this.radioButton2);
-            this.panelSinIn.Controls.Add(this.radioButton1);
+            this.panelSinIn.Controls.Add(this.radioButtonStudent);
+            this.panelSinIn.Controls.Add(this.buttonSignIn);
+            this.panelSinIn.Controls.Add(this.radioButtonTeacher);
             this.panelSinIn.Controls.Add(this.label2);
             this.panelSinIn.Controls.Add(this.label1);
-            this.panelSinIn.Controls.Add(this.textBox2);
-            this.panelSinIn.Controls.Add(this.textBox1);
-            this.panelSinIn.Location = new System.Drawing.Point(330, 135);
+            this.panelSinIn.Controls.Add(this.textBoxUserPass);
+            this.panelSinIn.Controls.Add(this.textUserName);
+            this.panelSinIn.Location = new System.Drawing.Point(368, 0);
             this.panelSinIn.Name = "panelSinIn";
-            this.panelSinIn.Size = new System.Drawing.Size(274, 205);
+            this.panelSinIn.Size = new System.Drawing.Size(274, 211);
             this.panelSinIn.TabIndex = 0;
             // 
-            // textBox1
+            // buttonSignIn
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 0;
+            this.buttonSignIn.Location = new System.Drawing.Point(100, 179);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
+            this.buttonSignIn.TabIndex = 6;
+            this.buttonSignIn.Text = "Sin in";
+            this.buttonSignIn.UseVisualStyleBackColor = true;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
             // 
-            // textBox2
+            // radioButtonStudent
             // 
-            this.textBox2.Location = new System.Drawing.Point(94, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 1;
+            this.radioButtonStudent.AutoSize = true;
+            this.radioButtonStudent.Location = new System.Drawing.Point(152, 135);
+            this.radioButtonStudent.Name = "radioButtonStudent";
+            this.radioButtonStudent.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonStudent.TabIndex = 5;
+            this.radioButtonStudent.TabStop = true;
+            this.radioButtonStudent.Text = "Student";
+            this.radioButtonStudent.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // radioButtonTeacher
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "User Name";
+            this.radioButtonTeacher.AutoSize = true;
+            this.radioButtonTeacher.Location = new System.Drawing.Point(59, 135);
+            this.radioButtonTeacher.Name = "radioButtonTeacher";
+            this.radioButtonTeacher.Size = new System.Drawing.Size(65, 17);
+            this.radioButtonTeacher.TabIndex = 4;
+            this.radioButtonTeacher.TabStop = true;
+            this.radioButtonTeacher.Text = "Teacher";
+            this.radioButtonTeacher.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -105,36 +114,28 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
-            // radioButton1
+            // label1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(50, 135);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Teacher";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "User Name";
             // 
-            // radioButton2
+            // textBoxUserPass
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(134, 135);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(62, 17);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Student";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.textBoxUserPass.Location = new System.Drawing.Point(94, 90);
+            this.textBoxUserPass.Name = "textBoxUserPass";
+            this.textBoxUserPass.Size = new System.Drawing.Size(144, 20);
+            this.textBoxUserPass.TabIndex = 1;
             // 
-            // button1
+            // textUserName
             // 
-            this.button1.Location = new System.Drawing.Point(100, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Sin in";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textUserName.Location = new System.Drawing.Point(94, 54);
+            this.textUserName.Name = "textUserName";
+            this.textUserName.Size = new System.Drawing.Size(144, 20);
+            this.textUserName.TabIndex = 0;
             // 
             // button2
             // 
@@ -184,48 +185,97 @@
             this.panelCreateAccount.Controls.Add(this.textBox6);
             this.panelCreateAccount.Controls.Add(this.label6);
             this.panelCreateAccount.Controls.Add(this.textBox5);
-            this.panelCreateAccount.Controls.Add(this.button4);
-            this.panelCreateAccount.Controls.Add(this.radioButton3);
-            this.panelCreateAccount.Controls.Add(this.radioButton4);
+            this.panelCreateAccount.Controls.Add(this.buttonCreateAccount);
+            this.panelCreateAccount.Controls.Add(this.radioButtonNewStudent);
+            this.panelCreateAccount.Controls.Add(this.radioButtonNewTeacher);
             this.panelCreateAccount.Controls.Add(this.label4);
             this.panelCreateAccount.Controls.Add(this.label5);
-            this.panelCreateAccount.Controls.Add(this.textBox3);
-            this.panelCreateAccount.Controls.Add(this.textBox4);
-            this.panelCreateAccount.Location = new System.Drawing.Point(305, 270);
+            this.panelCreateAccount.Controls.Add(this.textBoxClinetLName);
+            this.panelCreateAccount.Controls.Add(this.textBoxClientFName);
+            this.panelCreateAccount.Location = new System.Drawing.Point(368, 208);
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(274, 280);
             this.panelCreateAccount.TabIndex = 7;
             // 
-            // button4
+            // label8
             // 
-            this.button4.Location = new System.Drawing.Point(109, 245);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Create";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(43, 172);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Field";
             // 
-            // radioButton3
+            // textBox7
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(143, 201);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(62, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Student";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.textBox7.Location = new System.Drawing.Point(87, 164);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(144, 20);
+            this.textBox7.TabIndex = 11;
             // 
-            // radioButton4
+            // label7
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(59, 201);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(65, 17);
-            this.radioButton4.TabIndex = 4;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Teacher";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(43, 137);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Field";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(87, 127);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(144, 20);
+            this.textBox6.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Field";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(87, 90);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(144, 20);
+            this.textBox5.TabIndex = 7;
+            // 
+            // buttonCreateAccount
+            // 
+            this.buttonCreateAccount.Location = new System.Drawing.Point(109, 245);
+            this.buttonCreateAccount.Name = "buttonCreateAccount";
+            this.buttonCreateAccount.Size = new System.Drawing.Size(75, 23);
+            this.buttonCreateAccount.TabIndex = 6;
+            this.buttonCreateAccount.Text = "Create";
+            this.buttonCreateAccount.UseVisualStyleBackColor = true;
+            this.buttonCreateAccount.Click += new System.EventHandler(this.buttonCreateAccount_Click);
+            // 
+            // radioButtonNewStudent
+            // 
+            this.radioButtonNewStudent.AutoSize = true;
+            this.radioButtonNewStudent.Location = new System.Drawing.Point(143, 201);
+            this.radioButtonNewStudent.Name = "radioButtonNewStudent";
+            this.radioButtonNewStudent.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonNewStudent.TabIndex = 5;
+            this.radioButtonNewStudent.TabStop = true;
+            this.radioButtonNewStudent.Text = "Student";
+            this.radioButtonNewStudent.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNewTeacher
+            // 
+            this.radioButtonNewTeacher.AutoSize = true;
+            this.radioButtonNewTeacher.Location = new System.Drawing.Point(59, 201);
+            this.radioButtonNewTeacher.Name = "radioButtonNewTeacher";
+            this.radioButtonNewTeacher.Size = new System.Drawing.Size(65, 17);
+            this.radioButtonNewTeacher.TabIndex = 4;
+            this.radioButtonNewTeacher.TabStop = true;
+            this.radioButtonNewTeacher.Text = "Teacher";
+            this.radioButtonNewTeacher.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -245,73 +295,25 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "First Name";
             // 
-            // textBox3
+            // textBoxClinetLName
             // 
-            this.textBox3.Location = new System.Drawing.Point(87, 53);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 1;
+            this.textBoxClinetLName.Location = new System.Drawing.Point(87, 53);
+            this.textBoxClinetLName.Name = "textBoxClinetLName";
+            this.textBoxClinetLName.Size = new System.Drawing.Size(144, 20);
+            this.textBoxClinetLName.TabIndex = 1;
             // 
-            // textBox4
+            // textBoxClientFName
             // 
-            this.textBox4.Location = new System.Drawing.Point(87, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 20);
-            this.textBox4.TabIndex = 0;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(87, 90);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 20);
-            this.textBox5.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Field";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 137);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Field";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(87, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(144, 20);
-            this.textBox6.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 172);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Field";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(87, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(144, 20);
-            this.textBox7.TabIndex = 11;
+            this.textBoxClientFName.Location = new System.Drawing.Point(87, 16);
+            this.textBoxClientFName.Name = "textBoxClientFName";
+            this.textBoxClientFName.Size = new System.Drawing.Size(144, 20);
+            this.textBoxClientFName.TabIndex = 0;
             // 
             // SinInAndSinUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 450);
+            this.ClientSize = new System.Drawing.Size(347, 483);
             this.Controls.Add(this.panelCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelSininUpOption);
@@ -331,13 +333,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSinIn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button buttonSignIn;
+        private System.Windows.Forms.RadioButton radioButtonStudent;
+        private System.Windows.Forms.RadioButton radioButtonTeacher;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxUserPass;
+        private System.Windows.Forms.TextBox textUserName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelSininUpOption;
@@ -349,12 +351,12 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button buttonCreateAccount;
+        private System.Windows.Forms.RadioButton radioButtonNewStudent;
+        private System.Windows.Forms.RadioButton radioButtonNewTeacher;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxClinetLName;
+        private System.Windows.Forms.TextBox textBoxClientFName;
     }
 }

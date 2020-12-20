@@ -12,6 +12,12 @@ namespace CreatingSingInSignUpForm
 {
     public partial class SinInAndSinUpScreen : Form
     {
+        //Declaring instance of StudentPortal Form
+        FormStudentPortal studentForm;
+
+        //Declaring instance of TeacherPortal Form
+        TeacherPortal teacherPortal;
+
         public SinInAndSinUpScreen()
         {
             InitializeComponent();
@@ -33,6 +39,81 @@ namespace CreatingSingInSignUpForm
             panelSinIn.BringToFront();
             panelCreateAccount.Visible = false;
             panelSinIn.Location = new Point(41, 95);
+        }
+
+        private void buttonCreateAccount_Click(object sender, EventArgs e)
+        {
+            String fname = "";
+            string lname = "";
+            string category = "";
+            
+            fname = textBoxClientFName.Text;
+            lname = textBoxClinetLName.Text;
+            
+            if (radioButtonNewStudent.Checked)
+                category = radioButtonNewStudent.Text;
+            else
+                category = radioButtonNewTeacher.Text;
+
+            
+            if (NewClientData(fname, lname, category))
+            {
+                Console.WriteLine("Account Sucessfully Created");
+            }
+            else
+                Console.WriteLine("Could not created");
+
+
+        }
+
+        private void buttonSignIn_Click(object sender, EventArgs e)
+        {
+            string username = "";
+            string userpassword = "";
+            string category = "";
+            username = textUserName.Text;
+            userpassword = textBoxUserPass.Text;
+            
+            if (radioButtonStudent.Checked)
+            {
+                category = radioButtonNewStudent.Text;
+            }
+            if (radioButtonTeacher.Checked)
+            {
+                category = radioButtonTeacher.Text;
+            }
+            if (VerfyingUser(username, userpassword, category))
+           
+            {
+                Console.WriteLine("Access Gruanted");
+                Console.WriteLine(username +" --"+ userpassword + "--- " + category);
+                 this.Visible = false;
+                if (radioButtonStudent.Checked)
+                {
+                    studentForm = new FormStudentPortal();
+                    studentForm.Visible = true;
+                    studentForm.CurrentStudent = username;
+                }
+                else if(radioButtonTeacher.Checked)
+                {
+                   teacherPortal = new TeacherPortal();
+                   teacherPortal.Visible = true;
+                }
+            }
+            else if(!VerfyingUser(username, userpassword, category))
+            {
+                Console.WriteLine("Acess Denied");
+            }
+            
+        }
+        public Boolean VerfyingUser(string name,string password,string category) 
+        {
+            return true;
+        }
+        public Boolean NewClientData(string Fname, string LName,string category)
+        {
+            return false;
+          //  return true;
         }
     }
 }

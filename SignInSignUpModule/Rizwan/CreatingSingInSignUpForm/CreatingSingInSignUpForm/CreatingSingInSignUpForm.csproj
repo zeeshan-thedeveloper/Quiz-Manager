@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPortal.Designer.cs">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinInAndSinUpScreen.cs">
@@ -60,8 +66,17 @@
     <Compile Include="SinInAndSinUpScreen.Designer.cs">
       <DependentUpon>SinInAndSinUpScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherPortal.Designer.cs">
+      <DependentUpon>TeacherPortal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPortal.resx">
+      <DependentUpon>StudentPortal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="SinInAndSinUpScreen.resx">
       <DependentUpon>SinInAndSinUpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherPortal.resx">
+      <DependentUpon>TeacherPortal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
