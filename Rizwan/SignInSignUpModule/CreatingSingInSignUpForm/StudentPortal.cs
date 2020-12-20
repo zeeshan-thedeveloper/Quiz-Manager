@@ -16,10 +16,6 @@ namespace CreatingSingInSignUpForm
         {
             InitializeComponent();
         }
-        public string CurrentStudent
-        {
-            get { return labelCurrentStdName.Text; }
-            set { labelCurrentStdName.Text = value; }
-        }
+       
     }
 }

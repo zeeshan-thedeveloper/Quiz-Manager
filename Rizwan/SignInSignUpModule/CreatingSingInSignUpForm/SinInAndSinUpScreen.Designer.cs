@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelSinIn = new System.Windows.Forms.Panel();
-            this.buttonSignIn = new System.Windows.Forms.Button();
             this.radioButtonStudent = new System.Windows.Forms.RadioButton();
+            this.buttonSignIn = new System.Windows.Forms.Button();
             this.radioButtonTeacher = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +41,6 @@
             this.panelSininUpOption = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelCreateAccount = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,16 +71,6 @@
             this.panelSinIn.Size = new System.Drawing.Size(274, 211);
             this.panelSinIn.TabIndex = 0;
             // 
-            // buttonSignIn
-            // 
-            this.buttonSignIn.Location = new System.Drawing.Point(100, 179);
-            this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
-            this.buttonSignIn.TabIndex = 6;
-            this.buttonSignIn.Text = "Sin in";
-            this.buttonSignIn.UseVisualStyleBackColor = true;
-            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
-            // 
             // radioButtonStudent
             // 
             this.radioButtonStudent.AutoSize = true;
@@ -93,6 +81,16 @@
             this.radioButtonStudent.TabStop = true;
             this.radioButtonStudent.Text = "Student";
             this.radioButtonStudent.UseVisualStyleBackColor = true;
+            // 
+            // buttonSignIn
+            // 
+            this.buttonSignIn.Location = new System.Drawing.Point(109, 185);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(75, 23);
+            this.buttonSignIn.TabIndex = 6;
+            this.buttonSignIn.Text = "Sin in";
+            this.buttonSignIn.UseVisualStyleBackColor = true;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
             // 
             // radioButtonTeacher
             // 
@@ -179,8 +177,6 @@
             // 
             // panelCreateAccount
             // 
-            this.panelCreateAccount.Controls.Add(this.label8);
-            this.panelCreateAccount.Controls.Add(this.textBox7);
             this.panelCreateAccount.Controls.Add(this.label7);
             this.panelCreateAccount.Controls.Add(this.textBox6);
             this.panelCreateAccount.Controls.Add(this.label6);
@@ -192,35 +188,19 @@
             this.panelCreateAccount.Controls.Add(this.label5);
             this.panelCreateAccount.Controls.Add(this.textBoxClinetLName);
             this.panelCreateAccount.Controls.Add(this.textBoxClientFName);
-            this.panelCreateAccount.Location = new System.Drawing.Point(368, 208);
+            this.panelCreateAccount.Location = new System.Drawing.Point(368, 217);
             this.panelCreateAccount.Name = "panelCreateAccount";
             this.panelCreateAccount.Size = new System.Drawing.Size(274, 280);
             this.panelCreateAccount.TabIndex = 7;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 172);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Field";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(87, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(144, 20);
-            this.textBox7.TabIndex = 11;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 137);
+            this.label7.Location = new System.Drawing.Point(43, 130);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Field";
+            this.label7.Text = "Mobile";
             // 
             // textBox6
             // 
@@ -232,11 +212,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 101);
+            this.label6.Location = new System.Drawing.Point(43, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Field";
+            this.label6.Text = "Email";
             // 
             // textBox5
             // 
@@ -258,7 +238,7 @@
             // radioButtonNewStudent
             // 
             this.radioButtonNewStudent.AutoSize = true;
-            this.radioButtonNewStudent.Location = new System.Drawing.Point(143, 201);
+            this.radioButtonNewStudent.Location = new System.Drawing.Point(152, 183);
             this.radioButtonNewStudent.Name = "radioButtonNewStudent";
             this.radioButtonNewStudent.Size = new System.Drawing.Size(62, 17);
             this.radioButtonNewStudent.TabIndex = 5;
@@ -269,7 +249,7 @@
             // radioButtonNewTeacher
             // 
             this.radioButtonNewTeacher.AutoSize = true;
-            this.radioButtonNewTeacher.Location = new System.Drawing.Point(59, 201);
+            this.radioButtonNewTeacher.Location = new System.Drawing.Point(59, 183);
             this.radioButtonNewTeacher.Name = "radioButtonNewTeacher";
             this.radioButtonNewTeacher.Size = new System.Drawing.Size(65, 17);
             this.radioButtonNewTeacher.TabIndex = 4;
@@ -313,12 +293,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 483);
+            this.ClientSize = new System.Drawing.Size(685, 483);
             this.Controls.Add(this.panelCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelSininUpOption);
             this.Controls.Add(this.panelSinIn);
             this.Name = "SinInAndSinUpScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SinInAndSinUpScreen";
             this.panelSinIn.ResumeLayout(false);
             this.panelSinIn.PerformLayout();
@@ -345,8 +326,6 @@
         private System.Windows.Forms.Panel panelSininUpOption;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelCreateAccount;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;

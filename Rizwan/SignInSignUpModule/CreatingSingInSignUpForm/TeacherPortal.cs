@@ -16,5 +16,12 @@ namespace CreatingSingInSignUpForm
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SinInAndSinUpScreen.topicName = textBoxSamoel.Text;
+
+            this.Hide();
+        }
     }
 }

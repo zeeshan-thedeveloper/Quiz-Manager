@@ -12,6 +12,7 @@ namespace CreatingSingInSignUpForm
 {
     public partial class SinInAndSinUpScreen : Form
     {
+        public static String topicName;
         //Declaring instance of StudentPortal Form
         FormStudentPortal studentForm;
 
@@ -55,13 +56,16 @@ namespace CreatingSingInSignUpForm
             else
                 category = radioButtonNewTeacher.Text;
 
-            
-            if (NewClientData(fname, lname, category))
+
+            if (DatabaseConnector.CreateNewAccount(fname, lname, category))
             {
                 Console.WriteLine("Account Sucessfully Created");
             }
+
             else
+            {
                 Console.WriteLine("Could not created");
+            }
 
 
         }
@@ -82,8 +86,8 @@ namespace CreatingSingInSignUpForm
             {
                 category = radioButtonTeacher.Text;
             }
-            if (VerfyingUser(username, userpassword, category))
-           
+
+            if (DatabaseConnector.SinIn_Method(username, userpassword, category))
             {
                 Console.WriteLine("Access Gruanted");
                 Console.WriteLine(username +" --"+ userpassword + "--- " + category);
@@ -92,28 +96,25 @@ namespace CreatingSingInSignUpForm
                 {
                     studentForm = new FormStudentPortal();
                     studentForm.Visible = true;
-                    studentForm.CurrentStudent = username;
+                   
                 }
                 else if(radioButtonTeacher.Checked)
                 {
                    teacherPortal = new TeacherPortal();
-                   teacherPortal.Visible = true;
+                   teacherPortal.ShowDialog();
+                   Console.WriteLine("Returned value : "+topicName);
+                  
                 }
             }
-            else if(!VerfyingUser(username, userpassword, category))
+            else if(!DatabaseConnector.SinIn_Method(username, userpassword, category))
             {
+                
                 Console.WriteLine("Acess Denied");
             }
             
         }
-        public Boolean VerfyingUser(string name,string password,string category) 
-        {
-            return true;
-        }
-        public Boolean NewClientData(string Fname, string LName,string category)
-        {
-            return false;
-          //  return true;
-        }
+       
+        
+
     }
 }
