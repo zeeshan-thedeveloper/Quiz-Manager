@@ -293,14 +293,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 483);
+            this.ClientSize = new System.Drawing.Size(364, 483);
             this.Controls.Add(this.panelCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelSininUpOption);
             this.Controls.Add(this.panelSinIn);
             this.Name = "SinInAndSinUpScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SinInAndSinUpScreen";
+            this.Text = "   ";
             this.panelSinIn.ResumeLayout(false);
             this.panelSinIn.PerformLayout();
             this.panelSininUpOption.ResumeLayout(false);
