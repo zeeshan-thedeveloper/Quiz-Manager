@@ -44,15 +44,6 @@
             this.tabPagePrint = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBoxCurrentTeacherBio = new System.Windows.Forms.GroupBox();
@@ -60,22 +51,31 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panelOpenQuiz = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.buttonPanelCreatsave = new System.Windows.Forms.Button();
+            this.buttonPaneDelete = new System.Windows.Forms.Button();
+            this.buttonPanelCreateQuiz = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelCurrentQuizData = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
             this.label1QuizName = new System.Windows.Forms.Label();
             this.label1SubjectName = new System.Windows.Forms.Label();
+            this.btnCreateQuiz = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControlTeacherOptions.SuspendLayout();
             this.tabPageCreateQuiz.SuspendLayout();
             this.tabPageServer.SuspendLayout();
             this.tabPagePrint.SuspendLayout();
-            this.panelCreateNewQuiz.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBoxCurrentTeacherBio.SuspendLayout();
             this.panelScheduleQuiz.SuspendLayout();
             this.panelOpenQuiz.SuspendLayout();
+            this.panelCreateNewQuiz.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelCurrentQuizData.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,10 +123,11 @@
             this.tabControlTeacherOptions.Controls.Add(this.tabPageCreateQuiz);
             this.tabControlTeacherOptions.Controls.Add(this.tabPageServer);
             this.tabControlTeacherOptions.Controls.Add(this.tabPagePrint);
-            this.tabControlTeacherOptions.Location = new System.Drawing.Point(0, 39);
+            this.tabControlTeacherOptions.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabControlTeacherOptions.Location = new System.Drawing.Point(0, 24);
             this.tabControlTeacherOptions.Name = "tabControlTeacherOptions";
             this.tabControlTeacherOptions.SelectedIndex = 0;
-            this.tabControlTeacherOptions.Size = new System.Drawing.Size(158, 319);
+            this.tabControlTeacherOptions.Size = new System.Drawing.Size(158, 570);
             this.tabControlTeacherOptions.TabIndex = 2;
             // 
             // tabPageCreateQuiz
@@ -137,16 +138,18 @@
             this.tabPageCreateQuiz.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreateQuiz.Name = "tabPageCreateQuiz";
             this.tabPageCreateQuiz.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreateQuiz.Size = new System.Drawing.Size(150, 293);
+            this.tabPageCreateQuiz.Size = new System.Drawing.Size(150, 544);
             this.tabPageCreateQuiz.TabIndex = 0;
             this.tabPageCreateQuiz.Text = "Create Quiz";
             this.tabPageCreateQuiz.UseVisualStyleBackColor = true;
+            this.tabPageCreateQuiz.Click += new System.EventHandler(this.tabPageCreateQuiz_Click);
             // 
             // buttonScheduleQuiz
             // 
-            this.buttonScheduleQuiz.Location = new System.Drawing.Point(6, 156);
+            this.buttonScheduleQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonScheduleQuiz.Location = new System.Drawing.Point(6, 392);
             this.buttonScheduleQuiz.Name = "buttonScheduleQuiz";
-            this.buttonScheduleQuiz.Size = new System.Drawing.Size(141, 30);
+            this.buttonScheduleQuiz.Size = new System.Drawing.Size(141, 95);
             this.buttonScheduleQuiz.TabIndex = 2;
             this.buttonScheduleQuiz.Text = "Schedule Quiz";
             this.buttonScheduleQuiz.UseVisualStyleBackColor = true;
@@ -154,9 +157,10 @@
             // 
             // buttonOpenQuiz
             // 
-            this.buttonOpenQuiz.Location = new System.Drawing.Point(3, 107);
+            this.buttonOpenQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenQuiz.Location = new System.Drawing.Point(3, 257);
             this.buttonOpenQuiz.Name = "buttonOpenQuiz";
-            this.buttonOpenQuiz.Size = new System.Drawing.Size(141, 30);
+            this.buttonOpenQuiz.Size = new System.Drawing.Size(141, 95);
             this.buttonOpenQuiz.TabIndex = 1;
             this.buttonOpenQuiz.Text = "Open Quiz";
             this.buttonOpenQuiz.UseVisualStyleBackColor = true;
@@ -164,9 +168,10 @@
             // 
             // buttonCreateNewQuiz
             // 
-            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(3, 55);
+            this.buttonCreateNewQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(3, 122);
             this.buttonCreateNewQuiz.Name = "buttonCreateNewQuiz";
-            this.buttonCreateNewQuiz.Size = new System.Drawing.Size(141, 30);
+            this.buttonCreateNewQuiz.Size = new System.Drawing.Size(141, 95);
             this.buttonCreateNewQuiz.TabIndex = 0;
             this.buttonCreateNewQuiz.Text = "Create New Quiz";
             this.buttonCreateNewQuiz.UseVisualStyleBackColor = true;
@@ -179,25 +184,27 @@
             this.tabPageServer.Location = new System.Drawing.Point(4, 22);
             this.tabPageServer.Name = "tabPageServer";
             this.tabPageServer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServer.Size = new System.Drawing.Size(150, 293);
+            this.tabPageServer.Size = new System.Drawing.Size(150, 544);
             this.tabPageServer.TabIndex = 1;
             this.tabPageServer.Text = "Server";
             this.tabPageServer.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 214);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 326);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 30);
+            this.button5.Size = new System.Drawing.Size(141, 88);
             this.button5.TabIndex = 8;
             this.button5.Text = "Upload to Fire Base";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(3, 167);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(3, 146);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 30);
+            this.button6.Size = new System.Drawing.Size(141, 88);
             this.button6.TabIndex = 7;
             this.button6.Text = "Download";
             this.button6.UseVisualStyleBackColor = true;
@@ -209,7 +216,7 @@
             this.tabPagePrint.Location = new System.Drawing.Point(4, 22);
             this.tabPagePrint.Name = "tabPagePrint";
             this.tabPagePrint.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrint.Size = new System.Drawing.Size(150, 293);
+            this.tabPagePrint.Size = new System.Drawing.Size(150, 544);
             this.tabPagePrint.TabIndex = 2;
             this.tabPagePrint.Text = "Print";
             this.tabPagePrint.UseVisualStyleBackColor = true;
@@ -231,94 +238,6 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "Print Current Quiz";
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // panelCreateNewQuiz
-            // 
-            this.panelCreateNewQuiz.Controls.Add(this.button4);
-            this.panelCreateNewQuiz.Controls.Add(this.button3);
-            this.panelCreateNewQuiz.Controls.Add(this.button2);
-            this.panelCreateNewQuiz.Controls.Add(this.button1);
-            this.panelCreateNewQuiz.Controls.Add(this.panel1);
-            this.panelCreateNewQuiz.Location = new System.Drawing.Point(164, 61);
-            this.panelCreateNewQuiz.Name = "panelCreateNewQuiz";
-            this.panelCreateNewQuiz.Size = new System.Drawing.Size(838, 521);
-            this.panelCreateNewQuiz.TabIndex = 3;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(423, 465);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 40);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Show All Question";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(294, 465);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(167, 465);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Delete Question";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(39, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add New Question";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panelCurrentQuizData);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Location = new System.Drawing.Point(39, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 395);
-            this.panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(27, 319);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(523, 55);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Options of Text Processing";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Question#1";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(27, 45);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(523, 245);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
             // 
             // label2
             // 
@@ -383,44 +302,80 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Open Quiz Portion";
             // 
+            // panelCreateNewQuiz
+            // 
+            this.panelCreateNewQuiz.Controls.Add(this.button4);
+            this.panelCreateNewQuiz.Controls.Add(this.buttonPanelCreatsave);
+            this.panelCreateNewQuiz.Controls.Add(this.buttonPaneDelete);
+            this.panelCreateNewQuiz.Controls.Add(this.buttonPanelCreateQuiz);
+            this.panelCreateNewQuiz.Controls.Add(this.panel1);
+            this.panelCreateNewQuiz.Location = new System.Drawing.Point(937, 429);
+            this.panelCreateNewQuiz.Name = "panelCreateNewQuiz";
+            this.panelCreateNewQuiz.Size = new System.Drawing.Size(847, 521);
+            this.panelCreateNewQuiz.TabIndex = 10;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(423, 465);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 40);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Show All Question";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // buttonPanelCreatsave
+            // 
+            this.buttonPanelCreatsave.Location = new System.Drawing.Point(294, 465);
+            this.buttonPanelCreatsave.Name = "buttonPanelCreatsave";
+            this.buttonPanelCreatsave.Size = new System.Drawing.Size(123, 40);
+            this.buttonPanelCreatsave.TabIndex = 3;
+            this.buttonPanelCreatsave.Text = "Save";
+            this.buttonPanelCreatsave.UseVisualStyleBackColor = true;
+            this.buttonPanelCreatsave.Click += new System.EventHandler(this.buttonPanelCreatsave_Click);
+            // 
+            // buttonPaneDelete
+            // 
+            this.buttonPaneDelete.Location = new System.Drawing.Point(167, 465);
+            this.buttonPaneDelete.Name = "buttonPaneDelete";
+            this.buttonPaneDelete.Size = new System.Drawing.Size(123, 40);
+            this.buttonPaneDelete.TabIndex = 2;
+            this.buttonPaneDelete.Text = "Delete Question";
+            this.buttonPaneDelete.UseVisualStyleBackColor = true;
+            this.buttonPaneDelete.Click += new System.EventHandler(this.buttonPaneDelete_Click);
+            // 
+            // buttonPanelCreateQuiz
+            // 
+            this.buttonPanelCreateQuiz.Location = new System.Drawing.Point(38, 465);
+            this.buttonPanelCreateQuiz.Name = "buttonPanelCreateQuiz";
+            this.buttonPanelCreateQuiz.Size = new System.Drawing.Size(123, 40);
+            this.buttonPanelCreateQuiz.TabIndex = 1;
+            this.buttonPanelCreateQuiz.Text = "Add New Question";
+            this.buttonPanelCreateQuiz.UseVisualStyleBackColor = true;
+            this.buttonPanelCreateQuiz.Click += new System.EventHandler(this.buttonPanelCreateQuiz_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelCurrentQuizData);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Location = new System.Drawing.Point(39, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 395);
+            this.panel1.TabIndex = 0;
+            // 
             // panelCurrentQuizData
             // 
             this.panelCurrentQuizData.Controls.Add(this.label1QuizName);
             this.panelCurrentQuizData.Controls.Add(this.label1SubjectName);
-            this.panelCurrentQuizData.Controls.Add(this.button9);
+            this.panelCurrentQuizData.Controls.Add(this.btnCreateQuiz);
             this.panelCurrentQuizData.Controls.Add(this.label9);
             this.panelCurrentQuizData.Controls.Add(this.label8);
             this.panelCurrentQuizData.Location = new System.Drawing.Point(571, 45);
             this.panelCurrentQuizData.Name = "panelCurrentQuizData";
             this.panelCurrentQuizData.Size = new System.Drawing.Size(200, 329);
             this.panelCurrentQuizData.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Subject Name:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Quiz Name:";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(6, 290);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(191, 36);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Create Quiz";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // label1QuizName
             // 
@@ -440,21 +395,76 @@
             this.label1SubjectName.TabIndex = 10;
             this.label1SubjectName.Text = "Subject Name:";
             // 
+            // btnCreateQuiz
+            // 
+            this.btnCreateQuiz.Location = new System.Drawing.Point(6, 290);
+            this.btnCreateQuiz.Name = "btnCreateQuiz";
+            this.btnCreateQuiz.Size = new System.Drawing.Size(191, 36);
+            this.btnCreateQuiz.TabIndex = 9;
+            this.btnCreateQuiz.Text = "Create Quiz";
+            this.btnCreateQuiz.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Quiz Name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Subject Name:";
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(27, 319);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(523, 55);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Options of Text Processing";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(111, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Question#1";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Location = new System.Drawing.Point(27, 45);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(523, 245);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // TeacherPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 594);
+            this.Controls.Add(this.panelCreateNewQuiz);
             this.Controls.Add(this.panelOpenQuiz);
             this.Controls.Add(this.panelScheduleQuiz);
             this.Controls.Add(this.groupBoxCurrentTeacherBio);
-            this.Controls.Add(this.panelCreateNewQuiz);
             this.Controls.Add(this.tabControlTeacherOptions);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TeacherPortal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherPortalcs";
             this.Load += new System.EventHandler(this.TeacherPortal_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -463,15 +473,15 @@
             this.tabPageCreateQuiz.ResumeLayout(false);
             this.tabPageServer.ResumeLayout(false);
             this.tabPagePrint.ResumeLayout(false);
-            this.panelCreateNewQuiz.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBoxCurrentTeacherBio.ResumeLayout(false);
             this.groupBoxCurrentTeacherBio.PerformLayout();
             this.panelScheduleQuiz.ResumeLayout(false);
             this.panelScheduleQuiz.PerformLayout();
             this.panelOpenQuiz.ResumeLayout(false);
             this.panelOpenQuiz.PerformLayout();
+            this.panelCreateNewQuiz.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panelCurrentQuizData.ResumeLayout(false);
             this.panelCurrentQuizData.PerformLayout();
             this.ResumeLayout(false);
@@ -493,14 +503,6 @@
         private System.Windows.Forms.Button buttonCreateNewQuiz;
         private System.Windows.Forms.TabPage tabPageServer;
         private System.Windows.Forms.TabPage tabPagePrint;
-        private System.Windows.Forms.Panel panelCreateNewQuiz;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBoxCurrentTeacherBio;
@@ -508,16 +510,24 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelScheduleQuiz;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelOpenQuiz;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelCreateNewQuiz;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonPanelCreatsave;
+        private System.Windows.Forms.Button buttonPaneDelete;
+        private System.Windows.Forms.Button buttonPanelCreateQuiz;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelCurrentQuizData;
         private System.Windows.Forms.Label label1QuizName;
         private System.Windows.Forms.Label label1SubjectName;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCreateQuiz;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

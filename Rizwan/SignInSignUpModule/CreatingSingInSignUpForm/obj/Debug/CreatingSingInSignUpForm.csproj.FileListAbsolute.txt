@@ -49,3 +49,5 @@ E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Creat
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.exe
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.pdb
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.CreateNewQuizDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.CreateNewQuizDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.TempPanel.resources

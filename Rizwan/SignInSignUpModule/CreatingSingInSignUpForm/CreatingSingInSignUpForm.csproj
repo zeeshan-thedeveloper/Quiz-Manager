@@ -52,6 +52,9 @@
     <Compile Include="CreateNewQuizDialog.Designer.cs">
       <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateQuizPanelControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DatabaseConnector.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -79,6 +82,12 @@
     <Compile Include="TeacherPortal.Designer.cs">
       <DependentUpon>TeacherPortal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TempPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempPanel.Designer.cs">
+      <DependentUpon>TempPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateNewQuizDialog.resx">
       <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherPortal.resx">
       <DependentUpon>TeacherPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempPanel.resx">
+      <DependentUpon>TempPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

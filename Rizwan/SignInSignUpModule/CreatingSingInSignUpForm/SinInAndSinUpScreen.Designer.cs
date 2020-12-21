@@ -293,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 483);
+            this.ClientSize = new System.Drawing.Size(308, 483);
             this.Controls.Add(this.panelCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelSininUpOption);
