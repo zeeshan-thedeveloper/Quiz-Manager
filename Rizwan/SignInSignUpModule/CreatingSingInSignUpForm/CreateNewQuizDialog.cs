@@ -31,8 +31,9 @@ namespace CreatingSingInSignUpForm
 
         private void buttonCreateQuiz_Click(object sender, EventArgs e)
         {
-            TeacherPortal.TopicName = textBoxQuizName.Text;
 
+            TeacherPortal.subjectName = comboBoxSubjectList.SelectedItem.ToString();
+            TeacherPortal.topicName = textBoxQuizName.Text;
             this.DialogResult = System.Windows.Forms.DialogResult.No;
 
         }

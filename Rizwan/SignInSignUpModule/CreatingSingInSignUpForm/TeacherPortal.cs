@@ -12,7 +12,9 @@ namespace CreatingSingInSignUpForm
 {
     public partial class TeacherPortal : Form
     {
-        public static String TopicName;
+        public static String topicName;
+        public static String subjectName;
+
         public TeacherPortal()
         {
             InitializeComponent();
@@ -29,16 +31,17 @@ namespace CreatingSingInSignUpForm
         private void buttonCreateNewQuiz_Click(object sender, EventArgs e)
         {
             //location 179, 61
+            
             CreateNewQuizDialog createNewQuizDialog = new CreateNewQuizDialog();
             createNewQuizDialog.ShowDialog();
-            MessageBox.Show("Recievded Topic : " + TopicName);
-            label1QuizName.Text = TopicName;
-           //string na= createNewQuizDialog.textBoxQuizName.Text;
+           // MessageBox.Show("Recievded Topic : " + topicName);
+          
+            label1QuizName.Text = topicName;
+            label1SubjectName.Text = subjectName;
             panelCreateNewQuiz.Location = new Point(179, 61);
             panelCreateNewQuiz.BringToFront();
 
-            //   panelCreateNewQuiz.Visible = true;
-
+           
         }
 
         private void TeacherPortal_Load(object sender, EventArgs e)

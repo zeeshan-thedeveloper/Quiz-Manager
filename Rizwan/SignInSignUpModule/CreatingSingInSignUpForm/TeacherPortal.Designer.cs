@@ -96,7 +96,7 @@
             this.editToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1194, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,7 +127,7 @@
             this.tabControlTeacherOptions.Location = new System.Drawing.Point(0, 24);
             this.tabControlTeacherOptions.Name = "tabControlTeacherOptions";
             this.tabControlTeacherOptions.SelectedIndex = 0;
-            this.tabControlTeacherOptions.Size = new System.Drawing.Size(158, 570);
+            this.tabControlTeacherOptions.Size = new System.Drawing.Size(158, 725);
             this.tabControlTeacherOptions.TabIndex = 2;
             // 
             // tabPageCreateQuiz
@@ -138,7 +138,7 @@
             this.tabPageCreateQuiz.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreateQuiz.Name = "tabPageCreateQuiz";
             this.tabPageCreateQuiz.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreateQuiz.Size = new System.Drawing.Size(150, 544);
+            this.tabPageCreateQuiz.Size = new System.Drawing.Size(150, 699);
             this.tabPageCreateQuiz.TabIndex = 0;
             this.tabPageCreateQuiz.Text = "Create Quiz";
             this.tabPageCreateQuiz.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.tabPageServer.Location = new System.Drawing.Point(4, 22);
             this.tabPageServer.Name = "tabPageServer";
             this.tabPageServer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServer.Size = new System.Drawing.Size(150, 544);
+            this.tabPageServer.Size = new System.Drawing.Size(150, 699);
             this.tabPageServer.TabIndex = 1;
             this.tabPageServer.Text = "Server";
             this.tabPageServer.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             this.tabPagePrint.Location = new System.Drawing.Point(4, 22);
             this.tabPagePrint.Name = "tabPagePrint";
             this.tabPagePrint.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrint.Size = new System.Drawing.Size(150, 544);
+            this.tabPagePrint.Size = new System.Drawing.Size(150, 699);
             this.tabPagePrint.TabIndex = 2;
             this.tabPagePrint.Text = "Print";
             this.tabPagePrint.UseVisualStyleBackColor = true;
@@ -271,9 +271,9 @@
             // panelScheduleQuiz
             // 
             this.panelScheduleQuiz.Controls.Add(this.label7);
-            this.panelScheduleQuiz.Location = new System.Drawing.Point(1156, 372);
+            this.panelScheduleQuiz.Location = new System.Drawing.Point(1336, 386);
             this.panelScheduleQuiz.Name = "panelScheduleQuiz";
-            this.panelScheduleQuiz.Size = new System.Drawing.Size(838, 521);
+            this.panelScheduleQuiz.Size = new System.Drawing.Size(847, 684);
             this.panelScheduleQuiz.TabIndex = 5;
             // 
             // label7
@@ -288,9 +288,9 @@
             // panelOpenQuiz
             // 
             this.panelOpenQuiz.Controls.Add(this.label6);
-            this.panelOpenQuiz.Location = new System.Drawing.Point(1103, 457);
+            this.panelOpenQuiz.Location = new System.Drawing.Point(1359, 149);
             this.panelOpenQuiz.Name = "panelOpenQuiz";
-            this.panelOpenQuiz.Size = new System.Drawing.Size(838, 521);
+            this.panelOpenQuiz.Size = new System.Drawing.Size(847, 684);
             this.panelOpenQuiz.TabIndex = 7;
             // 
             // label6
@@ -309,25 +309,25 @@
             this.panelCreateNewQuiz.Controls.Add(this.buttonPaneDelete);
             this.panelCreateNewQuiz.Controls.Add(this.buttonPanelCreateQuiz);
             this.panelCreateNewQuiz.Controls.Add(this.panel1);
-            this.panelCreateNewQuiz.Location = new System.Drawing.Point(937, 429);
+            this.panelCreateNewQuiz.Location = new System.Drawing.Point(1356, 53);
             this.panelCreateNewQuiz.Name = "panelCreateNewQuiz";
-            this.panelCreateNewQuiz.Size = new System.Drawing.Size(847, 521);
+            this.panelCreateNewQuiz.Size = new System.Drawing.Size(847, 684);
             this.panelCreateNewQuiz.TabIndex = 10;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(423, 465);
+            this.button4.Location = new System.Drawing.Point(458, 575);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 40);
+            this.button4.Size = new System.Drawing.Size(132, 40);
             this.button4.TabIndex = 4;
             this.button4.Text = "Show All Question";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // buttonPanelCreatsave
             // 
-            this.buttonPanelCreatsave.Location = new System.Drawing.Point(294, 465);
+            this.buttonPanelCreatsave.Location = new System.Drawing.Point(315, 575);
             this.buttonPanelCreatsave.Name = "buttonPanelCreatsave";
-            this.buttonPanelCreatsave.Size = new System.Drawing.Size(123, 40);
+            this.buttonPanelCreatsave.Size = new System.Drawing.Size(132, 40);
             this.buttonPanelCreatsave.TabIndex = 3;
             this.buttonPanelCreatsave.Text = "Save";
             this.buttonPanelCreatsave.UseVisualStyleBackColor = true;
@@ -335,9 +335,9 @@
             // 
             // buttonPaneDelete
             // 
-            this.buttonPaneDelete.Location = new System.Drawing.Point(167, 465);
+            this.buttonPaneDelete.Location = new System.Drawing.Point(177, 575);
             this.buttonPaneDelete.Name = "buttonPaneDelete";
-            this.buttonPaneDelete.Size = new System.Drawing.Size(123, 40);
+            this.buttonPaneDelete.Size = new System.Drawing.Size(132, 40);
             this.buttonPaneDelete.TabIndex = 2;
             this.buttonPaneDelete.Text = "Delete Question";
             this.buttonPaneDelete.UseVisualStyleBackColor = true;
@@ -345,9 +345,9 @@
             // 
             // buttonPanelCreateQuiz
             // 
-            this.buttonPanelCreateQuiz.Location = new System.Drawing.Point(38, 465);
+            this.buttonPanelCreateQuiz.Location = new System.Drawing.Point(39, 575);
             this.buttonPanelCreateQuiz.Name = "buttonPanelCreateQuiz";
-            this.buttonPanelCreateQuiz.Size = new System.Drawing.Size(123, 40);
+            this.buttonPanelCreateQuiz.Size = new System.Drawing.Size(132, 40);
             this.buttonPanelCreateQuiz.TabIndex = 1;
             this.buttonPanelCreateQuiz.Text = "Add New Question";
             this.buttonPanelCreateQuiz.UseVisualStyleBackColor = true;
@@ -362,7 +362,7 @@
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Location = new System.Drawing.Point(39, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 395);
+            this.panel1.Size = new System.Drawing.Size(776, 483);
             this.panel1.TabIndex = 0;
             // 
             // panelCurrentQuizData
@@ -427,7 +427,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Location = new System.Drawing.Point(27, 319);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(523, 55);
+            this.label5.Size = new System.Drawing.Size(523, 141);
             this.label5.TabIndex = 2;
             this.label5.Text = "Options of Text Processing";
             // 
@@ -454,7 +454,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 594);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelCreateNewQuiz);
             this.Controls.Add(this.panelOpenQuiz);
             this.Controls.Add(this.panelScheduleQuiz);
