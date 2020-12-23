@@ -16,7 +16,8 @@ namespace CreatingSingInSignUpForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeacherPortal());
+            Application.Run(new TempPanel());
         }
+
     }
 }

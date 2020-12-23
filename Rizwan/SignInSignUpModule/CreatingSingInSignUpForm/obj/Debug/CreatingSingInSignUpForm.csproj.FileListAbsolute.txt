@@ -59,3 +59,10 @@ E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Creat
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\RestSharp.xml
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\ServiceStack.Text.xml
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.csproj.CopyComplete
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\FireSharp.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\FireSharp.Serialization.ServiceStack.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\RestSharp.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\ServiceStack.Text.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\RestSharp.xml
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\ServiceStack.Text.xml
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.csproj.CopyComplete

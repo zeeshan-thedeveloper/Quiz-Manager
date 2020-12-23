@@ -36,11 +36,7 @@ namespace CreatingSingInSignUpForm
             createNewQuizDialog.ShowDialog();
            // MessageBox.Show("Recievded Topic : " + topicName);
           
-            label1QuizName.Text = topicName;
-            label1SubjectName.Text = subjectName;
-            panelCreateNewQuiz.Location = new Point(179, 61);
-            panelCreateNewQuiz.BringToFront();
-
+            
            
         }
 
