@@ -42,9 +42,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panelCreateAccount = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxClientMobileNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxClientEmail = new System.Windows.Forms.TextBox();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.radioButtonNewStudent = new System.Windows.Forms.RadioButton();
             this.radioButtonNewTeacher = new System.Windows.Forms.RadioButton();
@@ -117,9 +117,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(28, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "User Name";
+            this.label1.Text = "Email";
             // 
             // textBoxUserPass
             // 
@@ -178,9 +178,9 @@
             // panelCreateAccount
             // 
             this.panelCreateAccount.Controls.Add(this.label7);
-            this.panelCreateAccount.Controls.Add(this.textBox6);
+            this.panelCreateAccount.Controls.Add(this.textBoxClientMobileNumber);
             this.panelCreateAccount.Controls.Add(this.label6);
-            this.panelCreateAccount.Controls.Add(this.textBox5);
+            this.panelCreateAccount.Controls.Add(this.textBoxClientEmail);
             this.panelCreateAccount.Controls.Add(this.buttonCreateAccount);
             this.panelCreateAccount.Controls.Add(this.radioButtonNewStudent);
             this.panelCreateAccount.Controls.Add(this.radioButtonNewTeacher);
@@ -202,12 +202,12 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Mobile";
             // 
-            // textBox6
+            // textBoxClientMobileNumber
             // 
-            this.textBox6.Location = new System.Drawing.Point(87, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(144, 20);
-            this.textBox6.TabIndex = 9;
+            this.textBoxClientMobileNumber.Location = new System.Drawing.Point(87, 127);
+            this.textBoxClientMobileNumber.Name = "textBoxClientMobileNumber";
+            this.textBoxClientMobileNumber.Size = new System.Drawing.Size(144, 20);
+            this.textBoxClientMobileNumber.TabIndex = 9;
             // 
             // label6
             // 
@@ -218,12 +218,12 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Email";
             // 
-            // textBox5
+            // textBoxClientEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(87, 90);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 20);
-            this.textBox5.TabIndex = 7;
+            this.textBoxClientEmail.Location = new System.Drawing.Point(87, 90);
+            this.textBoxClientEmail.Name = "textBoxClientEmail";
+            this.textBoxClientEmail.Size = new System.Drawing.Size(144, 20);
+            this.textBoxClientEmail.TabIndex = 7;
             // 
             // buttonCreateAccount
             // 
@@ -293,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 483);
+            this.ClientSize = new System.Drawing.Size(676, 483);
             this.Controls.Add(this.panelCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panelSininUpOption);
@@ -301,6 +301,7 @@
             this.Name = "SinInAndSinUpScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "   ";
+            this.Load += new System.EventHandler(this.SinInAndSinUpScreen_Load);
             this.panelSinIn.ResumeLayout(false);
             this.panelSinIn.PerformLayout();
             this.panelSininUpOption.ResumeLayout(false);
@@ -327,9 +328,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelCreateAccount;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxClientMobileNumber;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxClientEmail;
         private System.Windows.Forms.Button buttonCreateAccount;
         private System.Windows.Forms.RadioButton radioButtonNewStudent;
         private System.Windows.Forms.RadioButton radioButtonNewTeacher;

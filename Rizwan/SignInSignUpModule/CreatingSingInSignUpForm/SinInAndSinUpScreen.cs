@@ -8,22 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CreatingSingInSignUpForm
 {
     public partial class SinInAndSinUpScreen : Form
     {
         public static String topicName;
+       
         //Declaring instance of StudentPortal Form
         FormStudentPortal studentForm;
 
         //Declaring instance of TeacherPortal Form
         TeacherPortal teacherPortal;
+        DatabaseConnector databaseConnector;// = new DatabaseConnector();
 
         public SinInAndSinUpScreen()
         {
             InitializeComponent();
         }
 
+
+
+        private void SinInAndSinUpScreen_Load(object sender, EventArgs e)
+        {
+            databaseConnector = new DatabaseConnector();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             panelSininUpOption.Location = new Point(55, 351);
@@ -44,38 +53,34 @@ namespace CreatingSingInSignUpForm
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            String fname = "";
-            string lname = "";
+            String fname = textBoxClientFName.Text;
+            string lname = textBoxClinetLName.Text;
+            string email = textBoxClientEmail.Text;
+            string mbl = textBoxClientMobileNumber.Text;
             string category = "";
             
-            fname = textBoxClientFName.Text;
-            lname = textBoxClinetLName.Text;
             
             if (radioButtonNewStudent.Checked)
                 category = radioButtonNewStudent.Text;
             else
-                category = radioButtonNewTeacher.Text;
+             category = radioButtonNewTeacher.Text;
 
 
-            if (DatabaseConnector.CreateNewAccount(fname, lname, category))
-            {
-                Console.WriteLine("Account Sucessfully Created");
-            }
 
-            else
-            {
-                Console.WriteLine("Could not created");
-            }
-
+            databaseConnector.CreateNewAccount(textBoxClientFName.Text, textBoxClinetLName.Text, textBoxClientEmail.Text, textBoxClientMobileNumber.Text, category);
+            
+               
+            // Console.WriteLine("Account Sucessfully Created");
+            
 
         }
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            string username = "";
+            string email = "";
             string userpassword = "";
             string category = "";
-            username = textUserName.Text;
+            email = textUserName.Text;
             userpassword = textBoxUserPass.Text;
             
             if (radioButtonStudent.Checked)
@@ -87,10 +92,13 @@ namespace CreatingSingInSignUpForm
                 category = radioButtonTeacher.Text;
             }
 
-            if (DatabaseConnector.SinIn_Method(username, userpassword, category))
+            databaseConnector.SinIn_Method(email, userpassword, category);
+
+            /*
+            if (DatabaseConnector.SinIn_Method(email, userpassword, category))
             {
                 Console.WriteLine("Access Gruanted");
-                Console.WriteLine(username +" --"+ userpassword + "--- " + category);
+                Console.WriteLine(email +" --"+ userpassword + "--- " + category);
                  this.Visible = false;
                 if (radioButtonStudent.Checked)
                 {
@@ -111,10 +119,10 @@ namespace CreatingSingInSignUpForm
                 
                 Console.WriteLine("Acess Denied");
             }
-            
+                     */
+
         }
-       
-        
+
 
     }
 }

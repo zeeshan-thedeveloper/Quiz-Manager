@@ -59,3 +59,16 @@ E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Creat
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\RestSharp.xml
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\ServiceStack.Text.xml
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.csproj.CopyComplete
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Newtonsoft.Json.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\System.Net.Http.Extensions.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\System.Net.Http.Primitives.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\Newtonsoft.Json.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\System.Net.Http.Extensions.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\bin\Debug\System.Net.Http.Primitives.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\CreatingSingInSignUpForm\obj\Debug\CreatingSingInSignUpForm.csproj.App.config
