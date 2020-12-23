@@ -10,11 +10,22 @@ using System.Windows.Forms;
 using System.Collections;
 namespace CreatingSingInSignUpForm
 {
-    public partial class TempPanel
+    public partial class TeacherPortal
     {
         /**
          * You have to create varaibles and the fields and properties and every thing in this...
          * */
+        static ArrayList optionsList, questionsList;
+        private void panelCreateNewQuiz_Paint(object sender, PaintEventArgs e)
+        {
+            //Here we need to write the actions which should be performed when foerm is loaded
+            comboBoxCOptionsType.SelectedIndex = 0;
+            optionsList = new ArrayList();
+            questionsList = new ArrayList();
+            labelStartingTextInCenter.Dock = DockStyle.Fill;
+            labelStartingTextInCenter.TextAlign = ContentAlignment.MiddleCenter;
+
+        }
 
         private void CQBold_BTN_Click(object sender, EventArgs e)
         {

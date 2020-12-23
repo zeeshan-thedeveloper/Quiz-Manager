@@ -101,12 +101,6 @@
     <Compile Include="TeacherPortal.Designer.cs">
       <DependentUpon>TeacherPortal.cs</DependentUpon>
     </Compile>
-    <Compile Include="TempPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TempPanel.Designer.cs">
-      <DependentUpon>TempPanel.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CreateNewQuizDialog.resx">
       <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherPortal.resx">
       <DependentUpon>TeacherPortal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TempPanel.resx">
-      <DependentUpon>TempPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

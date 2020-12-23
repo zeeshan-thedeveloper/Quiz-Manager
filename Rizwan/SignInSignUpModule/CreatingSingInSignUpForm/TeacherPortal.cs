@@ -34,6 +34,9 @@ namespace CreatingSingInSignUpForm
             
             CreateNewQuizDialog createNewQuizDialog = new CreateNewQuizDialog();
             createNewQuizDialog.ShowDialog();
+            panelCreateNewQuiz.Location = new Point(179, 61);
+            panelCreateNewQuiz.Visible = true;
+            panelCreateNewQuiz.BringToFront();
            // MessageBox.Show("Recievded Topic : " + topicName);
           
             
@@ -42,6 +45,7 @@ namespace CreatingSingInSignUpForm
 
         private void TeacherPortal_Load(object sender, EventArgs e)
         {
+            panelCreateNewQuiz.Visible = false;
 
         }
 
@@ -61,6 +65,6 @@ namespace CreatingSingInSignUpForm
         {
 
         }
-       
+
     }
 }
