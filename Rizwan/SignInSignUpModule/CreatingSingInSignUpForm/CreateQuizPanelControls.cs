@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Collections;
 namespace CreatingSingInSignUpForm
 {
     public partial class TempPanel
@@ -68,6 +68,37 @@ namespace CreatingSingInSignUpForm
 
         private void buttonCQSaveQuestion_Click(object sender, EventArgs e)
         {
+            RightAnswerChooserDialog rightAnswerChooserDialog = new RightAnswerChooserDialog( ref optionsList);
+            rightAnswerChooserDialog.ShowDialog();
+            flowLayoutPanelCQOptions.Controls.Clear();
+            foreach (var option in optionsList)
+            {
+                if (option is CheckBox) flowLayoutPanelCQOptions.Controls.Add(option as CheckBox);
+                if (option is RadioButton) flowLayoutPanelCQOptions.Controls.Add(option as RadioButton);
+
+            }
+
+            questionsList.Add(new QuizQuestionDataHolder(textBoxCQOptionText.Text, optionsList));
+            MessageBox.Show("Saved");
+            ClearEveryThingForNewQuestion();
+            SlideQuestionPanelToLeft();
+
+        }
+
+        private void buttonRemoveOptionsFromlist_Click(object sender, EventArgs e)
+        {
+            int index = 0;
+            foreach (CheckBox checkBox in optionsList.ToArray())
+            {
+
+                if (checkBox.Checked)
+                {
+                    flowLayoutPanelCQOptions.Controls.RemoveAt(index);
+                    optionsList.RemoveAt(index);
+                }
+
+                index++;
+            }
 
         }
 
@@ -195,7 +226,51 @@ namespace CreatingSingInSignUpForm
             }
         }
 
+        //Utiliyu funtions...
 
+        
+
+        public void ClearEveryThingForNewQuestion()
+        {
+            optionsList = new ArrayList();
+            textBoxCQOptionText.Text = "";
+            textBoxQuestionText.Text = "";
+
+        }
+
+        public void SlideQuestionPanelToLeft()
+        {
+            timerMoveQuestionPanelToLeft.Tick += PanelMovertoleft_QuestionEditorPanel;
+            timerMoveQuestionPanelToLeft.Start();
+        }
+        public void SlideQuestionPanelToRight()
+        {
+            timerMoveQuestionPanelToRight.Tick += PanelMoverToRight_QuestionEditorPanel;
+            timerMoveQuestionPanelToRight.Start();
+        }
+
+        private void PanelMoverToRight_QuestionEditorPanel(object sender, EventArgs e)
+        {
+            if (panelQuestionOptionHoler.Left <= 40)
+            {
+                timerMoveQuestionPanelToRight.Stop();
+            }
+                panelQuestionOptionHoler.Left -= 10;
+        }
+
+        private void PanelMovertoleft_QuestionEditorPanel(object sender, EventArgs e)
+        {
+         if(panelQuestionOptionHoler.Left<=-800)
+            {
+                timerMoveQuestionPanelToLeft.Stop();
+                panelQuestionOptionHoler.Left = 1000;
+                SlideQuestionPanelToRight();
+            }
+            else
+            {
+                panelQuestionOptionHoler.Left -= 10;
+            }
+        }
 
     }
 }

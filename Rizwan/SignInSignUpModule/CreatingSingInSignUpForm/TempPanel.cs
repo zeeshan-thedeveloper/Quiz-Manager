@@ -25,7 +25,19 @@ namespace CreatingSingInSignUpForm
 
 
 
-        ArrayList optionsList, questionsList;
+       static ArrayList optionsList, questionsList;
+
+        private void TempPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
         private void panelCreateNewQuiz_Paint(object sender, PaintEventArgs e)
         {
             //Here we need to write the actions which should be performed when foerm is loaded
@@ -34,6 +46,7 @@ namespace CreatingSingInSignUpForm
             questionsList = new ArrayList();
             labelStartingTextInCenter.Dock = DockStyle.Fill;
             labelStartingTextInCenter.TextAlign = ContentAlignment.MiddleCenter;
+            
         }
 
     }

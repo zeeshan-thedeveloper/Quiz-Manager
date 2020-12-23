@@ -8,10 +8,10 @@ namespace CreatingSingInSignUpForm
 {
     class QuizQuestionDataHolder
     {
-        String question { get; set; }
-        ArrayList options { get; set; }
+      public  String question { get; set; }
+      public  ArrayList options { get; set; }
 
-        QuizQuestionDataHolder(String question, ArrayList options)
+       public QuizQuestionDataHolder(String question, ArrayList options)
         {
             this.question = question;
             this.options = options;

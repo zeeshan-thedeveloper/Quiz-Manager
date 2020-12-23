@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
             this.buttonCQShowPrevQuestion = new System.Windows.Forms.Button();
             this.buttonCQAShowNextQuestion = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.buttonCQADeleteQuestion = new System.Windows.Forms.Button();
             this.buttonCQAddNewQuestion = new System.Windows.Forms.Button();
             this.panelQuestionOptionHoler = new System.Windows.Forms.Panel();
+            this.labelStartingTextInCenter = new System.Windows.Forms.Label();
+            this.buttonRemoveOptionsFromlist = new System.Windows.Forms.Button();
             this.panelTrueFasleOptions = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButtonTrueOption = new System.Windows.Forms.RadioButton();
@@ -42,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelCQMcqsOptionType = new System.Windows.Forms.Panel();
             this.textBoxCQOptionText = new System.Windows.Forms.RichTextBox();
-            this.labelStartingTextInCenter = new System.Windows.Forms.Label();
+            this.buttonCQSaveQuestion = new System.Windows.Forms.Button();
             this.groupBoxAddOptionsPanel = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxCOptionsType = new System.Windows.Forms.ComboBox();
@@ -54,13 +57,15 @@
             this.CQHighLight_BTN = new System.Windows.Forms.Button();
             this.CQBold_BTN = new System.Windows.Forms.Button();
             this.Font = new System.Windows.Forms.Label();
-            this.buttonCQSaveQuestion = new System.Windows.Forms.Button();
             this.CQItalic_BTN = new System.Windows.Forms.Button();
             this.comboBoxFontFaimily = new System.Windows.Forms.ComboBox();
             this.CQUnderLine_BTN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxCQFontSize = new System.Windows.Forms.ComboBox();
             this.textBoxQuestionText = new System.Windows.Forms.RichTextBox();
+            this.timerMoveQuestionPanelToLeft = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.timerMoveQuestionPanelToRight = new System.Windows.Forms.Timer(this.components);
             this.panelCreateNewQuiz.SuspendLayout();
             this.panelQuestionOptionHoler.SuspendLayout();
             this.panelTrueFasleOptions.SuspendLayout();
@@ -138,9 +143,10 @@
             // panelQuestionOptionHoler
             // 
             this.panelQuestionOptionHoler.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelQuestionOptionHoler.Controls.Add(this.labelStartingTextInCenter);
+            this.panelQuestionOptionHoler.Controls.Add(this.buttonRemoveOptionsFromlist);
             this.panelQuestionOptionHoler.Controls.Add(this.panelTrueFasleOptions);
             this.panelQuestionOptionHoler.Controls.Add(this.panelCQMcqsOptionType);
-            this.panelQuestionOptionHoler.Controls.Add(this.labelStartingTextInCenter);
             this.panelQuestionOptionHoler.Controls.Add(this.buttonCQSaveQuestion);
             this.panelQuestionOptionHoler.Controls.Add(this.groupBoxAddOptionsPanel);
             this.panelQuestionOptionHoler.Controls.Add(this.groupBox2);
@@ -151,6 +157,25 @@
             this.panelQuestionOptionHoler.Name = "panelQuestionOptionHoler";
             this.panelQuestionOptionHoler.Size = new System.Drawing.Size(776, 423);
             this.panelQuestionOptionHoler.TabIndex = 0;
+            // 
+            // labelStartingTextInCenter
+            // 
+            this.labelStartingTextInCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartingTextInCenter.Location = new System.Drawing.Point(345, 6);
+            this.labelStartingTextInCenter.Name = "labelStartingTextInCenter";
+            this.labelStartingTextInCenter.Size = new System.Drawing.Size(415, 42);
+            this.labelStartingTextInCenter.TabIndex = 13;
+            this.labelStartingTextInCenter.Text = "Click any of given options below";
+            // 
+            // buttonRemoveOptionsFromlist
+            // 
+            this.buttonRemoveOptionsFromlist.Location = new System.Drawing.Point(464, 322);
+            this.buttonRemoveOptionsFromlist.Name = "buttonRemoveOptionsFromlist";
+            this.buttonRemoveOptionsFromlist.Size = new System.Drawing.Size(120, 24);
+            this.buttonRemoveOptionsFromlist.TabIndex = 12;
+            this.buttonRemoveOptionsFromlist.Text = "Remove Selected";
+            this.buttonRemoveOptionsFromlist.UseVisualStyleBackColor = true;
+            this.buttonRemoveOptionsFromlist.Click += new System.EventHandler(this.buttonRemoveOptionsFromlist_Click);
             // 
             // panelTrueFasleOptions
             // 
@@ -218,14 +243,15 @@
             this.textBoxCQOptionText.TabIndex = 5;
             this.textBoxCQOptionText.Text = "";
             // 
-            // labelStartingTextInCenter
+            // buttonCQSaveQuestion
             // 
-            this.labelStartingTextInCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStartingTextInCenter.Location = new System.Drawing.Point(3, 1);
-            this.labelStartingTextInCenter.Name = "labelStartingTextInCenter";
-            this.labelStartingTextInCenter.Size = new System.Drawing.Size(619, 41);
-            this.labelStartingTextInCenter.TabIndex = 11;
-            this.labelStartingTextInCenter.Text = "Please select any option from give options...!";
+            this.buttonCQSaveQuestion.Location = new System.Drawing.Point(436, 364);
+            this.buttonCQSaveQuestion.Name = "buttonCQSaveQuestion";
+            this.buttonCQSaveQuestion.Size = new System.Drawing.Size(170, 40);
+            this.buttonCQSaveQuestion.TabIndex = 3;
+            this.buttonCQSaveQuestion.Text = "Save";
+            this.buttonCQSaveQuestion.UseVisualStyleBackColor = true;
+            this.buttonCQSaveQuestion.Click += new System.EventHandler(this.buttonCQSaveQuestion_Click);
             // 
             // groupBoxAddOptionsPanel
             // 
@@ -352,16 +378,6 @@
             this.Font.TabIndex = 14;
             this.Font.Text = "Font";
             // 
-            // buttonCQSaveQuestion
-            // 
-            this.buttonCQSaveQuestion.Location = new System.Drawing.Point(548, 332);
-            this.buttonCQSaveQuestion.Name = "buttonCQSaveQuestion";
-            this.buttonCQSaveQuestion.Size = new System.Drawing.Size(98, 40);
-            this.buttonCQSaveQuestion.TabIndex = 3;
-            this.buttonCQSaveQuestion.Text = "Save";
-            this.buttonCQSaveQuestion.UseVisualStyleBackColor = true;
-            this.buttonCQSaveQuestion.Click += new System.EventHandler(this.buttonCQSaveQuestion_Click);
-            // 
             // CQItalic_BTN
             // 
             this.CQItalic_BTN.Location = new System.Drawing.Point(18, 72);
@@ -455,14 +471,34 @@
             this.textBoxQuestionText.TabIndex = 0;
             this.textBoxQuestionText.Text = "";
             // 
+            // timerMoveQuestionPanelToLeft
+            // 
+            this.timerMoveQuestionPanelToLeft.Interval = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timerMoveQuestionPanelToRight
+            // 
+            this.timerMoveQuestionPanelToRight.Interval = 5;
+            // 
             // TempPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 532);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelCreateNewQuiz);
             this.Name = "TempPanel";
             this.Text = "TempPanel";
+            this.Load += new System.EventHandler(this.TempPanel_Load);
             this.panelCreateNewQuiz.ResumeLayout(false);
             this.panelQuestionOptionHoler.ResumeLayout(false);
             this.panelQuestionOptionHoler.PerformLayout();
@@ -514,6 +550,10 @@
         private System.Windows.Forms.RadioButton radioButtonTrueOption;
         private System.Windows.Forms.RadioButton radioButtonFalseOptoin;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonRemoveOptionsFromlist;
         private System.Windows.Forms.Label labelStartingTextInCenter;
+        private System.Windows.Forms.Timer timerMoveQuestionPanelToLeft;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timerMoveQuestionPanelToRight;
     }
 }
