@@ -48,8 +48,14 @@ namespace CreatingSingInSignUpForm
         {
             Console.WriteLine("In SignIN");
             var get = firebaseClient.Get("@"+category +"/"+ email);
-            StudentTeacherDataSenderToFirebase datareciever = new StudentTeacherDataSenderToFirebase();
-        //    datareciever=get.ResultAs<>
+            StudentTeacherDataSenderToFirebase datareciever = get.ResultAs <StudentTeacherDataSenderToFirebase>();
+            Console.WriteLine("Retrieving data from database...");
+            
+            Console.WriteLine(datareciever.FName);
+            Console.WriteLine(datareciever.LName);
+            Console.WriteLine(datareciever.Email);
+            Console.WriteLine(datareciever.Mobile);
+                
             // Console.WriteLine(get.ToString());
 
         }
@@ -67,20 +73,8 @@ namespace CreatingSingInSignUpForm
                     Email = email,
                     Mobile = mbl
                 };
-     //       try
-      //      {
                 var set = firebaseClient.Set("@" + category + "/" + email, datasender);
                 MessageBox.Show("Account has been successfully Created!");
-
-        //    }
-
-          //  catch 
-          //  {
-//                MessageBox.Show("There is Sending/Path Problem");
-
-
-  //          }
-
 
 
         }
