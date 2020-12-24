@@ -37,7 +37,7 @@ namespace CreatingSingInSignUpForm
             if (topicName != null)
             {
 
-                panelCreateNewQuiz.Location = new Point(179, 61);
+                panelCreateNewQuiz.Location = new Point(3, 51);
                 panelCreateNewQuiz.Visible = true;
                 panelCreateNewQuiz.BringToFront();
                 panelSubOptionsOfCreateQuiz.Visible = true;
@@ -61,15 +61,12 @@ namespace CreatingSingInSignUpForm
         {
             panelCreateNewQuiz.Visible = false;
             panelSubOptionsOfCreateQuiz.Visible = false;
-            panelOpenQuizOptionHoler.Location = new Point(179, 61);
-            panelOpenQuizOptionHoler.Visible = true;
-            panelOpenQuizOptionHoler.BringToFront();
-
+            panelOpenQuizOptionHoler.Visible = false;
         }
 
         private void buttonOpenQuiz_Click(object sender, EventArgs e)
         {
-            panelOpenQuizOptionHoler.Location = new Point(179, 61);
+            panelOpenQuizOptionHoler.Location = new Point(3, 51);
             panelOpenQuizOptionHoler.Visible = true;
             panelOpenQuizOptionHoler.BringToFront();
 

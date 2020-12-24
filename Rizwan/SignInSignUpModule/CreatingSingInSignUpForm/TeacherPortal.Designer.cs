@@ -55,10 +55,10 @@
             this.buttonCreateNewQuiz = new System.Windows.Forms.Button();
             this.tabControlTeacherOptions = new System.Windows.Forms.TabControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
             this.panelOpenQuizOptionHoler = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panelSaveToDbOptionHoler = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panelShowAllQuestionsOptionHoler = new System.Windows.Forms.Panel();
@@ -97,7 +97,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCQFontSize = new System.Windows.Forms.ComboBox();
             this.textBoxQuestionText = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.menuStrip1.SuspendLayout();
             this.groupBoxCurrentTeacherBio.SuspendLayout();
             this.panelScheduleQuiz.SuspendLayout();
@@ -110,8 +110,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panelCreateNewQuiz.SuspendLayout();
             this.panelOpenQuizOptionHoler.SuspendLayout();
+            this.panelCreateNewQuiz.SuspendLayout();
             this.panelSaveToDbOptionHoler.SuspendLayout();
             this.panelShowAllQuestionsOptionHoler.SuspendLayout();
             this.panelSubOptionsOfCreateQuiz.SuspendLayout();
@@ -375,15 +375,24 @@
             this.splitContainer1.SplitterDistance = 196;
             this.splitContainer1.TabIndex = 13;
             // 
-            // splitter1
+            // panelOpenQuizOptionHoler
             // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1170, 45);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
+            this.panelOpenQuizOptionHoler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelOpenQuizOptionHoler.Controls.Add(this.label11);
+            this.panelOpenQuizOptionHoler.Location = new System.Drawing.Point(3, 51);
+            this.panelOpenQuizOptionHoler.Name = "panelOpenQuizOptionHoler";
+            this.panelOpenQuizOptionHoler.Size = new System.Drawing.Size(881, 645);
+            this.panelOpenQuizOptionHoler.TabIndex = 18;
+            this.panelOpenQuizOptionHoler.Tag = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Open Quiz Options holder";
             // 
             // panelCreateNewQuiz
             // 
@@ -399,24 +408,14 @@
             this.panelCreateNewQuiz.TabIndex = 12;
             this.panelCreateNewQuiz.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateNewQuiz_Paint);
             // 
-            // panelOpenQuizOptionHoler
+            // label12
             // 
-            this.panelOpenQuizOptionHoler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelOpenQuizOptionHoler.Controls.Add(this.label11);
-            this.panelOpenQuizOptionHoler.Location = new System.Drawing.Point(596, 355);
-            this.panelOpenQuizOptionHoler.Name = "panelOpenQuizOptionHoler";
-            this.panelOpenQuizOptionHoler.Size = new System.Drawing.Size(881, 645);
-            this.panelOpenQuizOptionHoler.TabIndex = 18;
-            this.panelOpenQuizOptionHoler.Tag = "";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(128, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Open Quiz Options holder";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Create quiz";
             // 
             // panelSaveToDbOptionHoler
             // 
@@ -879,14 +878,15 @@
             this.textBoxQuestionText.TabIndex = 0;
             this.textBoxQuestionText.Text = "Test";
             // 
-            // label12
+            // splitter1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Create quiz";
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1170, 45);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
             // 
             // TeacherPortal
             // 
@@ -920,10 +920,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panelCreateNewQuiz.ResumeLayout(false);
-            this.panelCreateNewQuiz.PerformLayout();
             this.panelOpenQuizOptionHoler.ResumeLayout(false);
             this.panelOpenQuizOptionHoler.PerformLayout();
+            this.panelCreateNewQuiz.ResumeLayout(false);
+            this.panelCreateNewQuiz.PerformLayout();
             this.panelSaveToDbOptionHoler.ResumeLayout(false);
             this.panelSaveToDbOptionHoler.PerformLayout();
             this.panelShowAllQuestionsOptionHoler.ResumeLayout(false);
