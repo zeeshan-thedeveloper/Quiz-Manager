@@ -61,13 +61,19 @@ namespace CreatingSingInSignUpForm
         {
             panelCreateNewQuiz.Visible = false;
             panelSubOptionsOfCreateQuiz.Visible = false;
+            panelOpenQuizOptionHoler.Location = new Point(179, 61);
+            panelOpenQuizOptionHoler.Visible = true;
+            panelOpenQuizOptionHoler.BringToFront();
+
         }
 
         private void buttonOpenQuiz_Click(object sender, EventArgs e)
         {
-            panelOpenQuiz.Location = new Point(179, 61);
-            panelOpenQuiz.BringToFront();
-            
+            panelOpenQuizOptionHoler.Location = new Point(179, 61);
+            panelOpenQuizOptionHoler.Visible = true;
+            panelOpenQuizOptionHoler.BringToFront();
+
+
         }
 
         private void buttonScheduleQuiz_Click(object sender, EventArgs e)
@@ -123,6 +129,21 @@ namespace CreatingSingInSignUpForm
 
         }
 
+
+        private void panelShowAllQuestionsOptionHoler_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+      
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
      
+
+        
     }
 }

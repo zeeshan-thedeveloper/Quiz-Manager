@@ -75,6 +75,12 @@ namespace CreatingSingInSignUpForm
 
         }
 
+        private void buttonSaveQuizInSystem_Click(object sender, EventArgs e)
+        {
+            panelSaveToDbOptionHoler.Location = new Point(3, 16);
+            panelSaveToDbOptionHoler.BringToFront();
+
+        }
         private void buttonCQSaveQuestion_Click(object sender, EventArgs e)
         {
             RightAnswerChooserDialog rightAnswerChooserDialog = new RightAnswerChooserDialog( ref optionsList);
@@ -123,6 +129,8 @@ namespace CreatingSingInSignUpForm
 
         private void buttonCQShowAllQuestions_Click(object sender, EventArgs e)
         {
+            panelShowAllQuestionsOptionHoler.Location = new Point(3, 16);
+            panelShowAllQuestionsOptionHoler.BringToFront();
 
         }
         private void HighLight_BTN_Click(object sender, EventArgs e)

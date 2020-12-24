@@ -40,7 +40,29 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panelOpenQuiz = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonCQAShowNextQuestion = new System.Windows.Forms.Button();
+            this.timerMoveQuestionPanelToRight = new System.Windows.Forms.Timer(this.components);
+            this.timerMoveQuestionPanelToLeft = new System.Windows.Forms.Timer(this.components);
+            this.tabPagePrint = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tabPageServer = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.tabPageCreateQuiz = new System.Windows.Forms.TabPage();
+            this.buttonScheduleQuiz = new System.Windows.Forms.Button();
+            this.buttonOpenQuiz = new System.Windows.Forms.Button();
+            this.buttonCreateNewQuiz = new System.Windows.Forms.Button();
+            this.tabControlTeacherOptions = new System.Windows.Forms.TabControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panelCreateNewQuiz = new System.Windows.Forms.Panel();
+            this.panelOpenQuizOptionHoler = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panelSaveToDbOptionHoler = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panelShowAllQuestionsOptionHoler = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSubOptionsOfCreateQuiz = new System.Windows.Forms.Panel();
             this.buttonCQAddNewQuestion = new System.Windows.Forms.Button();
             this.buttonSaveQuizInSystem = new System.Windows.Forms.Button();
@@ -75,35 +97,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxCQFontSize = new System.Windows.Forms.ComboBox();
             this.textBoxQuestionText = new System.Windows.Forms.RichTextBox();
-            this.buttonCQAShowNextQuestion = new System.Windows.Forms.Button();
-            this.timerMoveQuestionPanelToRight = new System.Windows.Forms.Timer(this.components);
-            this.timerMoveQuestionPanelToLeft = new System.Windows.Forms.Timer(this.components);
-            this.tabPagePrint = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.tabPageServer = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tabPageCreateQuiz = new System.Windows.Forms.TabPage();
-            this.buttonScheduleQuiz = new System.Windows.Forms.Button();
-            this.buttonOpenQuiz = new System.Windows.Forms.Button();
-            this.buttonCreateNewQuiz = new System.Windows.Forms.Button();
-            this.tabControlTeacherOptions = new System.Windows.Forms.TabControl();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBoxCurrentTeacherBio.SuspendLayout();
             this.panelScheduleQuiz.SuspendLayout();
             this.panelOpenQuiz.SuspendLayout();
-            this.panelCreateNewQuiz.SuspendLayout();
-            this.panelSubOptionsOfCreateQuiz.SuspendLayout();
-            this.panelQuestionOptionHoler.SuspendLayout();
-            this.panelTrueFasleOptions.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panelCQMcqsOptionType.SuspendLayout();
-            this.groupBoxAddOptionsPanel.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPagePrint.SuspendLayout();
             this.tabPageServer.SuspendLayout();
             this.tabPageCreateQuiz.SuspendLayout();
@@ -112,6 +110,18 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panelCreateNewQuiz.SuspendLayout();
+            this.panelOpenQuizOptionHoler.SuspendLayout();
+            this.panelSaveToDbOptionHoler.SuspendLayout();
+            this.panelShowAllQuestionsOptionHoler.SuspendLayout();
+            this.panelSubOptionsOfCreateQuiz.SuspendLayout();
+            this.panelQuestionOptionHoler.SuspendLayout();
+            this.panelTrueFasleOptions.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panelCQMcqsOptionType.SuspendLayout();
+            this.groupBoxAddOptionsPanel.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -207,34 +217,262 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Open Quiz Portion";
             // 
+            // buttonCQAShowNextQuestion
+            // 
+            this.buttonCQAShowNextQuestion.Location = new System.Drawing.Point(1209, 610);
+            this.buttonCQAShowNextQuestion.Name = "buttonCQAShowNextQuestion";
+            this.buttonCQAShowNextQuestion.Size = new System.Drawing.Size(98, 40);
+            this.buttonCQAShowNextQuestion.TabIndex = 5;
+            this.buttonCQAShowNextQuestion.Text = "Next";
+            this.buttonCQAShowNextQuestion.UseVisualStyleBackColor = true;
+            this.buttonCQAShowNextQuestion.Visible = false;
+            this.buttonCQAShowNextQuestion.Click += new System.EventHandler(this.buttonCQAShowNextQuestion_Click);
+            // 
+            // timerMoveQuestionPanelToRight
+            // 
+            this.timerMoveQuestionPanelToRight.Interval = 5;
+            // 
+            // timerMoveQuestionPanelToLeft
+            // 
+            this.timerMoveQuestionPanelToLeft.Interval = 5;
+            // 
+            // tabPagePrint
+            // 
+            this.tabPagePrint.Controls.Add(this.button8);
+            this.tabPagePrint.Controls.Add(this.button7);
+            this.tabPagePrint.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePrint.Name = "tabPagePrint";
+            this.tabPagePrint.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePrint.Size = new System.Drawing.Size(155, 699);
+            this.tabPagePrint.TabIndex = 2;
+            this.tabPagePrint.Text = "Print";
+            this.tabPagePrint.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(5, 131);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(141, 30);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "Print Random Quiz";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(3, 38);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(141, 30);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Print Current Quiz";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // tabPageServer
+            // 
+            this.tabPageServer.Controls.Add(this.button5);
+            this.tabPageServer.Controls.Add(this.button6);
+            this.tabPageServer.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServer.Name = "tabPageServer";
+            this.tabPageServer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageServer.Size = new System.Drawing.Size(155, 699);
+            this.tabPageServer.TabIndex = 1;
+            this.tabPageServer.Text = "Server";
+            this.tabPageServer.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 326);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(141, 88);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Upload to Fire Base";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(3, 146);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(141, 88);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Download";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // tabPageCreateQuiz
+            // 
+            this.tabPageCreateQuiz.Controls.Add(this.buttonScheduleQuiz);
+            this.tabPageCreateQuiz.Controls.Add(this.buttonOpenQuiz);
+            this.tabPageCreateQuiz.Controls.Add(this.buttonCreateNewQuiz);
+            this.tabPageCreateQuiz.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCreateQuiz.Name = "tabPageCreateQuiz";
+            this.tabPageCreateQuiz.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCreateQuiz.Size = new System.Drawing.Size(155, 699);
+            this.tabPageCreateQuiz.TabIndex = 0;
+            this.tabPageCreateQuiz.Text = "Create Quiz";
+            this.tabPageCreateQuiz.UseVisualStyleBackColor = true;
+            this.tabPageCreateQuiz.Click += new System.EventHandler(this.tabPageCreateQuiz_Click);
+            // 
+            // buttonScheduleQuiz
+            // 
+            this.buttonScheduleQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonScheduleQuiz.Location = new System.Drawing.Point(6, 392);
+            this.buttonScheduleQuiz.Name = "buttonScheduleQuiz";
+            this.buttonScheduleQuiz.Size = new System.Drawing.Size(141, 95);
+            this.buttonScheduleQuiz.TabIndex = 2;
+            this.buttonScheduleQuiz.Text = "Schedule Quiz";
+            this.buttonScheduleQuiz.UseVisualStyleBackColor = true;
+            this.buttonScheduleQuiz.Click += new System.EventHandler(this.buttonScheduleQuiz_Click);
+            // 
+            // buttonOpenQuiz
+            // 
+            this.buttonOpenQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenQuiz.Location = new System.Drawing.Point(3, 257);
+            this.buttonOpenQuiz.Name = "buttonOpenQuiz";
+            this.buttonOpenQuiz.Size = new System.Drawing.Size(141, 95);
+            this.buttonOpenQuiz.TabIndex = 1;
+            this.buttonOpenQuiz.Text = "Open Quiz";
+            this.buttonOpenQuiz.UseVisualStyleBackColor = true;
+            this.buttonOpenQuiz.Click += new System.EventHandler(this.buttonOpenQuiz_Click);
+            // 
+            // buttonCreateNewQuiz
+            // 
+            this.buttonCreateNewQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(3, 122);
+            this.buttonCreateNewQuiz.Name = "buttonCreateNewQuiz";
+            this.buttonCreateNewQuiz.Size = new System.Drawing.Size(141, 95);
+            this.buttonCreateNewQuiz.TabIndex = 0;
+            this.buttonCreateNewQuiz.Text = "Create New Quiz";
+            this.buttonCreateNewQuiz.UseVisualStyleBackColor = true;
+            this.buttonCreateNewQuiz.Click += new System.EventHandler(this.buttonCreateNewQuiz_Click);
+            // 
+            // tabControlTeacherOptions
+            // 
+            this.tabControlTeacherOptions.Controls.Add(this.tabPageCreateQuiz);
+            this.tabControlTeacherOptions.Controls.Add(this.tabPageServer);
+            this.tabControlTeacherOptions.Controls.Add(this.tabPagePrint);
+            this.tabControlTeacherOptions.Location = new System.Drawing.Point(11, 38);
+            this.tabControlTeacherOptions.Name = "tabControlTeacherOptions";
+            this.tabControlTeacherOptions.SelectedIndex = 0;
+            this.tabControlTeacherOptions.Size = new System.Drawing.Size(163, 725);
+            this.tabControlTeacherOptions.TabIndex = 2;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tabControlTeacherOptions);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelOpenQuizOptionHoler);
+            this.splitContainer1.Panel2.Controls.Add(this.panelCreateNewQuiz);
+            this.splitContainer1.Panel2.Controls.Add(this.splitter1);
+            this.splitContainer1.Size = new System.Drawing.Size(1370, 725);
+            this.splitContainer1.SplitterDistance = 196;
+            this.splitContainer1.TabIndex = 13;
+            // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1170, 45);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
+            // 
             // panelCreateNewQuiz
             // 
+            this.panelCreateNewQuiz.BackColor = System.Drawing.Color.Blue;
+            this.panelCreateNewQuiz.Controls.Add(this.label12);
+            this.panelCreateNewQuiz.Controls.Add(this.panelSaveToDbOptionHoler);
+            this.panelCreateNewQuiz.Controls.Add(this.panelShowAllQuestionsOptionHoler);
             this.panelCreateNewQuiz.Controls.Add(this.panelSubOptionsOfCreateQuiz);
             this.panelCreateNewQuiz.Controls.Add(this.panelQuestionOptionHoler);
-            this.panelCreateNewQuiz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCreateNewQuiz.Location = new System.Drawing.Point(0, 61);
+            this.panelCreateNewQuiz.Location = new System.Drawing.Point(423, 452);
             this.panelCreateNewQuiz.Name = "panelCreateNewQuiz";
-            this.panelCreateNewQuiz.Size = new System.Drawing.Size(1170, 664);
+            this.panelCreateNewQuiz.Size = new System.Drawing.Size(1158, 661);
             this.panelCreateNewQuiz.TabIndex = 12;
             this.panelCreateNewQuiz.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateNewQuiz_Paint);
+            // 
+            // panelOpenQuizOptionHoler
+            // 
+            this.panelOpenQuizOptionHoler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelOpenQuizOptionHoler.Controls.Add(this.label11);
+            this.panelOpenQuizOptionHoler.Location = new System.Drawing.Point(596, 355);
+            this.panelOpenQuizOptionHoler.Name = "panelOpenQuizOptionHoler";
+            this.panelOpenQuizOptionHoler.Size = new System.Drawing.Size(881, 645);
+            this.panelOpenQuizOptionHoler.TabIndex = 18;
+            this.panelOpenQuizOptionHoler.Tag = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Open Quiz Options holder";
+            // 
+            // panelSaveToDbOptionHoler
+            // 
+            this.panelSaveToDbOptionHoler.Controls.Add(this.label10);
+            this.panelSaveToDbOptionHoler.Location = new System.Drawing.Point(105, 547);
+            this.panelSaveToDbOptionHoler.Name = "panelSaveToDbOptionHoler";
+            this.panelSaveToDbOptionHoler.Size = new System.Drawing.Size(881, 645);
+            this.panelSaveToDbOptionHoler.TabIndex = 17;
+            this.panelSaveToDbOptionHoler.Tag = "";
+            this.panelSaveToDbOptionHoler.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Save to database ";
+            // 
+            // panelShowAllQuestionsOptionHoler
+            // 
+            this.panelShowAllQuestionsOptionHoler.Controls.Add(this.label1);
+            this.panelShowAllQuestionsOptionHoler.Location = new System.Drawing.Point(62, 574);
+            this.panelShowAllQuestionsOptionHoler.Name = "panelShowAllQuestionsOptionHoler";
+            this.panelShowAllQuestionsOptionHoler.Size = new System.Drawing.Size(881, 645);
+            this.panelShowAllQuestionsOptionHoler.TabIndex = 16;
+            this.panelShowAllQuestionsOptionHoler.Tag = "";
+            this.panelShowAllQuestionsOptionHoler.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestionsOptionHoler_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Show all questions";
             // 
             // panelSubOptionsOfCreateQuiz
             // 
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQAddNewQuestion);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonSaveQuizInSystem);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQShowAllQuestions);
-            this.panelSubOptionsOfCreateQuiz.Location = new System.Drawing.Point(902, 6);
+            this.panelSubOptionsOfCreateQuiz.Location = new System.Drawing.Point(1092, 139);
             this.panelSubOptionsOfCreateQuiz.Name = "panelSubOptionsOfCreateQuiz";
-            this.panelSubOptionsOfCreateQuiz.Size = new System.Drawing.Size(260, 562);
+            this.panelSubOptionsOfCreateQuiz.Size = new System.Drawing.Size(260, 624);
             this.panelSubOptionsOfCreateQuiz.TabIndex = 15;
             this.panelSubOptionsOfCreateQuiz.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubOptionsOfCreateQuiz_Paint);
             // 
             // buttonCQAddNewQuestion
             // 
             this.buttonCQAddNewQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCQAddNewQuestion.Location = new System.Drawing.Point(22, 116);
+            this.buttonCQAddNewQuestion.Location = new System.Drawing.Point(26, 77);
             this.buttonCQAddNewQuestion.Name = "buttonCQAddNewQuestion";
-            this.buttonCQAddNewQuestion.Size = new System.Drawing.Size(207, 40);
+            this.buttonCQAddNewQuestion.Size = new System.Drawing.Size(207, 82);
             this.buttonCQAddNewQuestion.TabIndex = 1;
             this.buttonCQAddNewQuestion.Text = "Add New Question";
             this.buttonCQAddNewQuestion.UseVisualStyleBackColor = true;
@@ -243,19 +481,20 @@
             // buttonSaveQuizInSystem
             // 
             this.buttonSaveQuizInSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveQuizInSystem.Location = new System.Drawing.Point(22, 456);
+            this.buttonSaveQuizInSystem.Location = new System.Drawing.Point(27, 453);
             this.buttonSaveQuizInSystem.Name = "buttonSaveQuizInSystem";
-            this.buttonSaveQuizInSystem.Size = new System.Drawing.Size(207, 40);
+            this.buttonSaveQuizInSystem.Size = new System.Drawing.Size(207, 82);
             this.buttonSaveQuizInSystem.TabIndex = 7;
             this.buttonSaveQuizInSystem.Text = "Save Quiz in system";
             this.buttonSaveQuizInSystem.UseVisualStyleBackColor = true;
+            this.buttonSaveQuizInSystem.Click += new System.EventHandler(this.buttonSaveQuizInSystem_Click);
             // 
             // buttonCQShowAllQuestions
             // 
             this.buttonCQShowAllQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCQShowAllQuestions.Location = new System.Drawing.Point(21, 278);
+            this.buttonCQShowAllQuestions.Location = new System.Drawing.Point(31, 265);
             this.buttonCQShowAllQuestions.Name = "buttonCQShowAllQuestions";
-            this.buttonCQShowAllQuestions.Size = new System.Drawing.Size(207, 40);
+            this.buttonCQShowAllQuestions.Size = new System.Drawing.Size(207, 82);
             this.buttonCQShowAllQuestions.TabIndex = 4;
             this.buttonCQShowAllQuestions.Text = "Show All Question";
             this.buttonCQShowAllQuestions.UseVisualStyleBackColor = true;
@@ -280,7 +519,7 @@
             this.panelQuestionOptionHoler.Controls.Add(this.textBoxQuestionText);
             this.panelQuestionOptionHoler.Location = new System.Drawing.Point(26, 612);
             this.panelQuestionOptionHoler.Name = "panelQuestionOptionHoler";
-            this.panelQuestionOptionHoler.Size = new System.Drawing.Size(881, 645);
+            this.panelQuestionOptionHoler.Size = new System.Drawing.Size(869, 642);
             this.panelQuestionOptionHoler.TabIndex = 0;
             this.panelQuestionOptionHoler.Paint += new System.Windows.Forms.PaintEventHandler(this.panelQuestionOptionHoler_Paint);
             // 
@@ -640,172 +879,14 @@
             this.textBoxQuestionText.TabIndex = 0;
             this.textBoxQuestionText.Text = "Test";
             // 
-            // buttonCQAShowNextQuestion
+            // label12
             // 
-            this.buttonCQAShowNextQuestion.Location = new System.Drawing.Point(1209, 610);
-            this.buttonCQAShowNextQuestion.Name = "buttonCQAShowNextQuestion";
-            this.buttonCQAShowNextQuestion.Size = new System.Drawing.Size(98, 40);
-            this.buttonCQAShowNextQuestion.TabIndex = 5;
-            this.buttonCQAShowNextQuestion.Text = "Next";
-            this.buttonCQAShowNextQuestion.UseVisualStyleBackColor = true;
-            this.buttonCQAShowNextQuestion.Visible = false;
-            this.buttonCQAShowNextQuestion.Click += new System.EventHandler(this.buttonCQAShowNextQuestion_Click);
-            // 
-            // timerMoveQuestionPanelToRight
-            // 
-            this.timerMoveQuestionPanelToRight.Interval = 5;
-            // 
-            // timerMoveQuestionPanelToLeft
-            // 
-            this.timerMoveQuestionPanelToLeft.Interval = 5;
-            // 
-            // tabPagePrint
-            // 
-            this.tabPagePrint.Controls.Add(this.button8);
-            this.tabPagePrint.Controls.Add(this.button7);
-            this.tabPagePrint.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePrint.Name = "tabPagePrint";
-            this.tabPagePrint.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePrint.Size = new System.Drawing.Size(155, 699);
-            this.tabPagePrint.TabIndex = 2;
-            this.tabPagePrint.Text = "Print";
-            this.tabPagePrint.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(5, 131);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(141, 30);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Print Random Quiz";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(3, 38);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 30);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Print Current Quiz";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // tabPageServer
-            // 
-            this.tabPageServer.Controls.Add(this.button5);
-            this.tabPageServer.Controls.Add(this.button6);
-            this.tabPageServer.Location = new System.Drawing.Point(4, 22);
-            this.tabPageServer.Name = "tabPageServer";
-            this.tabPageServer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServer.Size = new System.Drawing.Size(155, 699);
-            this.tabPageServer.TabIndex = 1;
-            this.tabPageServer.Text = "Server";
-            this.tabPageServer.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 326);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 88);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Upload to Fire Base";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(3, 146);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 88);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Download";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCreateQuiz
-            // 
-            this.tabPageCreateQuiz.Controls.Add(this.buttonScheduleQuiz);
-            this.tabPageCreateQuiz.Controls.Add(this.buttonOpenQuiz);
-            this.tabPageCreateQuiz.Controls.Add(this.buttonCreateNewQuiz);
-            this.tabPageCreateQuiz.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCreateQuiz.Name = "tabPageCreateQuiz";
-            this.tabPageCreateQuiz.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreateQuiz.Size = new System.Drawing.Size(155, 699);
-            this.tabPageCreateQuiz.TabIndex = 0;
-            this.tabPageCreateQuiz.Text = "Create Quiz";
-            this.tabPageCreateQuiz.UseVisualStyleBackColor = true;
-            this.tabPageCreateQuiz.Click += new System.EventHandler(this.tabPageCreateQuiz_Click);
-            // 
-            // buttonScheduleQuiz
-            // 
-            this.buttonScheduleQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonScheduleQuiz.Location = new System.Drawing.Point(6, 392);
-            this.buttonScheduleQuiz.Name = "buttonScheduleQuiz";
-            this.buttonScheduleQuiz.Size = new System.Drawing.Size(141, 95);
-            this.buttonScheduleQuiz.TabIndex = 2;
-            this.buttonScheduleQuiz.Text = "Schedule Quiz";
-            this.buttonScheduleQuiz.UseVisualStyleBackColor = true;
-            this.buttonScheduleQuiz.Click += new System.EventHandler(this.buttonScheduleQuiz_Click);
-            // 
-            // buttonOpenQuiz
-            // 
-            this.buttonOpenQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpenQuiz.Location = new System.Drawing.Point(3, 257);
-            this.buttonOpenQuiz.Name = "buttonOpenQuiz";
-            this.buttonOpenQuiz.Size = new System.Drawing.Size(141, 95);
-            this.buttonOpenQuiz.TabIndex = 1;
-            this.buttonOpenQuiz.Text = "Open Quiz";
-            this.buttonOpenQuiz.UseVisualStyleBackColor = true;
-            this.buttonOpenQuiz.Click += new System.EventHandler(this.buttonOpenQuiz_Click);
-            // 
-            // buttonCreateNewQuiz
-            // 
-            this.buttonCreateNewQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(3, 122);
-            this.buttonCreateNewQuiz.Name = "buttonCreateNewQuiz";
-            this.buttonCreateNewQuiz.Size = new System.Drawing.Size(141, 95);
-            this.buttonCreateNewQuiz.TabIndex = 0;
-            this.buttonCreateNewQuiz.Text = "Create New Quiz";
-            this.buttonCreateNewQuiz.UseVisualStyleBackColor = true;
-            this.buttonCreateNewQuiz.Click += new System.EventHandler(this.buttonCreateNewQuiz_Click);
-            // 
-            // tabControlTeacherOptions
-            // 
-            this.tabControlTeacherOptions.Controls.Add(this.tabPageCreateQuiz);
-            this.tabControlTeacherOptions.Controls.Add(this.tabPageServer);
-            this.tabControlTeacherOptions.Controls.Add(this.tabPagePrint);
-            this.tabControlTeacherOptions.Location = new System.Drawing.Point(11, 38);
-            this.tabControlTeacherOptions.Name = "tabControlTeacherOptions";
-            this.tabControlTeacherOptions.SelectedIndex = 0;
-            this.tabControlTeacherOptions.Size = new System.Drawing.Size(163, 725);
-            this.tabControlTeacherOptions.TabIndex = 2;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.tabControlTeacherOptions);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelCreateNewQuiz);
-            this.splitContainer1.Panel2.Controls.Add(this.splitter1);
-            this.splitContainer1.Size = new System.Drawing.Size(1370, 725);
-            this.splitContainer1.SplitterDistance = 196;
-            this.splitContainer1.TabIndex = 13;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1170, 61);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Create quiz";
             // 
             // TeacherPortal
             // 
@@ -831,7 +912,22 @@
             this.panelScheduleQuiz.PerformLayout();
             this.panelOpenQuiz.ResumeLayout(false);
             this.panelOpenQuiz.PerformLayout();
+            this.tabPagePrint.ResumeLayout(false);
+            this.tabPageServer.ResumeLayout(false);
+            this.tabPageCreateQuiz.ResumeLayout(false);
+            this.tabControlTeacherOptions.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.panelCreateNewQuiz.ResumeLayout(false);
+            this.panelCreateNewQuiz.PerformLayout();
+            this.panelOpenQuizOptionHoler.ResumeLayout(false);
+            this.panelOpenQuizOptionHoler.PerformLayout();
+            this.panelSaveToDbOptionHoler.ResumeLayout(false);
+            this.panelSaveToDbOptionHoler.PerformLayout();
+            this.panelShowAllQuestionsOptionHoler.ResumeLayout(false);
+            this.panelShowAllQuestionsOptionHoler.PerformLayout();
             this.panelSubOptionsOfCreateQuiz.ResumeLayout(false);
             this.panelQuestionOptionHoler.ResumeLayout(false);
             this.panelQuestionOptionHoler.PerformLayout();
@@ -845,14 +941,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPagePrint.ResumeLayout(false);
-            this.tabPageServer.ResumeLayout(false);
-            this.tabPageCreateQuiz.ResumeLayout(false);
-            this.tabControlTeacherOptions.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,37 +958,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelOpenQuiz;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panelCreateNewQuiz;
-        private System.Windows.Forms.Button buttonCQShowPrevQuestion;
         private System.Windows.Forms.Button buttonCQAShowNextQuestion;
-        private System.Windows.Forms.Panel panelQuestionOptionHoler;
-        private System.Windows.Forms.Label labelStartingTextInCenter;
-        private System.Windows.Forms.Button buttonRemoveOptionsFromlist;
-        private System.Windows.Forms.Panel panelTrueFasleOptions;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButtonTrueOption;
-        private System.Windows.Forms.RadioButton radioButtonFalseOptoin;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panelCQMcqsOptionType;
-        private System.Windows.Forms.RichTextBox textBoxCQOptionText;
-        private System.Windows.Forms.Button buttonCQSaveQuestion;
-        private System.Windows.Forms.GroupBox groupBoxAddOptionsPanel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxCOptionsType;
-        private System.Windows.Forms.Button buttonCQAddoption;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCQOptions;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button CQHighLight_BTN;
-        private System.Windows.Forms.Button CQBold_BTN;
-        private System.Windows.Forms.Label Font;
-        private System.Windows.Forms.Button CQItalic_BTN;
-        private System.Windows.Forms.ComboBox comboBoxFontFaimily;
-        private System.Windows.Forms.Button CQUnderLine_BTN;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBoxCQFontSize;
-        private System.Windows.Forms.RichTextBox textBoxQuestionText;
         private System.Windows.Forms.Timer timerMoveQuestionPanelToRight;
         private System.Windows.Forms.Timer timerMoveQuestionPanelToLeft;
         private System.Windows.Forms.TabPage tabPagePrint;
@@ -916,10 +974,47 @@
         private System.Windows.Forms.TabControl tabControlTeacherOptions;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button buttonCQADeleteQuestion;
+        private System.Windows.Forms.Panel panelCreateNewQuiz;
+        private System.Windows.Forms.Panel panelOpenQuizOptionHoler;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panelSaveToDbOptionHoler;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panelShowAllQuestionsOptionHoler;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelSubOptionsOfCreateQuiz;
         private System.Windows.Forms.Button buttonCQAddNewQuestion;
         private System.Windows.Forms.Button buttonSaveQuizInSystem;
         private System.Windows.Forms.Button buttonCQShowAllQuestions;
+        private System.Windows.Forms.Panel panelQuestionOptionHoler;
+        private System.Windows.Forms.Button buttonCQADeleteQuestion;
+        private System.Windows.Forms.Panel panelTrueFasleOptions;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButtonTrueOption;
+        private System.Windows.Forms.RadioButton radioButtonFalseOptoin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelCQMcqsOptionType;
+        private System.Windows.Forms.RichTextBox textBoxCQOptionText;
+        private System.Windows.Forms.Button buttonCQShowPrevQuestion;
+        private System.Windows.Forms.Label labelStartingTextInCenter;
+        private System.Windows.Forms.Button buttonCQSaveQuestion;
+        private System.Windows.Forms.GroupBox groupBoxAddOptionsPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxCOptionsType;
+        private System.Windows.Forms.Button buttonRemoveOptionsFromlist;
+        private System.Windows.Forms.Button buttonCQAddoption;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCQOptions;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button CQHighLight_BTN;
+        private System.Windows.Forms.Button CQBold_BTN;
+        private System.Windows.Forms.Label Font;
+        private System.Windows.Forms.Button CQItalic_BTN;
+        private System.Windows.Forms.ComboBox comboBoxFontFaimily;
+        private System.Windows.Forms.Button CQUnderLine_BTN;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxCQFontSize;
+        private System.Windows.Forms.RichTextBox textBoxQuestionText;
+        private System.Windows.Forms.Label label12;
     }
 }
