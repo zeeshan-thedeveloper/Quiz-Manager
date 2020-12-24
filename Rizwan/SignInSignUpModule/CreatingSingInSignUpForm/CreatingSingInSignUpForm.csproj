@@ -68,6 +68,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DatabaseConnector.cs" />
+    <Compile Include="ErrorInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorInfoDialog.Designer.cs">
+      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="CreateNewQuizDialog.resx">
       <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorInfoDialog.resx">
+      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

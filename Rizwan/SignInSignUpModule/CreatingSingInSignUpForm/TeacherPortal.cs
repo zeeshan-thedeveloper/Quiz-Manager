@@ -31,28 +31,43 @@ namespace CreatingSingInSignUpForm
         private void buttonCreateNewQuiz_Click(object sender, EventArgs e)
         {
             //location 179, 61
-            
+            topicName = null;
             CreateNewQuizDialog createNewQuizDialog = new CreateNewQuizDialog();
             createNewQuizDialog.ShowDialog();
-            panelCreateNewQuiz.Location = new Point(179, 61);
-            panelCreateNewQuiz.Visible = true;
-            panelCreateNewQuiz.BringToFront();
-           // MessageBox.Show("Recievded Topic : " + topicName);
-          
-            
-           
+            if (topicName != null)
+            {
+
+                panelCreateNewQuiz.Location = new Point(179, 61);
+                panelCreateNewQuiz.Visible = true;
+                panelCreateNewQuiz.BringToFront();
+                panelSubOptionsOfCreateQuiz.Visible = true;
+                panelSubOptionsOfCreateQuiz.Location = new Point(905, 31);
+                panelSubOptionsOfCreateQuiz.BringToFront();
+
+            }
+            else
+            {
+
+                ErrorInfoDialog errorInfo = new ErrorInfoDialog("No quiz created..!!");
+                errorInfo.ShowDialog();
+
+            }
+
+
+
         }
 
         private void TeacherPortal_Load(object sender, EventArgs e)
         {
             panelCreateNewQuiz.Visible = false;
-
+            panelSubOptionsOfCreateQuiz.Visible = false;
         }
 
         private void buttonOpenQuiz_Click(object sender, EventArgs e)
         {
             panelOpenQuiz.Location = new Point(179, 61);
             panelOpenQuiz.BringToFront();
+            
         }
 
         private void buttonScheduleQuiz_Click(object sender, EventArgs e)
@@ -66,5 +81,48 @@ namespace CreatingSingInSignUpForm
 
         }
 
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void panelTrueFasleOptions_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void groupBoxAddOptionsPanel_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelQuestionOptionHoler_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButtonTrueOption_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonFalseOptoin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSubOptionsOfCreateQuiz_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
     }
 }

@@ -15,11 +15,12 @@ namespace CreatingSingInSignUpForm
         public CreateNewQuizDialog()
         {
             InitializeComponent();
+            
         }
 
         private void CreateNewQuizDialog_Load(object sender, EventArgs e)
         {
-
+            
             comboBoxSubjectList.Items.Add("Sindhi");
             comboBoxSubjectList.Items.Add("Pakistan Studies");
             comboBoxSubjectList.Items.Add("Urdu");

@@ -22,8 +22,8 @@ namespace CreatingSingInSignUpForm
             comboBoxCOptionsType.SelectedIndex = 0;
             optionsList = new ArrayList();
             questionsList = new ArrayList();
-            labelStartingTextInCenter.Dock = DockStyle.Fill;
-            labelStartingTextInCenter.TextAlign = ContentAlignment.MiddleCenter;
+            ///labelStartingTextInCenter.Dock = DockStyle.Fill;
+           // labelStartingTextInCenter.TextAlign = ContentAlignment.MiddleCenter;
 
         }
 
@@ -65,11 +65,9 @@ namespace CreatingSingInSignUpForm
 
         private void buttonCQAddNewQuestion_Click(object sender, EventArgs e)
         {
-            labelStartingTextInCenter.Visible = false;
-            labelStartingTextInCenter.SendToBack();
-            panelQuestionOptionHoler.Visible = true;
+            panelQuestionOptionHoler.Location = new Point(3, 16);
             panelQuestionOptionHoler.BringToFront();
-            panelQuestionOptionHoler.Location = new Point(42, 13);
+
         }
 
         private void buttonCQADeleteQuestion_Click(object sender, EventArgs e)
@@ -92,7 +90,7 @@ namespace CreatingSingInSignUpForm
             questionsList.Add(new QuizQuestionDataHolder(textBoxCQOptionText.Text, optionsList));
             MessageBox.Show("Saved");
             ClearEveryThingForNewQuestion();
-            SlideQuestionPanelToLeft();
+            //SlideQuestionPanelToLeft();
 
         }
 
@@ -237,7 +235,7 @@ namespace CreatingSingInSignUpForm
             }
         }
 
-        //Utiliyu funtions...
+        //Utiliy funtions...
 
         
 
@@ -246,6 +244,10 @@ namespace CreatingSingInSignUpForm
             optionsList = new ArrayList();
             textBoxCQOptionText.Text = "";
             textBoxQuestionText.Text = "";
+            flowLayoutPanelCQOptions.Controls.Clear();
+
+            timerMoveQuestionPanelToLeft.Interval = 5;
+            timerMoveQuestionPanelToRight.Interval= 5;
 
         }
 
@@ -275,7 +277,7 @@ namespace CreatingSingInSignUpForm
             {
                 timerMoveQuestionPanelToLeft.Stop();
                 panelQuestionOptionHoler.Left = 1000;
-                SlideQuestionPanelToRight();
+                
             }
             else
             {
