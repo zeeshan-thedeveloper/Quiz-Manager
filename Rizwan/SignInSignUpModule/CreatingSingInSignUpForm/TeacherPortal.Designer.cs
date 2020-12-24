@@ -368,7 +368,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelOpenQuizOptionHoler);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateNewQuiz);
             this.splitContainer1.Panel2.Controls.Add(this.splitter1);
             this.splitContainer1.Size = new System.Drawing.Size(1370, 725);
@@ -379,7 +378,7 @@
             // 
             this.panelOpenQuizOptionHoler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelOpenQuizOptionHoler.Controls.Add(this.label11);
-            this.panelOpenQuizOptionHoler.Location = new System.Drawing.Point(3, 51);
+            this.panelOpenQuizOptionHoler.Location = new System.Drawing.Point(649, 492);
             this.panelOpenQuizOptionHoler.Name = "panelOpenQuizOptionHoler";
             this.panelOpenQuizOptionHoler.Size = new System.Drawing.Size(881, 645);
             this.panelOpenQuizOptionHoler.TabIndex = 18;
@@ -396,13 +395,14 @@
             // 
             // panelCreateNewQuiz
             // 
-            this.panelCreateNewQuiz.BackColor = System.Drawing.Color.Blue;
+            this.panelCreateNewQuiz.BackColor = System.Drawing.Color.Lavender;
+            this.panelCreateNewQuiz.Controls.Add(this.panelOpenQuizOptionHoler);
             this.panelCreateNewQuiz.Controls.Add(this.label12);
             this.panelCreateNewQuiz.Controls.Add(this.panelSaveToDbOptionHoler);
             this.panelCreateNewQuiz.Controls.Add(this.panelShowAllQuestionsOptionHoler);
             this.panelCreateNewQuiz.Controls.Add(this.panelSubOptionsOfCreateQuiz);
             this.panelCreateNewQuiz.Controls.Add(this.panelQuestionOptionHoler);
-            this.panelCreateNewQuiz.Location = new System.Drawing.Point(423, 452);
+            this.panelCreateNewQuiz.Location = new System.Drawing.Point(3, 48);
             this.panelCreateNewQuiz.Name = "panelCreateNewQuiz";
             this.panelCreateNewQuiz.Size = new System.Drawing.Size(1158, 661);
             this.panelCreateNewQuiz.TabIndex = 12;
@@ -439,7 +439,7 @@
             // panelShowAllQuestionsOptionHoler
             // 
             this.panelShowAllQuestionsOptionHoler.Controls.Add(this.label1);
-            this.panelShowAllQuestionsOptionHoler.Location = new System.Drawing.Point(62, 574);
+            this.panelShowAllQuestionsOptionHoler.Location = new System.Drawing.Point(14, 28);
             this.panelShowAllQuestionsOptionHoler.Name = "panelShowAllQuestionsOptionHoler";
             this.panelShowAllQuestionsOptionHoler.Size = new System.Drawing.Size(881, 645);
             this.panelShowAllQuestionsOptionHoler.TabIndex = 16;
