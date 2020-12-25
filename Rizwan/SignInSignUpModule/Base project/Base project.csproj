@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44C8784F-570F-4A41-9429-5CE4B72D50EE}</ProjectGuid>
+    <ProjectGuid>{BD106650-1A05-45F0-86A4-E2199CC95E8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CreatingSingInSignUpForm</RootNamespace>
-    <AssemblyName>CreatingSingInSignUpForm</AssemblyName>
+    <RootNamespace>Base_project</RootNamespace>
+    <AssemblyName>Base project</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,18 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FireSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FireSharp.1.1.0\lib\net45\FireSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="FireSharp.Serialization.ServiceStack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FireSharp.Serialization.ServiceStack.1.1.0\lib\net45\FireSharp.Serialization.ServiceStack.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceStack.Text, Version=3.9.70.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Text.3.9.70\lib\net35\ServiceStack.Text.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,21 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateNewQuizDialog.cs">
+    <Compile Include="AddNewQuestionPanelControls.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateNewQuizDialog.Designer.cs">
-      <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateQuizPanelControls.cs">
+    <Compile Include="CreateQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseConnector.cs" />
-    <Compile Include="ErrorInfoDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ErrorInfoDialog.Designer.cs">
-      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
+    <Compile Include="CreateQuizParentWindow.Designer.cs">
+      <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -80,50 +61,31 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuizQuestionDataHolder.cs" />
-    <Compile Include="RightAnswerChooserDialog.cs">
+    <Compile Include="OpenQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RightAnswerChooserDialog.Designer.cs">
-      <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
+    <Compile Include="OpenQuizParentWindow.Designer.cs">
+      <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentPortal.cs">
+    <Compile Include="PrintQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentPortal.Designer.cs">
-      <DependentUpon>StudentPortal.cs</DependentUpon>
+    <Compile Include="PrintQuizParentWindow.Designer.cs">
+      <DependentUpon>PrintQuizParentWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SinInAndSinUpScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SinInAndSinUpScreen.Designer.cs">
-      <DependentUpon>SinInAndSinUpScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TeacherPortal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherPortal.Designer.cs">
-      <DependentUpon>TeacherPortal.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CreateNewQuizDialog.resx">
-      <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateQuizPanelControls.resx">
-      <DependentUpon>CreateQuizPanelControls.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ErrorInfoDialog.resx">
-      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="CreateQuizParentWindow.resx">
+      <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RightAnswerChooserDialog.resx">
-      <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
+    <EmbeddedResource Include="OpenQuizParentWindow.resx">
+      <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentPortal.resx">
-      <DependentUpon>StudentPortal.cs</DependentUpon>
+    <EmbeddedResource Include="PrintQuizParentWindow.resx">
+      <DependentUpon>PrintQuizParentWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,13 +96,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SinInAndSinUpScreen.resx">
-      <DependentUpon>SinInAndSinUpScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeacherPortal.resx">
-      <DependentUpon>TeacherPortal.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

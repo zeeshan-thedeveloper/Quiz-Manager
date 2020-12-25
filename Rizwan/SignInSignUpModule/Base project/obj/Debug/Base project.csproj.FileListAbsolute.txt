@@ -1,0 +1,13 @@
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.exe.config
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.CreateQuizParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.Form1.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.Properties.Resources.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.GenerateResource.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.CoreCompileInputs.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csprojAssemblyReference.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.OpenQuizParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.PrintQuizParentWindow.resources
