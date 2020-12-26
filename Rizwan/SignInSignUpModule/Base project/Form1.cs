@@ -58,11 +58,15 @@ namespace Base_project
         }
         private void HideChild()
         {
-            createQuizParentWindow.Hide();
-            openQuizParentWindow.Hide();
-            printQuizParentWindow.Hide();
+            createQuizParentWindow.Dispose();
+            openQuizParentWindow.Dispose();
+            printQuizParentWindow.Dispose();
+            createQuizParentWindow = new CreateQuizParentWindow();
+            openQuizParentWindow = new OpenQuizParentWindow();
+            printQuizParentWindow = new PrintQuizParentWindow();
+
         }
 
-     
+
     }
 }

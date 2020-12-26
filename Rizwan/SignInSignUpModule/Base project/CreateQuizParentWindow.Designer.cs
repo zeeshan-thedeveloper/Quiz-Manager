@@ -37,6 +37,11 @@
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.splitter4 = new System.Windows.Forms.Splitter();
             this.panelAddNewQuestion = new System.Windows.Forms.Panel();
+            this.panelTrueFalseOptions = new System.Windows.Forms.Panel();
+            this.radioButtonFalseOption = new System.Windows.Forms.RadioButton();
+            this.radioButtonTrueOption = new System.Windows.Forms.RadioButton();
+            this.panelMsqsTypeOptions = new System.Windows.Forms.Panel();
+            this.richTextBoxOptiontext = new System.Windows.Forms.RichTextBox();
             this.buttonCQSaveQuestion = new System.Windows.Forms.Button();
             this.groupBoxAddOptionsPanel = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,10 +63,12 @@
             this.textBoxQuestionText = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelShowAllQuestions = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelMcqtypeOption = new System.Windows.Forms.Panel();
             this.panelSubOptionsOfCreateQuiz.SuspendLayout();
             this.panelAddNewQuestion.SuspendLayout();
+            this.panelTrueFalseOptions.SuspendLayout();
+            this.panelMsqsTypeOptions.SuspendLayout();
             this.groupBoxAddOptionsPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,7 +81,7 @@
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonSaveQuizInSystem);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQShowAllQuestions);
             this.panelSubOptionsOfCreateQuiz.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelSubOptionsOfCreateQuiz.Location = new System.Drawing.Point(794, 0);
+            this.panelSubOptionsOfCreateQuiz.Location = new System.Drawing.Point(709, 0);
             this.panelSubOptionsOfCreateQuiz.Name = "panelSubOptionsOfCreateQuiz";
             this.panelSubOptionsOfCreateQuiz.Size = new System.Drawing.Size(276, 526);
             this.panelSubOptionsOfCreateQuiz.TabIndex = 16;
@@ -125,14 +132,14 @@
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter2.Location = new System.Drawing.Point(27, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(767, 27);
+            this.splitter2.Size = new System.Drawing.Size(682, 27);
             this.splitter2.TabIndex = 18;
             this.splitter2.TabStop = false;
             // 
             // splitter3
             // 
             this.splitter3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter3.Location = new System.Drawing.Point(767, 27);
+            this.splitter3.Location = new System.Drawing.Point(682, 27);
             this.splitter3.Name = "splitter3";
             this.splitter3.Size = new System.Drawing.Size(27, 499);
             this.splitter3.TabIndex = 19;
@@ -143,14 +150,15 @@
             this.splitter4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitter4.Location = new System.Drawing.Point(27, 499);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(740, 27);
+            this.splitter4.Size = new System.Drawing.Size(655, 27);
             this.splitter4.TabIndex = 20;
             this.splitter4.TabStop = false;
             // 
             // panelAddNewQuestion
             // 
             this.panelAddNewQuestion.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelAddNewQuestion.Controls.Add(this.panelMcqtypeOption);
+            this.panelAddNewQuestion.Controls.Add(this.panelTrueFalseOptions);
+            this.panelAddNewQuestion.Controls.Add(this.panelMsqsTypeOptions);
             this.panelAddNewQuestion.Controls.Add(this.buttonCQSaveQuestion);
             this.panelAddNewQuestion.Controls.Add(this.groupBoxAddOptionsPanel);
             this.panelAddNewQuestion.Controls.Add(this.groupBox2);
@@ -158,10 +166,62 @@
             this.panelAddNewQuestion.Controls.Add(this.groupBox1);
             this.panelAddNewQuestion.Controls.Add(this.textBoxQuestionText);
             this.panelAddNewQuestion.Controls.Add(this.label1);
-            this.panelAddNewQuestion.Location = new System.Drawing.Point(33, 33);
+            this.panelAddNewQuestion.Location = new System.Drawing.Point(773, 431);
             this.panelAddNewQuestion.Name = "panelAddNewQuestion";
             this.panelAddNewQuestion.Size = new System.Drawing.Size(721, 460);
             this.panelAddNewQuestion.TabIndex = 21;
+            // 
+            // panelTrueFalseOptions
+            // 
+            this.panelTrueFalseOptions.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTrueFalseOptions.Controls.Add(this.radioButtonFalseOption);
+            this.panelTrueFalseOptions.Controls.Add(this.radioButtonTrueOption);
+            this.panelTrueFalseOptions.Location = new System.Drawing.Point(699, 287);
+            this.panelTrueFalseOptions.Name = "panelTrueFalseOptions";
+            this.panelTrueFalseOptions.Size = new System.Drawing.Size(200, 100);
+            this.panelTrueFalseOptions.TabIndex = 14;
+            this.panelTrueFalseOptions.Visible = false;
+            // 
+            // radioButtonFalseOption
+            // 
+            this.radioButtonFalseOption.AutoSize = true;
+            this.radioButtonFalseOption.Location = new System.Drawing.Point(67, 51);
+            this.radioButtonFalseOption.Name = "radioButtonFalseOption";
+            this.radioButtonFalseOption.Size = new System.Drawing.Size(50, 17);
+            this.radioButtonFalseOption.TabIndex = 1;
+            this.radioButtonFalseOption.TabStop = true;
+            this.radioButtonFalseOption.Text = "False";
+            this.radioButtonFalseOption.UseVisualStyleBackColor = true;
+            this.radioButtonFalseOption.CheckedChanged += new System.EventHandler(this.radioButtonFalseOption_CheckedChanged);
+            // 
+            // radioButtonTrueOption
+            // 
+            this.radioButtonTrueOption.AutoSize = true;
+            this.radioButtonTrueOption.Location = new System.Drawing.Point(68, 27);
+            this.radioButtonTrueOption.Name = "radioButtonTrueOption";
+            this.radioButtonTrueOption.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonTrueOption.TabIndex = 0;
+            this.radioButtonTrueOption.TabStop = true;
+            this.radioButtonTrueOption.Text = "True";
+            this.radioButtonTrueOption.UseVisualStyleBackColor = true;
+            // 
+            // panelMsqsTypeOptions
+            // 
+            this.panelMsqsTypeOptions.BackColor = System.Drawing.Color.Coral;
+            this.panelMsqsTypeOptions.Controls.Add(this.richTextBoxOptiontext);
+            this.panelMsqsTypeOptions.Location = new System.Drawing.Point(699, 177);
+            this.panelMsqsTypeOptions.Name = "panelMsqsTypeOptions";
+            this.panelMsqsTypeOptions.Size = new System.Drawing.Size(200, 100);
+            this.panelMsqsTypeOptions.TabIndex = 13;
+            this.panelMsqsTypeOptions.Visible = false;
+            // 
+            // richTextBoxOptiontext
+            // 
+            this.richTextBoxOptiontext.Location = new System.Drawing.Point(0, 0);
+            this.richTextBoxOptiontext.Name = "richTextBoxOptiontext";
+            this.richTextBoxOptiontext.Size = new System.Drawing.Size(200, 96);
+            this.richTextBoxOptiontext.TabIndex = 0;
+            this.richTextBoxOptiontext.Text = "";
             // 
             // buttonCQSaveQuestion
             // 
@@ -199,6 +259,7 @@
             // 
             // comboBoxCOptionsType
             // 
+            this.comboBoxCOptionsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCOptionsType.FormattingEnabled = true;
             this.comboBoxCOptionsType.Items.AddRange(new object[] {
             "Mcqs",
@@ -207,7 +268,6 @@
             this.comboBoxCOptionsType.Name = "comboBoxCOptionsType";
             this.comboBoxCOptionsType.Size = new System.Drawing.Size(148, 26);
             this.comboBoxCOptionsType.TabIndex = 7;
-            this.comboBoxCOptionsType.Text = "Select type";
             this.comboBoxCOptionsType.SelectedIndexChanged += new System.EventHandler(this.comboBoxCOptionsType_SelectedIndexChanged);
             // 
             // buttonRemoveOptionsFromlist
@@ -426,11 +486,21 @@
             // panelShowAllQuestions
             // 
             this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
+            this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
             this.panelShowAllQuestions.Controls.Add(this.label2);
-            this.panelShowAllQuestions.Location = new System.Drawing.Point(773, 338);
+            this.panelShowAllQuestions.Location = new System.Drawing.Point(33, 33);
             this.panelShowAllQuestions.Name = "panelShowAllQuestions";
-            this.panelShowAllQuestions.Size = new System.Drawing.Size(728, 460);
+            this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
             this.panelShowAllQuestions.TabIndex = 22;
+            this.panelShowAllQuestions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestions_Paint);
+            // 
+            // flowLayoutPanelCreateQuizPanelShowAllListItemHolder
+            // 
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Location = new System.Drawing.Point(17, 26);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Name = "flowLayoutPanelCreateQuizPanelShowAllListItemHolder";
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Size = new System.Drawing.Size(612, 417);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.TabIndex = 8;
             // 
             // label2
             // 
@@ -441,18 +511,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Show all questions";
             // 
-            // panelMcqtypeOption
-            // 
-            this.panelMcqtypeOption.Location = new System.Drawing.Point(699, 171);
-            this.panelMcqtypeOption.Name = "panelMcqtypeOption";
-            this.panelMcqtypeOption.Size = new System.Drawing.Size(200, 100);
-            this.panelMcqtypeOption.TabIndex = 13;
-            // 
             // CreateQuizParentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 526);
+            this.ClientSize = new System.Drawing.Size(985, 526);
             this.Controls.Add(this.panelShowAllQuestions);
             this.Controls.Add(this.panelAddNewQuestion);
             this.Controls.Add(this.splitter4);
@@ -466,6 +529,9 @@
             this.panelSubOptionsOfCreateQuiz.ResumeLayout(false);
             this.panelAddNewQuestion.ResumeLayout(false);
             this.panelAddNewQuestion.PerformLayout();
+            this.panelTrueFalseOptions.ResumeLayout(false);
+            this.panelTrueFalseOptions.PerformLayout();
+            this.panelMsqsTypeOptions.ResumeLayout(false);
             this.groupBoxAddOptionsPanel.ResumeLayout(false);
             this.groupBoxAddOptionsPanel.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -510,6 +576,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxCQFontSize;
         private System.Windows.Forms.RichTextBox textBoxQuestionText;
-        private System.Windows.Forms.Panel panelMcqtypeOption;
+        private System.Windows.Forms.Panel panelMsqsTypeOptions;
+        private System.Windows.Forms.Panel panelTrueFalseOptions;
+        private System.Windows.Forms.RadioButton radioButtonFalseOption;
+        private System.Windows.Forms.RadioButton radioButtonTrueOption;
+        private System.Windows.Forms.RichTextBox richTextBoxOptiontext;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCreateQuizPanelShowAllListItemHolder;
     }
 }
