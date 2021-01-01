@@ -193,9 +193,17 @@ namespace Base_project
 
         private void buttonCQAddoption_Click(object sender, EventArgs e)
         {
+            if (richTextBoxOptiontext.Text.Length <= 0)
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoTextFoundInOptionTextBoxErrorMessage);
+
+                return;
+            }
+
             //Here we will add choice options
             if (comboBoxCOptionsType.SelectedIndex == 0 && ! doesFlowLayoutContainRadioButton())
             {
+
                 //Mcqs
                 CheckBox checkBox = new CheckBox();
                 checkBox.Text = richTextBoxOptiontext.Text;

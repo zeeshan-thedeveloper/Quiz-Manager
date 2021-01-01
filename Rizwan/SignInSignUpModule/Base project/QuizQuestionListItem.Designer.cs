@@ -80,6 +80,7 @@
             // 
             // flowLayoutPanelListoptionHolder
             // 
+            this.flowLayoutPanelListoptionHolder.AutoScroll = true;
             this.flowLayoutPanelListoptionHolder.Location = new System.Drawing.Point(15, 95);
             this.flowLayoutPanelListoptionHolder.Name = "flowLayoutPanelListoptionHolder";
             this.flowLayoutPanelListoptionHolder.Size = new System.Drawing.Size(464, 42);

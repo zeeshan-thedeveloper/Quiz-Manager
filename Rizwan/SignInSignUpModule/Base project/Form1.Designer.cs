@@ -32,13 +32,15 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlTeacherOptions = new System.Windows.Forms.TabControl();
             this.tabPageCreateQuiz = new System.Windows.Forms.TabPage();
-            this.buttonPrint = new System.Windows.Forms.Button();
+            this.buttonAnalytics = new System.Windows.Forms.Button();
+            this.buttonAddSubject = new System.Windows.Forms.Button();
             this.buttonOpenQuiz = new System.Windows.Forms.Button();
             this.buttonCreateNewQuiz = new System.Windows.Forms.Button();
             this.tabPageServer = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tabPagePrint = new System.Windows.Forms.TabPage();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -82,7 +84,8 @@
             // 
             // tabPageCreateQuiz
             // 
-            this.tabPageCreateQuiz.Controls.Add(this.buttonPrint);
+            this.tabPageCreateQuiz.Controls.Add(this.buttonAnalytics);
+            this.tabPageCreateQuiz.Controls.Add(this.buttonAddSubject);
             this.tabPageCreateQuiz.Controls.Add(this.buttonOpenQuiz);
             this.tabPageCreateQuiz.Controls.Add(this.buttonCreateNewQuiz);
             this.tabPageCreateQuiz.Location = new System.Drawing.Point(4, 22);
@@ -93,21 +96,32 @@
             this.tabPageCreateQuiz.Text = "Create Quiz";
             this.tabPageCreateQuiz.UseVisualStyleBackColor = true;
             // 
-            // buttonPrint
+            // buttonAnalytics
             // 
-            this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrint.Location = new System.Drawing.Point(3, 408);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(141, 95);
-            this.buttonPrint.TabIndex = 2;
-            this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            this.buttonAnalytics.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnalytics.Location = new System.Drawing.Point(6, 528);
+            this.buttonAnalytics.Name = "buttonAnalytics";
+            this.buttonAnalytics.Size = new System.Drawing.Size(141, 95);
+            this.buttonAnalytics.TabIndex = 3;
+            this.buttonAnalytics.Text = "Analytics";
+            this.buttonAnalytics.UseVisualStyleBackColor = true;
+            this.buttonAnalytics.Click += new System.EventHandler(this.buttonAnalytics_Click);
+            // 
+            // buttonAddSubject
+            // 
+            this.buttonAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddSubject.Location = new System.Drawing.Point(6, 75);
+            this.buttonAddSubject.Name = "buttonAddSubject";
+            this.buttonAddSubject.Size = new System.Drawing.Size(141, 95);
+            this.buttonAddSubject.TabIndex = 2;
+            this.buttonAddSubject.Text = "Add Subject";
+            this.buttonAddSubject.UseVisualStyleBackColor = true;
+            this.buttonAddSubject.Click += new System.EventHandler(this.buttonAddSubject_Click);
             // 
             // buttonOpenQuiz
             // 
             this.buttonOpenQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpenQuiz.Location = new System.Drawing.Point(3, 257);
+            this.buttonOpenQuiz.Location = new System.Drawing.Point(8, 377);
             this.buttonOpenQuiz.Name = "buttonOpenQuiz";
             this.buttonOpenQuiz.Size = new System.Drawing.Size(141, 95);
             this.buttonOpenQuiz.TabIndex = 1;
@@ -118,7 +132,7 @@
             // buttonCreateNewQuiz
             // 
             this.buttonCreateNewQuiz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(3, 122);
+            this.buttonCreateNewQuiz.Location = new System.Drawing.Point(6, 226);
             this.buttonCreateNewQuiz.Name = "buttonCreateNewQuiz";
             this.buttonCreateNewQuiz.Size = new System.Drawing.Size(141, 95);
             this.buttonCreateNewQuiz.TabIndex = 0;
@@ -160,6 +174,7 @@
             // 
             // tabPagePrint
             // 
+            this.tabPagePrint.Controls.Add(this.buttonPrint);
             this.tabPagePrint.Controls.Add(this.button8);
             this.tabPagePrint.Controls.Add(this.button7);
             this.tabPagePrint.Location = new System.Drawing.Point(4, 22);
@@ -169,6 +184,17 @@
             this.tabPagePrint.TabIndex = 2;
             this.tabPagePrint.Text = "Print";
             this.tabPagePrint.UseVisualStyleBackColor = true;
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.Location = new System.Drawing.Point(8, 317);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(141, 95);
+            this.buttonPrint.TabIndex = 10;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click_1);
             // 
             // button8
             // 
@@ -257,7 +283,6 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControlTeacherOptions;
         private System.Windows.Forms.TabPage tabPageCreateQuiz;
-        private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Button buttonOpenQuiz;
         private System.Windows.Forms.Button buttonCreateNewQuiz;
         private System.Windows.Forms.TabPage tabPageServer;
@@ -270,6 +295,9 @@
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter3;
         private System.Windows.Forms.Splitter splitter4;
+        private System.Windows.Forms.Button buttonAnalytics;
+        private System.Windows.Forms.Button buttonAddSubject;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }
 

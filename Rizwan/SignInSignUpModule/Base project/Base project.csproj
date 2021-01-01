@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +49,18 @@
   <ItemGroup>
     <Compile Include="AddNewQuestionPanelControls.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectParentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectParentWindow.Designer.cs">
+      <DependentUpon>AddSubjectParentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyticsParentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyticsParentWindow.Designer.cs">
+      <DependentUpon>AnalyticsParentWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateQuizParentWindow.cs">
       <SubType>Form</SubType>
@@ -95,18 +108,12 @@
     <Compile Include="QuizQuestionListItem.Designer.cs">
       <DependentUpon>QuizQuestionListItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="RightAnswerChooserDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RightAnswerChooserDialog.Designer.cs">
-      <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="AddSubjectParentWindow.resx">
+      <DependentUpon>AddSubjectParentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyticsParentWindow.resx">
+      <DependentUpon>AnalyticsParentWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateQuizParentWindow.resx">
       <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,12 +143,6 @@
     </Compile>
     <EmbeddedResource Include="QuizQuestionListItem.resx">
       <DependentUpon>QuizQuestionListItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RightAnswerChooserDialog.resx">
-      <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -33,6 +33,7 @@ namespace Base_project
 
         static public String NotQuestionErrorMessage { set { } get { return "Please add question"; } }
 
+        static public String NoTextFoundInOptionTextBoxErrorMessage { set { } get { return" Please write something in option then add "; } }
 
 
         public static void CreateErrorMessage(String message)

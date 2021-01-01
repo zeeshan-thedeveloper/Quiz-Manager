@@ -13,17 +13,21 @@ namespace Base_project
 {
     public partial class Form1 : Form
     {
+
         CreateQuizParentWindow createQuizParentWindow;
         OpenQuizParentWindow openQuizParentWindow;
         PrintQuizParentWindow printQuizParentWindow;
-        
+        AddSubjectParentWindow addSubjectParentWindow;
+        AnalyticsParentWindow analyticsParentWindow;
+
         public Form1()
         {
             InitializeComponent();
             createQuizParentWindow = new CreateQuizParentWindow();
             openQuizParentWindow = new OpenQuizParentWindow();
             printQuizParentWindow = new PrintQuizParentWindow();
-
+            addSubjectParentWindow = new AddSubjectParentWindow();
+            analyticsParentWindow = new AnalyticsParentWindow();
             GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = true;
         }
 
@@ -101,7 +105,8 @@ namespace Base_project
 
 
         }
-        private void buttonPrint_Click(object sender, EventArgs e)
+        
+        private void buttonPrint_Click_1(object sender, EventArgs e)
         {
             if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
@@ -117,20 +122,59 @@ namespace Base_project
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
             }
 
+        }
 
-          }
+        private void buttonAddSubject_Click(object sender, EventArgs e)
+        {
+            if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
+            {
+                HideChild();
+                addSubjectParentWindow.MdiParent = this;
+                addSubjectParentWindow.Show();
+                addSubjectParentWindow.BringToFront();
+                addSubjectParentWindow.Dock = DockStyle.Top;
+
+
+            }
+            else
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
+            }
+        }
+
+        private void buttonAnalytics_Click(object sender, EventArgs e)
+        {
+            if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
+            {
+                HideChild();
+
+               analyticsParentWindow.MdiParent = this;
+               analyticsParentWindow.Show();
+               analyticsParentWindow.BringToFront();
+               analyticsParentWindow.Dock = DockStyle.Top;
+            }
+            else
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
+            }
+        }
         private void HideChild()
         {
 
             createQuizParentWindow.Dispose();
             openQuizParentWindow.Dispose();
             printQuizParentWindow.Dispose();
+            addSubjectParentWindow.Dispose();
+            analyticsParentWindow.Dispose();
+
             createQuizParentWindow = new CreateQuizParentWindow();
             openQuizParentWindow = new OpenQuizParentWindow();
             printQuizParentWindow = new PrintQuizParentWindow();
+            addSubjectParentWindow = new AddSubjectParentWindow();
+            analyticsParentWindow = new AnalyticsParentWindow();
 
         }
 
-
+       
     }
 }

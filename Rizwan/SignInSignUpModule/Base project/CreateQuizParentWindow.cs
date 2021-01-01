@@ -94,8 +94,6 @@ namespace Base_project
 
                 flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Controls.Add(questionListItem);
                 questionListItem.Width = flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Width;
-
-
             }
            
 
