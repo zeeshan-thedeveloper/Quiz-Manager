@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.panelSubOptionsOfCreateQuiz = new System.Windows.Forms.Panel();
+            this.panelShowAllQuestions = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.buttonCQAddNewQuestion = new System.Windows.Forms.Button();
             this.buttonSaveQuizInSystem = new System.Windows.Forms.Button();
             this.buttonCQShowAllQuestions = new System.Windows.Forms.Button();
+            this.labelTopicName = new System.Windows.Forms.Label();
+            this.labelSubjectName = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
@@ -62,29 +67,58 @@
             this.comboBoxCQFontSize = new System.Windows.Forms.ComboBox();
             this.textBoxQuestionText = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelShowAllQuestions = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelSubOptionsOfCreateQuiz.SuspendLayout();
+            this.panelShowAllQuestions.SuspendLayout();
             this.panelAddNewQuestion.SuspendLayout();
             this.panelTrueFalseOptions.SuspendLayout();
             this.panelMsqsTypeOptions.SuspendLayout();
             this.groupBoxAddOptionsPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panelShowAllQuestions.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSubOptionsOfCreateQuiz
             // 
+            this.panelSubOptionsOfCreateQuiz.Controls.Add(this.labelTopicName);
+            this.panelSubOptionsOfCreateQuiz.Controls.Add(this.panelShowAllQuestions);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQAddNewQuestion);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonSaveQuizInSystem);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQShowAllQuestions);
+            this.panelSubOptionsOfCreateQuiz.Controls.Add(this.labelSubjectName);
             this.panelSubOptionsOfCreateQuiz.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelSubOptionsOfCreateQuiz.Location = new System.Drawing.Point(709, 0);
             this.panelSubOptionsOfCreateQuiz.Name = "panelSubOptionsOfCreateQuiz";
             this.panelSubOptionsOfCreateQuiz.Size = new System.Drawing.Size(276, 526);
             this.panelSubOptionsOfCreateQuiz.TabIndex = 16;
+            // 
+            // panelShowAllQuestions
+            // 
+            this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
+            this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
+            this.panelShowAllQuestions.Controls.Add(this.label2);
+            this.panelShowAllQuestions.Location = new System.Drawing.Point(67, 371);
+            this.panelShowAllQuestions.Name = "panelShowAllQuestions";
+            this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
+            this.panelShowAllQuestions.TabIndex = 22;
+            this.panelShowAllQuestions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestions_Paint);
+            // 
+            // flowLayoutPanelCreateQuizPanelShowAllListItemHolder
+            // 
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.AutoScroll = true;
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Location = new System.Drawing.Point(17, 26);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Name = "flowLayoutPanelCreateQuizPanelShowAllListItemHolder";
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Size = new System.Drawing.Size(612, 417);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Show all questions";
             // 
             // buttonCQAddNewQuestion
             // 
@@ -118,6 +152,26 @@
             this.buttonCQShowAllQuestions.Text = "Show All Question";
             this.buttonCQShowAllQuestions.UseVisualStyleBackColor = true;
             this.buttonCQShowAllQuestions.Click += new System.EventHandler(this.buttonCQShowAllQuestions_Click);
+            // 
+            // labelTopicName
+            // 
+            this.labelTopicName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTopicName.Location = new System.Drawing.Point(14, 45);
+            this.labelTopicName.Name = "labelTopicName";
+            this.labelTopicName.Size = new System.Drawing.Size(250, 21);
+            this.labelTopicName.TabIndex = 24;
+            this.labelTopicName.Text = "label3";
+            this.labelTopicName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSubjectName
+            // 
+            this.labelSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubjectName.Location = new System.Drawing.Point(14, 9);
+            this.labelSubjectName.Name = "labelSubjectName";
+            this.labelSubjectName.Size = new System.Drawing.Size(250, 21);
+            this.labelSubjectName.TabIndex = 23;
+            this.labelSubjectName.Text = "label3";
+            this.labelSubjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitter1
             // 
@@ -166,7 +220,7 @@
             this.panelAddNewQuestion.Controls.Add(this.groupBox1);
             this.panelAddNewQuestion.Controls.Add(this.textBoxQuestionText);
             this.panelAddNewQuestion.Controls.Add(this.label1);
-            this.panelAddNewQuestion.Location = new System.Drawing.Point(773, 431);
+            this.panelAddNewQuestion.Location = new System.Drawing.Point(27, 33);
             this.panelAddNewQuestion.Name = "panelAddNewQuestion";
             this.panelAddNewQuestion.Size = new System.Drawing.Size(721, 460);
             this.panelAddNewQuestion.TabIndex = 21;
@@ -483,40 +537,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add new Question";
             // 
-            // panelShowAllQuestions
-            // 
-            this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
-            this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
-            this.panelShowAllQuestions.Controls.Add(this.label2);
-            this.panelShowAllQuestions.Location = new System.Drawing.Point(33, 33);
-            this.panelShowAllQuestions.Name = "panelShowAllQuestions";
-            this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
-            this.panelShowAllQuestions.TabIndex = 22;
-            this.panelShowAllQuestions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestions_Paint);
-            // 
-            // flowLayoutPanelCreateQuizPanelShowAllListItemHolder
-            // 
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Location = new System.Drawing.Point(17, 26);
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Name = "flowLayoutPanelCreateQuizPanelShowAllListItemHolder";
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Size = new System.Drawing.Size(612, 417);
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Show all questions";
-            // 
             // CreateQuizParentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 526);
-            this.Controls.Add(this.panelShowAllQuestions);
             this.Controls.Add(this.panelAddNewQuestion);
             this.Controls.Add(this.splitter4);
             this.Controls.Add(this.splitter3);
@@ -526,7 +551,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "CreateQuizParentWindow";
             this.Text = "CreateQuizParentWindow";
+            this.Load += new System.EventHandler(this.CreateQuizParentWindow_Load);
             this.panelSubOptionsOfCreateQuiz.ResumeLayout(false);
+            this.panelShowAllQuestions.ResumeLayout(false);
+            this.panelShowAllQuestions.PerformLayout();
             this.panelAddNewQuestion.ResumeLayout(false);
             this.panelAddNewQuestion.PerformLayout();
             this.panelTrueFalseOptions.ResumeLayout(false);
@@ -537,8 +565,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panelShowAllQuestions.ResumeLayout(false);
-            this.panelShowAllQuestions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -582,5 +608,7 @@
         private System.Windows.Forms.RadioButton radioButtonTrueOption;
         private System.Windows.Forms.RichTextBox richTextBoxOptiontext;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCreateQuizPanelShowAllListItemHolder;
+        private System.Windows.Forms.Label labelSubjectName;
+        private System.Windows.Forms.Label labelTopicName;
     }
 }

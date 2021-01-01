@@ -49,11 +49,84 @@ namespace Base_project
 
         private void buttonCQAddoption_Click(object sender, EventArgs e)
         {
+            //Here we will add choice options
+            if (comboBoxCOptionsType.SelectedIndex == 0)
+            {
+                //Mcqs
+                CheckBox checkBox = new CheckBox();
+                checkBox.Text = richTextBoxOptiontext.Text;
+                checkBox.Width = ((checkBox.Text).Length)*50;
+                checkBox.Height = 20;
+                flowLayoutPanelCQOptions.Controls.Add(checkBox);
+                    
+            }
+            else
+            {
+                //True/False
+                RadioButton rbTrue = new RadioButton();
+                RadioButton rbFalse = new RadioButton();
+
+                rbTrue.Width = 100;
+                rbTrue.Height = 20;
+                rbTrue.Text = "True";
+                rbTrue.Checked= radioButtonTrueOption.Checked;
+
+                flowLayoutPanelCQOptions.Controls.Add(rbTrue);
+
+                
+                rbFalse.Width = 100;
+                rbFalse.Height = 20;
+                rbFalse.Text = "False";
+                rbFalse.Checked = radioButtonFalseOption.Checked;
+
+                flowLayoutPanelCQOptions.Controls.Add(rbFalse);
+
+            }
 
         }
 
         private void buttonRemoveOptionsFromlist_Click(object sender, EventArgs e)
         {
+            int index = 0;
+            foreach (var control in flowLayoutPanelCQOptions.Controls)
+            {
+                if (control is RadioButton)
+                {
+                    flowLayoutPanelCQOptions.Controls.Clear();
+                    break;
+                }
+                else
+                {
+                    CheckBox checkBox = control as CheckBox;
+                    if (checkBox.Checked)
+                    {
+                        flowLayoutPanelCQOptions.Controls.RemoveAt(index);
+                    }
+                }
+                index++;
+            }
+        }
+
+        private void comboBoxCOptionsType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCOptionsType.SelectedIndex == 0)
+            {
+                groupBoxAddOptionsPanel.Controls.Add(panelMsqsTypeOptions);
+
+                panelMsqsTypeOptions.Location = new Point(19, 73);
+                panelMsqsTypeOptions.BringToFront();
+                panelMsqsTypeOptions.Visible = true;
+
+            }
+            else if (comboBoxCOptionsType.SelectedIndex == 1)
+            {
+                groupBoxAddOptionsPanel.Controls.Add(panelTrueFalseOptions);
+
+                panelTrueFalseOptions.Location = new Point(19, 73);
+                panelTrueFalseOptions.BringToFront();
+                panelTrueFalseOptions.Visible = true;
+            }
+
 
         }
 
@@ -104,10 +177,6 @@ namespace Base_project
         }
 
         //Utiliy funtions...
-
-
-
-       
 
     }
 }

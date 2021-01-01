@@ -49,23 +49,18 @@
     <Compile Include="AddNewQuestionPanelControls.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateNewQuizDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateNewQuizDialog.Designer.cs">
-      <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateQuizParentWindow.Designer.cs">
       <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ErrorInfoDialog.cs">
+    <Compile Include="DatasetManager.cs" />
+    <Compile Include="ErrorInforDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ErrorInfoDialog.Designer.cs">
-      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
+    <Compile Include="ErrorInforDialog.Designer.cs">
+      <DependentUpon>ErrorInforDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -73,6 +68,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetQuizTopicNameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetQuizTopicNameWindow.Designer.cs">
+      <DependentUpon>GetQuizTopicNameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalStaticVariables.cs" />
     <Compile Include="OpenQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,17 +101,17 @@
     <Compile Include="RightAnswerChooserDialog.Designer.cs">
       <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateNewQuizDialog.resx">
-      <DependentUpon>CreateNewQuizDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateQuizParentWindow.resx">
       <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ErrorInfoDialog.resx">
-      <DependentUpon>ErrorInfoDialog.cs</DependentUpon>
+    <EmbeddedResource Include="ErrorInforDialog.resx">
+      <DependentUpon>ErrorInforDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetQuizTopicNameWindow.resx">
+      <DependentUpon>GetQuizTopicNameWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuizParentWindow.resx">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>

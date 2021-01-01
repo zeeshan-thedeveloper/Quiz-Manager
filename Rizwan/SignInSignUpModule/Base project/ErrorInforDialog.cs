@@ -8,20 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CreatingSingInSignUpForm
+namespace Base_project
 {
-    public partial class ErrorInfoDialog : Form
+    public partial class ErrorInforDialog : Form
     {
-
-        public ErrorInfoDialog(String errorMessage)
+       
+        public ErrorInforDialog(String erroMsg)
         {
             InitializeComponent();
-            labelerrorInfo.Text = errorMessage;
+            labelErrorMsg.Text = erroMsg;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
         }
     }
 }

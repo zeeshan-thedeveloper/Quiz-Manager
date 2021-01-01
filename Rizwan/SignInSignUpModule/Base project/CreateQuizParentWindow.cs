@@ -12,15 +12,26 @@ namespace Base_project
 {
     public partial class CreateQuizParentWindow : Form
     {
-       
+
         public CreateQuizParentWindow()
         {
             InitializeComponent();
+            Console.WriteLine("New quiz creation window is created with topic name" + GlobalStaticVariables.currentTopicName);
             HideChild();
-        }
 
-        private void buttonCQAddNewQuestion_Click(object sender, EventArgs e)
+          
+           
+
+
+        }
+        private void CreateQuizParentWindow_Load(object sender, EventArgs e)
         {
+            labelSubjectName.Text = "Topic Name: "+GlobalStaticVariables.currentTopicName;
+            labelTopicName.Text ="Subject Name: "+ GlobalStaticVariables.currentSubjectName;
+        }
+            private void buttonCQAddNewQuestion_Click(object sender, EventArgs e)
+        {
+
             panelAddNewQuestion.Show();
             panelAddNewQuestion.Location = new Point(33, 33);
             panelAddNewQuestion.BringToFront();
@@ -57,7 +68,6 @@ namespace Base_project
 
             QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
 
-
             //Question 2
              quizQuestionListItem = new QuizQuestionListItem();
             quizQuestionListItem.QuizSubject = "Programming pro";
@@ -67,7 +77,7 @@ namespace Base_project
             //options of question 2..
              options = new ArrayList();
 
-             checkBox = new CheckBox();
+            checkBox = new CheckBox();
             checkBox.Text = "Options B";
             checkBox.Height = 15;
             checkBox.Width = 50;
@@ -80,12 +90,35 @@ namespace Base_project
             QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
 
 
+            //Question 3
+
+            //Question 2
+            quizQuestionListItem = new QuizQuestionListItem();
+            quizQuestionListItem.QuizSubject = "Programming pro";
+            quizQuestionListItem.QuizTitle = "Quiz 2";
+            quizQuestionListItem.QuizQuestionData = " Hey thi is the queztio";
+
+            //options of question 2..
+            options = new ArrayList();
+
+            checkBox = new CheckBox();
+            checkBox.Text = "Options B";
+            checkBox.Height = 15;
+            checkBox.Width = 50;
+
+            options.Add(checkBox);
+
+
+            quizQuestionListItem.Options = options;
+
+            QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
 
             foreach (QuizQuestionListItem questionListItem in QueztionsItems)
             {
 
                 flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Controls.Add(questionListItem);
                 questionListItem.Width = flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Width;
+
 
             }
             
@@ -105,28 +138,7 @@ namespace Base_project
             panelShowAllQuestions.Hide();
         }
         
-        private void comboBoxCOptionsType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxCOptionsType.SelectedIndex == 0)
-            {
-                groupBoxAddOptionsPanel.Controls.Add(panelMsqsTypeOptions);
-
-                panelMsqsTypeOptions.Location = new Point(19, 73);
-                panelMsqsTypeOptions.BringToFront();
-                panelMsqsTypeOptions.Visible = true;
-
-            }
-            else if (comboBoxCOptionsType.SelectedIndex == 1)
-            {
-                groupBoxAddOptionsPanel.Controls.Add(panelTrueFalseOptions);
-
-                panelTrueFalseOptions.Location = new Point(19, 73);
-                panelTrueFalseOptions.BringToFront();
-                panelTrueFalseOptions.Visible = true;
-            }
-
-
-        }
+     
 
         private void panelShowAllQuestions_Paint(object sender, PaintEventArgs e)
         {
@@ -142,5 +154,8 @@ namespace Base_project
         {
             this.Hide();
         }
+
+       
+        }
     }
-}
+

@@ -49,9 +49,9 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(283, 3);
+            this.buttonDelete.Location = new System.Drawing.Point(354, 3);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(113, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(77, 23);
             this.buttonDelete.TabIndex = 1;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(402, 3);
+            this.buttonEdit.Location = new System.Drawing.Point(438, 3);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(113, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(77, 23);
             this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanelListoptionHolder);
             this.groupBox1.Controls.Add(this.richTextBoxListItemQuestion);
-            this.groupBox1.Location = new System.Drawing.Point(30, 26);
+            this.groupBox1.Location = new System.Drawing.Point(58, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(485, 143);
             this.groupBox1.TabIndex = 3;
@@ -106,14 +106,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Controls.Add(this.labelQuizSubject);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelQuizTitle);
             this.Name = "QuizQuestionListItem";
-            this.Size = new System.Drawing.Size(528, 172);
+            this.Size = new System.Drawing.Size(546, 172);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
