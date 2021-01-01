@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelSubOptionsOfCreateQuiz = new System.Windows.Forms.Panel();
+            this.labelTopicName = new System.Windows.Forms.Label();
             this.panelShowAllQuestions = new System.Windows.Forms.Panel();
             this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCQAddNewQuestion = new System.Windows.Forms.Button();
             this.buttonSaveQuizInSystem = new System.Windows.Forms.Button();
             this.buttonCQShowAllQuestions = new System.Windows.Forms.Button();
-            this.labelTopicName = new System.Windows.Forms.Label();
             this.labelSubjectName = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
@@ -55,7 +55,7 @@
             this.buttonCQAddoption = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanelCQOptions = new System.Windows.Forms.FlowLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelQuestionNumber = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CQHighLight_BTN = new System.Windows.Forms.Button();
             this.CQBold_BTN = new System.Windows.Forms.Button();
@@ -80,7 +80,6 @@
             // panelSubOptionsOfCreateQuiz
             // 
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.labelTopicName);
-            this.panelSubOptionsOfCreateQuiz.Controls.Add(this.panelShowAllQuestions);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQAddNewQuestion);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonSaveQuizInSystem);
             this.panelSubOptionsOfCreateQuiz.Controls.Add(this.buttonCQShowAllQuestions);
@@ -91,12 +90,22 @@
             this.panelSubOptionsOfCreateQuiz.Size = new System.Drawing.Size(276, 526);
             this.panelSubOptionsOfCreateQuiz.TabIndex = 16;
             // 
+            // labelTopicName
+            // 
+            this.labelTopicName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTopicName.Location = new System.Drawing.Point(14, 45);
+            this.labelTopicName.Name = "labelTopicName";
+            this.labelTopicName.Size = new System.Drawing.Size(250, 21);
+            this.labelTopicName.TabIndex = 24;
+            this.labelTopicName.Text = "label3";
+            this.labelTopicName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelShowAllQuestions
             // 
             this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
             this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
             this.panelShowAllQuestions.Controls.Add(this.label2);
-            this.panelShowAllQuestions.Location = new System.Drawing.Point(67, 371);
+            this.panelShowAllQuestions.Location = new System.Drawing.Point(585, 418);
             this.panelShowAllQuestions.Name = "panelShowAllQuestions";
             this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
             this.panelShowAllQuestions.TabIndex = 22;
@@ -153,16 +162,6 @@
             this.buttonCQShowAllQuestions.UseVisualStyleBackColor = true;
             this.buttonCQShowAllQuestions.Click += new System.EventHandler(this.buttonCQShowAllQuestions_Click);
             // 
-            // labelTopicName
-            // 
-            this.labelTopicName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTopicName.Location = new System.Drawing.Point(14, 45);
-            this.labelTopicName.Name = "labelTopicName";
-            this.labelTopicName.Size = new System.Drawing.Size(250, 21);
-            this.labelTopicName.TabIndex = 24;
-            this.labelTopicName.Text = "label3";
-            this.labelTopicName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelSubjectName
             // 
             this.labelSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,21 +215,22 @@
             this.panelAddNewQuestion.Controls.Add(this.buttonCQSaveQuestion);
             this.panelAddNewQuestion.Controls.Add(this.groupBoxAddOptionsPanel);
             this.panelAddNewQuestion.Controls.Add(this.groupBox2);
-            this.panelAddNewQuestion.Controls.Add(this.label8);
+            this.panelAddNewQuestion.Controls.Add(this.labelQuestionNumber);
             this.panelAddNewQuestion.Controls.Add(this.groupBox1);
             this.panelAddNewQuestion.Controls.Add(this.textBoxQuestionText);
             this.panelAddNewQuestion.Controls.Add(this.label1);
-            this.panelAddNewQuestion.Location = new System.Drawing.Point(27, 33);
+            this.panelAddNewQuestion.Location = new System.Drawing.Point(641, 364);
             this.panelAddNewQuestion.Name = "panelAddNewQuestion";
             this.panelAddNewQuestion.Size = new System.Drawing.Size(721, 460);
             this.panelAddNewQuestion.TabIndex = 21;
+            this.panelAddNewQuestion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAddNewQuestion_Paint);
             // 
             // panelTrueFalseOptions
             // 
             this.panelTrueFalseOptions.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panelTrueFalseOptions.Controls.Add(this.radioButtonFalseOption);
             this.panelTrueFalseOptions.Controls.Add(this.radioButtonTrueOption);
-            this.panelTrueFalseOptions.Location = new System.Drawing.Point(699, 287);
+            this.panelTrueFalseOptions.Location = new System.Drawing.Point(699, 279);
             this.panelTrueFalseOptions.Name = "panelTrueFalseOptions";
             this.panelTrueFalseOptions.Size = new System.Drawing.Size(200, 100);
             this.panelTrueFalseOptions.TabIndex = 14;
@@ -243,7 +243,6 @@
             this.radioButtonFalseOption.Name = "radioButtonFalseOption";
             this.radioButtonFalseOption.Size = new System.Drawing.Size(50, 17);
             this.radioButtonFalseOption.TabIndex = 1;
-            this.radioButtonFalseOption.TabStop = true;
             this.radioButtonFalseOption.Text = "False";
             this.radioButtonFalseOption.UseVisualStyleBackColor = true;
             this.radioButtonFalseOption.CheckedChanged += new System.EventHandler(this.radioButtonFalseOption_CheckedChanged);
@@ -251,6 +250,7 @@
             // radioButtonTrueOption
             // 
             this.radioButtonTrueOption.AutoSize = true;
+            this.radioButtonTrueOption.Checked = true;
             this.radioButtonTrueOption.Location = new System.Drawing.Point(68, 27);
             this.radioButtonTrueOption.Name = "radioButtonTrueOption";
             this.radioButtonTrueOption.Size = new System.Drawing.Size(47, 17);
@@ -367,15 +367,15 @@
             this.flowLayoutPanelCQOptions.Size = new System.Drawing.Size(342, 84);
             this.flowLayoutPanelCQOptions.TabIndex = 3;
             // 
-            // label8
+            // labelQuestionNumber
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 25);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Question 01";
+            this.labelQuestionNumber.AutoSize = true;
+            this.labelQuestionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestionNumber.Location = new System.Drawing.Point(6, 7);
+            this.labelQuestionNumber.Name = "labelQuestionNumber";
+            this.labelQuestionNumber.Size = new System.Drawing.Size(129, 25);
+            this.labelQuestionNumber.TabIndex = 13;
+            this.labelQuestionNumber.Text = "Question 01";
             // 
             // groupBox1
             // 
@@ -543,6 +543,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 526);
             this.Controls.Add(this.panelAddNewQuestion);
+            this.Controls.Add(this.panelShowAllQuestions);
             this.Controls.Add(this.splitter4);
             this.Controls.Add(this.splitter3);
             this.Controls.Add(this.splitter2);
@@ -591,7 +592,7 @@
         private System.Windows.Forms.Button buttonCQAddoption;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCQOptions;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelQuestionNumber;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button CQHighLight_BTN;
         private System.Windows.Forms.Button CQBold_BTN;

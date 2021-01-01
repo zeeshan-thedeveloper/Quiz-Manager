@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 namespace Base_project
 {
-    class GlobalStaticVariables
+    class GlobalStaticVariablesAndMethods
     {
         static public string currentTopicName{get;set;}
         static public string currentSubjectName { get; set; }
@@ -22,6 +22,18 @@ namespace Base_project
         
 
         static public String UnsavedQuizErrorMessage { set { } get { return "Please Save the current opened quiz..!!"; } }
+        static public String UnSelectedErrorMessage { set { } get { return "Please select at least one options as Right asnwer..!!"; } }
+        static public String MultipleOptionSelectedErrorMessage { set { } get { return "Please only one option as right asnwer..!!"; } }
+
+        static public String NotAddedOptionsErrorMessage { set { } get { return "Please add some options for question"; } }
+
+        static public String NoOptionTypeSelectedErrorMessage { set { } get { return "Please any option type"; } }
+
+        static public String CantAddMultipleTrueFalseErrorMessage { set { } get { return "Cant not add true false more than once"; } }
+
+        static public String NotQuestionErrorMessage { set { } get { return "Please add question"; } }
+
+
 
         public static void CreateErrorMessage(String message)
         {

@@ -26,8 +26,8 @@ namespace Base_project
             }
             else if (comboBoxSubjects.SelectedIndex >= 0)
             {
-                GlobalStaticVariables.currentTopicName = textBoxTopicNam.Text;
-                GlobalStaticVariables.currentSubjectName = comboBoxSubjects.SelectedItem.ToString();
+                GlobalStaticVariablesAndMethods.currentTopicName = textBoxTopicNam.Text;
+                GlobalStaticVariablesAndMethods.currentSubjectName = comboBoxSubjects.SelectedItem.ToString();
 
                 this.Hide();
 
@@ -42,7 +42,7 @@ namespace Base_project
 
         private void closedForm_Click(object sender, FormClosedEventArgs e)
         {
-            GlobalStaticVariables.currentTopicName = null;
+            GlobalStaticVariablesAndMethods.currentTopicName = null;
             this.Hide();
         }
     }

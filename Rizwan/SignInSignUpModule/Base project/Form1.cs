@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Base_project
 {
     public partial class Form1 : Form
@@ -23,7 +24,7 @@ namespace Base_project
             openQuizParentWindow = new OpenQuizParentWindow();
             printQuizParentWindow = new PrintQuizParentWindow();
 
-            GlobalStaticVariables.isCurrentQuizTopicSaved = true;
+            GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,19 +35,20 @@ namespace Base_project
         private void buttonCreateNewQuiz_Click(object sender, EventArgs e)
         {
 
-            if (GlobalStaticVariables.isCurrentQuizTopicSaved)
+            if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
 
 
                 HideChild();
 
-                GlobalStaticVariables.currentTopicName = null; //this will be setted from dialog window which we are opening down
-                GlobalStaticVariables.currentSubjectName = null;//this will be setted from dialog window which we are opening down
+                GlobalStaticVariablesAndMethods.currentTopicName = null; //this will be setted from dialog window which we are opening down
+                GlobalStaticVariablesAndMethods.currentSubjectName = null;//this will be setted from dialog window which we are opening down
 
                 GetQuizTopicNameWindow getQuizTopicNameWindow = new GetQuizTopicNameWindow();
                 getQuizTopicNameWindow.ShowDialog();
 
-                if (GlobalStaticVariables.currentTopicName != null)
+
+                if (GlobalStaticVariablesAndMethods.currentTopicName != null)
                 {
                     //this means some topic name is provided
                     createQuizParentWindow.MdiParent = this;
@@ -56,32 +58,34 @@ namespace Base_project
 
                     //setting the isQuizSavedflag;
 
-                    GlobalStaticVariables.isCurrentQuizTopicSaved = false;
+                    GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = false;
 
                     //Create a dataset to hold the questions...
+                    GlobalStaticVariablesAndMethods.currentQuectionNumber = 1;
 
-                    GlobalStaticVariables.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariables.currentSubjectName);
-                    GlobalStaticVariables.currentDataTableUsedForHoldingQuestions = DatasetManager.createDataTableForHoldingQuestions(GlobalStaticVariables.currentTopicName);
+                    GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);
+                    GlobalStaticVariablesAndMethods.currentDataTableUsedForHoldingQuestions = DatasetManager.createDataTableForHoldingQuestions(GlobalStaticVariablesAndMethods.currentTopicName);
+                    DatasetManager.joinDataSetAndTable(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions, GlobalStaticVariablesAndMethods.currentDataTableUsedForHoldingQuestions);
 
                     //We will now use this gloabl variable to store questions.
 
                 }
                 else
                 {
-                    GlobalStaticVariables.isCurrentQuizTopicSaved = true;
+                    GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = true;
                 }
 
             }
             else
             {
-                GlobalStaticVariables.CreateErrorMessage(GlobalStaticVariables.UnsavedQuizErrorMessage);
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
             }
             //Open dialog
         }
 
         private void buttonOpenQuiz_Click(object sender, EventArgs e)
         {
-            if (GlobalStaticVariables.isCurrentQuizTopicSaved)
+            if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
                 HideChild();
                 openQuizParentWindow.MdiParent = this;
@@ -92,14 +96,14 @@ namespace Base_project
             }
             else
             {
-                GlobalStaticVariables.CreateErrorMessage(GlobalStaticVariables.UnsavedQuizErrorMessage);
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
             }
 
 
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            if (GlobalStaticVariables.isCurrentQuizTopicSaved)
+            if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
                 HideChild();
                 printQuizParentWindow.MdiParent = this;
@@ -110,7 +114,7 @@ namespace Base_project
             }
             else
             {
-                GlobalStaticVariables.CreateErrorMessage(GlobalStaticVariables.UnsavedQuizErrorMessage);
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnsavedQuizErrorMessage);
             }
 
 

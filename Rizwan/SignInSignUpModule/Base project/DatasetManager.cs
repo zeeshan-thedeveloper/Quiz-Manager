@@ -37,17 +37,20 @@ namespace Base_project
             questionDataHolderTable.Columns.Add(answers);
             questionDataHolderTable.Columns.Add(rightAnswer);
 
-            return questionDataHolderTable;
+            return  questionDataHolderTable;
 
         }
-        public static bool insertRowInTable(DataTable dataTable, String question, String answers, String rightAnswer)
+
+        public static bool insertRowInTable( DataTable dataTable, String question, String answers, String rightAnswer)
         {
             DataRow dataRow = dataTable.NewRow();
 
-            dataRow[0] = question;
-            dataRow[1] = answers;
-            dataRow[2] = rightAnswer;
+            dataRow["Question"] = question;
+            dataRow["Answers"] = answers;
+            dataRow["RightAnswer"] = rightAnswer;
 
+
+            dataTable.Rows.Add(dataRow);
             
             return true;
         }

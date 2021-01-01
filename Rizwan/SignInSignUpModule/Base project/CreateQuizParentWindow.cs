@@ -16,7 +16,7 @@ namespace Base_project
         public CreateQuizParentWindow()
         {
             InitializeComponent();
-            Console.WriteLine("New quiz creation window is created with topic name" + GlobalStaticVariables.currentTopicName);
+            Console.WriteLine("New quiz creation window is created with topic name" + GlobalStaticVariablesAndMethods.currentTopicName);
             HideChild();
 
           
@@ -26,10 +26,11 @@ namespace Base_project
         }
         private void CreateQuizParentWindow_Load(object sender, EventArgs e)
         {
-            labelSubjectName.Text = "Topic Name: "+GlobalStaticVariables.currentTopicName;
-            labelTopicName.Text ="Subject Name: "+ GlobalStaticVariables.currentSubjectName;
+            labelSubjectName.Text = "Topic Name: "+GlobalStaticVariablesAndMethods.currentTopicName;
+            labelTopicName.Text ="Subject Name: "+ GlobalStaticVariablesAndMethods.currentSubjectName;
         }
-            private void buttonCQAddNewQuestion_Click(object sender, EventArgs e)
+       
+        private void buttonCQAddNewQuestion_Click(object sender, EventArgs e)
         {
 
             panelAddNewQuestion.Show();
@@ -40,79 +41,54 @@ namespace Base_project
         private void buttonCQShowAllQuestions_Click(object sender, EventArgs e)
         {
            HideChild();
+
            panelShowAllQuestions.Show();
            panelShowAllQuestions.Location = new Point(33, 33);
            panelShowAllQuestions.BringToFront();
 
+
             ArrayList QueztionsItems = new ArrayList();//Main list of questions.....
 
 
-            //Question 1
-            QuizQuestionListItem quizQuestionListItem = new QuizQuestionListItem(); 
-            quizQuestionListItem.QuizSubject = "Programming";
-            quizQuestionListItem.QuizTitle = "Quiz 1";
-            quizQuestionListItem.QuizQuestionData = " Hey thi is the queztio";
+            DataTableReader dataTableReader = new DataTableReader(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
+            
+            Console.WriteLine(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Count+" is used");
+            QuizQuestionListItem quizQuestionListItem;
+            ArrayList options;
+            CheckBox checkBox;
+            String answers="";
+            String[] optionsValue;
 
-            //options of question 1..
-            ArrayList options = new ArrayList();
+            while (dataTableReader.Read())
+            {
 
-            CheckBox checkBox = new CheckBox();
-            checkBox.Text = "Options A";
-            checkBox.Height = 15;
-            checkBox.Width = 50;
+                Console.WriteLine("Question"+dataTableReader[0]);
+                quizQuestionListItem = new QuizQuestionListItem();
+                quizQuestionListItem.QuizSubject = GlobalStaticVariablesAndMethods.currentSubjectName;
+                quizQuestionListItem.QuizTitle = GlobalStaticVariablesAndMethods.currentTopicName;
+                quizQuestionListItem.QuizQuestionData = (string)dataTableReader["Question"];
 
-            options.Add(checkBox);
+                options = new ArrayList();
 
+                answers = (string)dataTableReader[1];
+                optionsValue = answers.Split(';');
+                foreach (String opt in optionsValue)
+                {
+                    checkBox = new CheckBox();
+                    checkBox.Text = opt;
+                    checkBox.Height = 25;
+                    checkBox.Width =(opt.Length)*30;
+                    options.Add(checkBox);
+                    if (opt.Equals(dataTableReader["RightAnswer"]))
+                    {
+                        checkBox.Checked=true;
+                    }
+                }
+                quizQuestionListItem.Options = options;
+                QueztionsItems.Add(quizQuestionListItem);
+            }
 
-            quizQuestionListItem.Options = options;
-
-            QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
-
-            //Question 2
-             quizQuestionListItem = new QuizQuestionListItem();
-            quizQuestionListItem.QuizSubject = "Programming pro";
-            quizQuestionListItem.QuizTitle = "Quiz 2";
-            quizQuestionListItem.QuizQuestionData = " Hey thi is the queztio";
-
-            //options of question 2..
-             options = new ArrayList();
-
-            checkBox = new CheckBox();
-            checkBox.Text = "Options B";
-            checkBox.Height = 15;
-            checkBox.Width = 50;
-
-            options.Add(checkBox);
-
-
-            quizQuestionListItem.Options = options;
-
-            QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
-
-
-            //Question 3
-
-            //Question 2
-            quizQuestionListItem = new QuizQuestionListItem();
-            quizQuestionListItem.QuizSubject = "Programming pro";
-            quizQuestionListItem.QuizTitle = "Quiz 2";
-            quizQuestionListItem.QuizQuestionData = " Hey thi is the queztio";
-
-            //options of question 2..
-            options = new ArrayList();
-
-            checkBox = new CheckBox();
-            checkBox.Text = "Options B";
-            checkBox.Height = 15;
-            checkBox.Width = 50;
-
-            options.Add(checkBox);
-
-
-            quizQuestionListItem.Options = options;
-
-            QueztionsItems.Add(quizQuestionListItem);//This will be the list of all questions
-
+            flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Controls.Clear();
             foreach (QuizQuestionListItem questionListItem in QueztionsItems)
             {
 
@@ -121,9 +97,7 @@ namespace Base_project
 
 
             }
-            
-
-
+           
 
         }
 
@@ -156,6 +130,6 @@ namespace Base_project
         }
 
        
-        }
+    }
     }
 

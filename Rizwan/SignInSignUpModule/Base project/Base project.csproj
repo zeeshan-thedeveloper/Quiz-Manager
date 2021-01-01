@@ -74,7 +74,7 @@
     <Compile Include="GetQuizTopicNameWindow.Designer.cs">
       <DependentUpon>GetQuizTopicNameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalStaticVariables.cs" />
+    <Compile Include="GlobalStaticVariablesAndMethods.cs" />
     <Compile Include="OpenQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +100,12 @@
     </Compile>
     <Compile Include="RightAnswerChooserDialog.Designer.cs">
       <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CreateQuizParentWindow.resx">
       <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RightAnswerChooserDialog.resx">
       <DependentUpon>RightAnswerChooserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
