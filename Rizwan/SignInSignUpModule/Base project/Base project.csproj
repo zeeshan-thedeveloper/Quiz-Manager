@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Custom Control liabrary">
+      <HintPath>..\..\..\..\..\..\..\..\5th semester\C#\Custom controls assignemnt\CustomControl\Custom Control liabrary\bin\Debug\Custom Control liabrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using System.Configuration;
 namespace Base_project
 {
     public partial class Form1 : Form
@@ -33,6 +32,8 @@ namespace Base_project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Setting connection string // by loading from app config file.
+            GlobalStaticVariablesAndMethods.currentConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
         }
 
@@ -129,10 +130,9 @@ namespace Base_project
             if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
                 HideChild();
-                addSubjectParentWindow.MdiParent = this;
-                addSubjectParentWindow.Show();
-                addSubjectParentWindow.BringToFront();
-                addSubjectParentWindow.Dock = DockStyle.Top;
+              
+                AddSubjectParentWindow addSubjectParentWindow = new AddSubjectParentWindow();
+                addSubjectParentWindow.ShowDialog();
 
 
             }

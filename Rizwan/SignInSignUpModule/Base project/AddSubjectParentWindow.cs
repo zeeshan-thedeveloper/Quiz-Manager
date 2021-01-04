@@ -22,18 +22,47 @@ namespace Base_project
         {
 
         }
-
-        private void buttonCreateSubject_Click(object sender, EventArgs e)
+        private void buttonCreateTable_Click(object sender, EventArgs e)
         {
-            String connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-          string   sql = "CREATE TABLE myTable" +  
-    "(myId INTEGER CONSTRAINT PKeyMyId PRIMARY KEY," +  
-    "myName CHAR(50), myAddress CHAR(255), myBalance FLOAT)";
+            try
+            {
+                SqlConnection connection = new SqlConnection(GlobalStaticVariablesAndMethods.currentConnectionString);
+                connection.Open();
+                if (richTextBoxTableName.Text.Length > 0)
+                {
+                    String tableName = richTextBoxTableName.Text.Replace(' ', '_');
+                    String qury = "CREATE TABLE "+tableName+ " ( Id INT NOT NULL CONSTRAINT PKeyMyId PRIMARY KEY IDENTITY(1,1),   QuizTopicName VARCHAR(MAX) NULL,    Question VARCHAR(MAX) NULL,    Answers VARCHAR(MAX) NULL,    RightAnswer VARCHAR(MAX) NULL)";
+                    SqlCommand sqlCommand = new SqlCommand(qury, connection);
 
-            SqlCommand sqlCommand = new SqlCommand(sql, connection);
-            sqlCommand.ExecuteNonQuery();
+                    sqlCommand.ExecuteNonQuery();
+
+                    MessageBox.Show("Subject added Successfully.");
+                    
+                    
+                    connection.Close();
+                }
+                else
+                {
+                    GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoTableNameGivemErrorMessage);
+                }
+                
+
+            }
+            catch (Exception x)
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(x.Message);
+            }
+        }
+
+        private void buttonShowAvailSub_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Calleed");
+            listBox1.Items.Clear();
+            foreach (String tables in GlobalStaticVariablesAndMethods.GetTableNames())
+            {
+                listBox1.Items.Add(tables);
+            }
         }
     }
 }

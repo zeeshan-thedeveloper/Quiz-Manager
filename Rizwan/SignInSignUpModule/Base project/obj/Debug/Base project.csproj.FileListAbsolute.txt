@@ -16,3 +16,6 @@ F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignI
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.ErrorInforDialog.resources
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.AddSubjectParentWindow.resources
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.AnalyticsParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Custom Control liabrary.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Custom Control liabrary.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.CopyComplete
