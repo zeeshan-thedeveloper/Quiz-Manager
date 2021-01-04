@@ -135,10 +135,9 @@ namespace Base_project
 
                     // DatasetManager.insertRowInTable(ref questionDataTable, textBoxQuestionText.Text, asnwers, rightAnswer);
 
+                    DatasetManager.insertRowInTable(textBoxQuestionText.Text, asnwers, rightAnswer);
 
-                    DatasetManager.insertRowInTable(GlobalStaticVariablesAndMethods.currentDataTableUsedForHoldingQuestions, textBoxQuestionText.Text,asnwers, rightAnswer);
 
-                    Console.WriteLine("Zis"+GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Count);
                     //Here we will store in dataset.
                         CLEARALL();
 
@@ -173,7 +172,11 @@ namespace Base_project
                 }
 
                 //Here we will store in dataset.
+
               
+                
+                    DatasetManager.insertRowInTable(textBoxQuestionText.Text, asnwers, rightAnswer);
+
                     CLEARALL();
 
                     GlobalStaticVariablesAndMethods.currentQuectionNumber = GlobalStaticVariablesAndMethods.currentQuectionNumber+1;
@@ -193,7 +196,7 @@ namespace Base_project
 
         private void buttonCQAddoption_Click(object sender, EventArgs e)
         {
-            if (richTextBoxOptiontext.Text.Length <= 0)
+            if (richTextBoxOptiontext.Text.Length <= 0 && comboBoxCOptionsType.SelectedIndex==0)
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoTextFoundInOptionTextBoxErrorMessage);
 

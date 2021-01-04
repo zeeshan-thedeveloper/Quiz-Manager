@@ -20,6 +20,9 @@ namespace Base_project
         
         static public DataTable currentDataTableUsedForHoldingQuestions { get; set; }
 
+        static public SqlDataAdapter currentSqlDataAdapter { get; set; }
+
+
         static public String currentConnectionString { get; set; }
 
 
@@ -37,6 +40,7 @@ namespace Base_project
 
         static public String NoTextFoundInOptionTextBoxErrorMessage { set { } get { return" Please write something in option then add "; } }
         static public String NoTableNameGivemErrorMessage { set { } get { return " Please give any subject name.. "; } }
+
 
 
         public static void CreateErrorMessage(String message)

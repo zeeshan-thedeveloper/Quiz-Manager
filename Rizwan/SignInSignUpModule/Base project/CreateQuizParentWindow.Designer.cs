@@ -30,13 +30,13 @@
         {
             this.panelSubOptionsOfCreateQuiz = new System.Windows.Forms.Panel();
             this.labelTopicName = new System.Windows.Forms.Label();
-            this.panelShowAllQuestions = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonCQAddNewQuestion = new System.Windows.Forms.Button();
             this.buttonSaveQuizInSystem = new System.Windows.Forms.Button();
             this.buttonCQShowAllQuestions = new System.Windows.Forms.Button();
             this.labelSubjectName = new System.Windows.Forms.Label();
+            this.panelShowAllQuestions = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
@@ -100,35 +100,6 @@
             this.labelTopicName.Text = "label3";
             this.labelTopicName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelShowAllQuestions
-            // 
-            this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
-            this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
-            this.panelShowAllQuestions.Controls.Add(this.label2);
-            this.panelShowAllQuestions.Location = new System.Drawing.Point(585, 418);
-            this.panelShowAllQuestions.Name = "panelShowAllQuestions";
-            this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
-            this.panelShowAllQuestions.TabIndex = 22;
-            this.panelShowAllQuestions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestions_Paint);
-            // 
-            // flowLayoutPanelCreateQuizPanelShowAllListItemHolder
-            // 
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.AutoScroll = true;
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Location = new System.Drawing.Point(17, 26);
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Name = "flowLayoutPanelCreateQuizPanelShowAllListItemHolder";
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Size = new System.Drawing.Size(612, 417);
-            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Show all questions";
-            // 
             // buttonCQAddNewQuestion
             // 
             this.buttonCQAddNewQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,6 +142,35 @@
             this.labelSubjectName.TabIndex = 23;
             this.labelSubjectName.Text = "label3";
             this.labelSubjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelShowAllQuestions
+            // 
+            this.panelShowAllQuestions.BackColor = System.Drawing.Color.BurlyWood;
+            this.panelShowAllQuestions.Controls.Add(this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder);
+            this.panelShowAllQuestions.Controls.Add(this.label2);
+            this.panelShowAllQuestions.Location = new System.Drawing.Point(580, 458);
+            this.panelShowAllQuestions.Name = "panelShowAllQuestions";
+            this.panelShowAllQuestions.Size = new System.Drawing.Size(643, 460);
+            this.panelShowAllQuestions.TabIndex = 22;
+            this.panelShowAllQuestions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShowAllQuestions_Paint);
+            // 
+            // flowLayoutPanelCreateQuizPanelShowAllListItemHolder
+            // 
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.AutoScroll = true;
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Location = new System.Drawing.Point(17, 26);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Name = "flowLayoutPanelCreateQuizPanelShowAllListItemHolder";
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Size = new System.Drawing.Size(612, 417);
+            this.flowLayoutPanelCreateQuizPanelShowAllListItemHolder.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Show all questions";
             // 
             // splitter1
             // 
@@ -219,7 +219,7 @@
             this.panelAddNewQuestion.Controls.Add(this.groupBox1);
             this.panelAddNewQuestion.Controls.Add(this.textBoxQuestionText);
             this.panelAddNewQuestion.Controls.Add(this.label1);
-            this.panelAddNewQuestion.Location = new System.Drawing.Point(641, 364);
+            this.panelAddNewQuestion.Location = new System.Drawing.Point(640, 441);
             this.panelAddNewQuestion.Name = "panelAddNewQuestion";
             this.panelAddNewQuestion.Size = new System.Drawing.Size(721, 460);
             this.panelAddNewQuestion.TabIndex = 21;

@@ -79,13 +79,6 @@
             this.comboBoxSubjects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSubjects.FormattingEnabled = true;
-            this.comboBoxSubjects.Items.AddRange(new object[] {
-            "Java",
-            "C++",
-            "C#",
-            "C",
-            "Java Spring boot",
-            "Rest API"});
             this.comboBoxSubjects.Location = new System.Drawing.Point(527, 12);
             this.comboBoxSubjects.Name = "comboBoxSubjects";
             this.comboBoxSubjects.Size = new System.Drawing.Size(216, 28);
@@ -105,6 +98,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GetQuizTopicNameWindow";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.closedForm_Click);
+            this.Load += new System.EventHandler(this.GetQuizTopicNameWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

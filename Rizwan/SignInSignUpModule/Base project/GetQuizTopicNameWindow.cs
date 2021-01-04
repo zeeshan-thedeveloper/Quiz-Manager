@@ -16,7 +16,13 @@ namespace Base_project
         {
             InitializeComponent();
         }
-
+        private void GetQuizTopicNameWindow_Load(object sender, EventArgs e)
+        {
+            foreach (String tables in GlobalStaticVariablesAndMethods.GetTableNames())
+            {
+                comboBoxSubjects.Items.Add(tables);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBoxTopicNam.Text.Length <= 0)
@@ -45,5 +51,7 @@ namespace Base_project
             GlobalStaticVariablesAndMethods.currentTopicName = null;
             this.Hide();
         }
+
+     
     }
 }

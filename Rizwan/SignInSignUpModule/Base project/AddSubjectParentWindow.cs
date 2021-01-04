@@ -57,12 +57,18 @@ namespace Base_project
         private void buttonShowAvailSub_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Calleed");
+        
             listBox1.Items.Clear();
             foreach (String tables in GlobalStaticVariablesAndMethods.GetTableNames())
             {
                 listBox1.Items.Add(tables);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SettingConnectionStringWindow settingConnectionStringWindow = new SettingConnectionStringWindow();
+            settingConnectionStringWindow.ShowDialog();
         }
     }
 }

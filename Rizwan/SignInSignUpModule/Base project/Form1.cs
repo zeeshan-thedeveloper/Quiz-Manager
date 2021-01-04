@@ -69,9 +69,8 @@ namespace Base_project
                     GlobalStaticVariablesAndMethods.currentQuectionNumber = 1;
 
                     GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);
-                    GlobalStaticVariablesAndMethods.currentDataTableUsedForHoldingQuestions = DatasetManager.createDataTableForHoldingQuestions(GlobalStaticVariablesAndMethods.currentTopicName);
-                    DatasetManager.joinDataSetAndTable(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions, GlobalStaticVariablesAndMethods.currentDataTableUsedForHoldingQuestions);
 
+                    
                     //We will now use this gloabl variable to store questions.
 
                 }

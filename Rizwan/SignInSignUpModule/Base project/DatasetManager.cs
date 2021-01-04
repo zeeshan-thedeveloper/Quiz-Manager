@@ -4,16 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
+
 namespace Base_project
 {
     class DatasetManager
     {
         public static DataSet createDataSetForHoldingQuestions(String subjectName)
         {
+            SqlConnection connection = new SqlConnection(GlobalStaticVariablesAndMethods.currentConnectionString);
+            connection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand("Select * from " + subjectName, connection);
+
+            GlobalStaticVariablesAndMethods.currentSqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
             DataSet dataSet = new DataSet();
-            dataSet.DataSetName = subjectName;
+
+            GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Fill(dataSet);
 
             return dataSet;
+
         }
         public static DataTable createDataTableForHoldingQuestions(String topicName)
         {
@@ -41,23 +52,35 @@ namespace Base_project
 
         }
 
-        public static bool insertRowInTable( DataTable dataTable, String question, String answers, String rightAnswer)
+        public static bool insertRowInTable( String question, String answers, String rightAnswer)
         {
-            DataRow dataRow = dataTable.NewRow();
+            DataRow row = GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].NewRow();
+            row["QuizTopicName"] = GlobalStaticVariablesAndMethods.currentTopicName;
+            row["Question"] =question;
+            row["Answers"]=answers;
+            row["RightAnswer"] =rightAnswer;
 
-            dataRow["Question"] = question;
-            dataRow["Answers"] = answers;
-            dataRow["RightAnswer"] = rightAnswer;
+            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Add(row);
 
-
-            dataTable.Rows.Add(dataRow);
             
+
             return true;
         }
 
-        public static bool joinDataSetAndTable(DataSet dataSet, DataTable dataTable)
+        public static bool saveQuizToDatabase()
         {
-            dataSet.Tables.Add(dataTable);
+
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(GlobalStaticVariablesAndMethods.currentSqlDataAdapter);
+
+            GlobalStaticVariablesAndMethods.currentSqlDataAdapter.UpdateCommand = sqlCommandBuilder.GetUpdateCommand();
+
+            GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Update(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
+
+            
+
+            Console.WriteLine("Saved to database");
+
+
 
             return true;
         }

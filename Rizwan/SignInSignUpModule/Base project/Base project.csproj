@@ -111,6 +111,12 @@
     <Compile Include="QuizQuestionListItem.Designer.cs">
       <DependentUpon>QuizQuestionListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingConnectionStringWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingConnectionStringWindow.Designer.cs">
+      <DependentUpon>SettingConnectionStringWindow.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddSubjectParentWindow.resx">
       <DependentUpon>AddSubjectParentWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="QuizQuestionListItem.resx">
       <DependentUpon>QuizQuestionListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingConnectionStringWindow.resx">
+      <DependentUpon>SettingConnectionStringWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

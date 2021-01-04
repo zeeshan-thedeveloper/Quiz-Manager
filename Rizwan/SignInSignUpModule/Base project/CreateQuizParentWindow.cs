@@ -62,30 +62,41 @@ namespace Base_project
             while (dataTableReader.Read())
             {
 
-                Console.WriteLine("Question"+dataTableReader[0]);
-                quizQuestionListItem = new QuizQuestionListItem();
-                quizQuestionListItem.QuizSubject = GlobalStaticVariablesAndMethods.currentSubjectName;
-                quizQuestionListItem.QuizTitle = GlobalStaticVariablesAndMethods.currentTopicName;
-                quizQuestionListItem.QuizQuestionData = (string)dataTableReader["Question"];
 
-                options = new ArrayList();
-
-                answers = (string)dataTableReader[1];
-                optionsValue = answers.Split(';');
-                foreach (String opt in optionsValue)
+                String topic = dataTableReader[1] as String;
+                if (topic.Equals(GlobalStaticVariablesAndMethods.currentTopicName))
                 {
-                    checkBox = new CheckBox();
-                    checkBox.Text = opt;
-                    checkBox.Height = 25;
-                    checkBox.Width =(opt.Length)*30;
-                    options.Add(checkBox);
-                    if (opt.Equals(dataTableReader["RightAnswer"]))
+
+
+
+                    quizQuestionListItem = new QuizQuestionListItem();
+                    quizQuestionListItem.QuizSubject = GlobalStaticVariablesAndMethods.currentSubjectName;
+                    quizQuestionListItem.QuizTitle = GlobalStaticVariablesAndMethods.currentTopicName;
+                    quizQuestionListItem.QuizQuestionData = (string)dataTableReader[2];
+
+
+
+                    options = new ArrayList();
+
+                    answers = (string)dataTableReader[3];
+                    optionsValue = answers.Split(';');
+                    foreach (String opt in optionsValue)
                     {
-                        checkBox.Checked=true;
+                        checkBox = new CheckBox();
+                        checkBox.Text = opt;
+                        checkBox.Height = 25;
+                        checkBox.Width = (opt.Length) * 30;
+                        options.Add(checkBox);
+                        if (opt.Equals(dataTableReader["RightAnswer"]))
+                        {
+                            checkBox.Checked = true;
+                        }
                     }
+                    quizQuestionListItem.Options = options;
+                    QueztionsItems.Add(quizQuestionListItem);
+
                 }
-                quizQuestionListItem.Options = options;
-                QueztionsItems.Add(quizQuestionListItem);
+                
             }
 
             flowLayoutPanelCreateQuizPanelShowAllListItemHolder.Controls.Clear();
@@ -101,7 +112,8 @@ namespace Base_project
 
         private void buttonSaveQuizInSystem_Click(object sender, EventArgs e)
         {
-
+            DatasetManager.saveQuizToDatabase();//save changes to database
+            GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = true;
         }
 
         private void HideChild()
