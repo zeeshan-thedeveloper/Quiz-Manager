@@ -74,6 +74,7 @@ namespace Base_project
                     
                     //We will now use this gloabl variable to store questions.
 
+
                 }
                 else
                 {
@@ -93,10 +94,12 @@ namespace Base_project
             if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
                 HideChild();
-                openQuizParentWindow.MdiParent = this;
-                openQuizParentWindow.Show();
-                openQuizParentWindow.BringToFront();
-                openQuizParentWindow.Dock = DockStyle.Top;
+
+                TopicSelectorDialog topicSelectorDialog = new TopicSelectorDialog(this,createQuizParentWindow,openQuizParentWindow);
+                topicSelectorDialog.ShowDialog();
+
+
+               
 
             }
             else
@@ -174,6 +177,7 @@ namespace Base_project
             analyticsParentWindow = new AnalyticsParentWindow();
 
         }
+        
 
        
     }

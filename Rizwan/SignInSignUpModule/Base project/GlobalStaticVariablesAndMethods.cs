@@ -9,7 +9,7 @@ namespace Base_project
 {
     class GlobalStaticVariablesAndMethods
     {
-        private static String sepChar = ";";
+        private static Char sepChar = ';';
         static public string currentTopicName{get;set;}
         static public string currentSubjectName { get; set; }
 
@@ -29,7 +29,7 @@ namespace Base_project
 
         static public String currentConnectionString { get; set; }
 
-        static public String seperatorCharactor { get { return sepChar; } set { value = sepChar; } }
+        static public Char seperatorCharactor { get { return sepChar; } set { value = sepChar; } }
 
 
         //Error messages.
@@ -48,10 +48,14 @@ namespace Base_project
         static public String NoTextFoundInOptionTextBoxErrorMessage { set { } get { return" Please write something in option then add "; } }
         static public String NoTableNameGivemErrorMessage { set { } get { return " Please give any subject name.. "; } }
 
+        static public String NoTopicSelectedErrorMessage { set { }get { return "Please select any topic"; } }
+
         //Infor messages
         static public String QuestionDeletedInfoMessage { set { } get { return "Removed from list ( Note untill you save it it will not be affected in database.) "; } }
         static public String ChangesSavedInfoMessage { set { } get { return "Saved Changes..!!"; } }
         static public String ChangesSavedInDataseInfoMessage { set { } get { return "Saved Changes in list, these will not be applied until you save changes...!!"; } }
+
+        static public String FileavedAsPdfInfoMessage { set { } get { return "File saved..!!!"; } }
 
 
         public static void CreateErrorMessage(String message)
