@@ -13,12 +13,13 @@ namespace Base_project
     public partial class CreateQuizParentWindow : Form
     {
 
+        public static FlowLayoutPanel QuestionsListFlowLoayoutPanel;
         public CreateQuizParentWindow()
         {
             InitializeComponent();
             Console.WriteLine("New quiz creation window is created with topic name" + GlobalStaticVariablesAndMethods.currentTopicName);
             HideChild();
-
+            QuestionsListFlowLoayoutPanel = flowLayoutPanelCreateQuizPanelShowAllListItemHolder;
           
            
 
@@ -58,7 +59,7 @@ namespace Base_project
             CheckBox checkBox;
             String answers="";
             String[] optionsValue;
-
+            int listIndex = 0;
             while (dataTableReader.Read())
             {
 
@@ -73,8 +74,9 @@ namespace Base_project
                     quizQuestionListItem.QuizSubject = GlobalStaticVariablesAndMethods.currentSubjectName;
                     quizQuestionListItem.QuizTitle = GlobalStaticVariablesAndMethods.currentTopicName;
                     quizQuestionListItem.QuizQuestionData = (string)dataTableReader[2];
-
-
+                    quizQuestionListItem.TableRowId = dataTableReader[0]+"";
+                    quizQuestionListItem.ListIndex = listIndex;
+                    listIndex++;
 
                     options = new ArrayList();
 
@@ -114,6 +116,8 @@ namespace Base_project
         {
             DatasetManager.saveQuizToDatabase();//save changes to database
             GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = true;
+            GlobalStaticVariablesAndMethods.CreateInfoMesssage(GlobalStaticVariablesAndMethods.ChangesSavedInfoMessage);
+
         }
 
         private void HideChild()

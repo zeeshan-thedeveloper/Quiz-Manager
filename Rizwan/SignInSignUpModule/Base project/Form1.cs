@@ -66,6 +66,7 @@ namespace Base_project
                     GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved = false;
 
                     //Create a dataset to hold the questions...
+                    
                     GlobalStaticVariablesAndMethods.currentQuectionNumber = 1;
 
                     GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);

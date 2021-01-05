@@ -9,6 +9,7 @@ namespace Base_project
 {
     class GlobalStaticVariablesAndMethods
     {
+        private static String sepChar = ";";
         static public string currentTopicName{get;set;}
         static public string currentSubjectName { get; set; }
 
@@ -25,7 +26,10 @@ namespace Base_project
 
         static public String currentConnectionString { get; set; }
 
+        static public String seperatorCharactor { get { return sepChar; } set { value = sepChar; } }
 
+
+        //Error messages.
         static public String UnsavedQuizErrorMessage { set { } get { return "Please Save the current opened quiz..!!"; } }
         static public String UnSelectedErrorMessage { set { } get { return "Please select at least one options as Right asnwer..!!"; } }
         static public String MultipleOptionSelectedErrorMessage { set { } get { return "Please only one option as right asnwer..!!"; } }
@@ -41,12 +45,22 @@ namespace Base_project
         static public String NoTextFoundInOptionTextBoxErrorMessage { set { } get { return" Please write something in option then add "; } }
         static public String NoTableNameGivemErrorMessage { set { } get { return " Please give any subject name.. "; } }
 
+        //Infor messages
+        static public String QuestionDeletedInfoMessage { set { } get { return "Removed from list ( Note untill you save it it will not be affected in database.) "; } }
+        static public String ChangesSavedInfoMessage { set { } get { return "Saved Changes..!!"; } }
+        static public String ChangesSavedInDataseInfoMessage { set { } get { return "Saved Changes in list, these will not be applied until you save changes...!!"; } }
 
 
         public static void CreateErrorMessage(String message)
         {
             ErrorInforDialog errorInforDialog = new ErrorInforDialog(message);
             errorInforDialog.ShowDialog();
+        }
+        public static void CreateInfoMesssage(String message)
+        {
+            InforMessageDialog inforMessageDialog = new InforMessageDialog(message);
+            inforMessageDialog.Show();
+
         }
         public static List<string> GetTableNames()
         {

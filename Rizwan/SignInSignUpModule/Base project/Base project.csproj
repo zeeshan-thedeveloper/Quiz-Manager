@@ -91,6 +91,12 @@
       <DependentUpon>GetQuizTopicNameWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalStaticVariablesAndMethods.cs" />
+    <Compile Include="InforMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforMessageDialog.Designer.cs">
+      <DependentUpon>InforMessageDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GetQuizTopicNameWindow.resx">
       <DependentUpon>GetQuizTopicNameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforMessageDialog.resx">
+      <DependentUpon>InforMessageDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuizParentWindow.resx">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>

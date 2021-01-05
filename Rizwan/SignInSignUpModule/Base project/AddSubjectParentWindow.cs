@@ -31,7 +31,7 @@ namespace Base_project
                 if (richTextBoxTableName.Text.Length > 0)
                 {
                     String tableName = richTextBoxTableName.Text.Replace(' ', '_');
-                    String qury = "CREATE TABLE "+tableName+ " ( Id INT NOT NULL CONSTRAINT PKeyMyId PRIMARY KEY IDENTITY(1,1),   QuizTopicName VARCHAR(MAX) NULL,    Question VARCHAR(MAX) NULL,    Answers VARCHAR(MAX) NULL,    RightAnswer VARCHAR(MAX) NULL)";
+                    String qury = "CREATE TABLE "+tableName+ " ( Id INT NOT NULL PRIMARY KEY IDENTITY(1,1),   QuizTopicName VARCHAR(MAX) NULL,    Question VARCHAR(MAX) NULL,    Answers VARCHAR(MAX) NULL,    RightAnswer VARCHAR(MAX) NULL)";
                     SqlCommand sqlCommand = new SqlCommand(qury, connection);
 
                     sqlCommand.ExecuteNonQuery();

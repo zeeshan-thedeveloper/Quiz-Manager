@@ -115,7 +115,7 @@ namespace Base_project
                         {
                             RadioButton radioButton = controls as RadioButton;
                             //if options are true and false.
-                            asnwers += radioButton.Text + ";";
+                            asnwers += radioButton.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
                             if (radioButton.Checked)
                             {
                                 rightAnswer = radioButton.Text;
@@ -125,7 +125,7 @@ namespace Base_project
                         {
                             //if mcsqs
                             CheckBox checkBox = controls as CheckBox;
-                            asnwers += checkBox.Text + ";";
+                            asnwers += checkBox.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
                             if (checkBox.Checked)
                             {
                                 rightAnswer = checkBox.Text;
@@ -156,7 +156,7 @@ namespace Base_project
                     {
                         RadioButton radioButton = controls as RadioButton;
                         //if options are true and false.
-                        asnwers += radioButton.Text + ";";
+                        asnwers += radioButton.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
                         if(radioButton.Checked)
                          rightAnswer = radioButton.Text;
                     }
@@ -164,7 +164,7 @@ namespace Base_project
                     {
                         //if mcsqs
                         CheckBox checkBox = controls as CheckBox;
-                        asnwers += checkBox.Text + ";";
+                        asnwers += checkBox.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
                         if (checkBox.Checked)
                             rightAnswer = checkBox.Text;
                         
@@ -189,6 +189,7 @@ namespace Base_project
             else if (comboBoxCOptionsType.SelectedIndex < 0)
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoOptionTypeSelectedErrorMessage);
+
             }
 
 
