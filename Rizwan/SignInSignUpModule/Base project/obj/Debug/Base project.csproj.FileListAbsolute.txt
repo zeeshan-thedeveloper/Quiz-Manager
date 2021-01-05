@@ -21,7 +21,32 @@ F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignI
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.CopyComplete
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.SettingConnectionStringWindow.resources
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.InforMessageDialog.resources
+<<<<<<< Updated upstream
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.TopicSelectorDialog.resources
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\BouncyCastle.Crypto.dll
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\itextsharp.dll
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\itextsharp.xml
+=======
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.exe.config
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.exe
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Base project.pdb
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\Custom Control liabrary.pdb
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csprojAssemblyReference.cache
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.AddSubjectParentWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.AnalyticsParentWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.CreateQuizParentWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.ErrorInforDialog.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.Form1.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.GetQuizTopicNameWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.InforMessageDialog.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.OpenQuizParentWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.PrintQuizParentWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.Properties.Resources.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.QuizQuestionListItem.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.SettingConnectionStringWindow.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.GenerateResource.cache
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.CoreCompileInputs.cache
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.csproj.CopyComplete
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.exe
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.pdb
+>>>>>>> Stashed changes
