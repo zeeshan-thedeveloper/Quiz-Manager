@@ -27,6 +27,7 @@ namespace Base_project
         private ArrayList _options;
         private string _TableRowId;
         private int _listIndex;
+        private int _dataSetIndex;
         [Category("Custom Prop")]
         public string QuizSubject
         {
@@ -88,17 +89,37 @@ namespace Base_project
 
             }
         }
+        [Category("Custom Prop")]
+        public int DataSetIndex
+        {
+            get { return _dataSetIndex; }
+            set
+            {
+                _dataSetIndex = value;
+
+            }
+        }
 
 
         #endregion
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            if (_TableRowId == null || _TableRowId.Length==0)
+            {
+                DatasetManager.deleteQuestionFromDataSet(_listIndex);
+                CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.RemoveAt(_listIndex);//this will update the list.
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.QuestionDeletedInfoMessage);
 
-            DatasetManager.deleteQuestion(Int32.Parse( _TableRowId));//this will delete question from dataset.
+            }
+            else
+            {
+                DatasetManager.deleteQuestionFromDataBase(Int32.Parse(_TableRowId));//this will delete question from dataset.
 
-            GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.QuestionDeletedInfoMessage);
-            CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.RemoveAt(_listIndex);//this will update the list.
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.QuestionDeletedInfoMessage);
+                CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.RemoveAt(_listIndex);//this will update the list.
+            }
+          
 
         }
 

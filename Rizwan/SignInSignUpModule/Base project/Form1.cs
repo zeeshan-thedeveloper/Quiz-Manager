@@ -70,7 +70,7 @@ namespace Base_project
                     GlobalStaticVariablesAndMethods.currentQuectionNumber = 1;
 
                     GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);
-
+                    GlobalStaticVariablesAndMethods.currentSizeOfDataSet = GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Count;
                     
                     //We will now use this gloabl variable to store questions.
 

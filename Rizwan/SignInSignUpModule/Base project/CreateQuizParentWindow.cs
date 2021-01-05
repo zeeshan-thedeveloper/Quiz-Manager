@@ -58,8 +58,10 @@ namespace Base_project
             ArrayList options;
             CheckBox checkBox;
             String answers="";
+
             String[] optionsValue;
             int listIndex = 0;
+            int dataSetIndex = GlobalStaticVariablesAndMethods.currentSizeOfDataSet + 1;
             while (dataTableReader.Read())
             {
 
@@ -68,14 +70,16 @@ namespace Base_project
                 if (topic.Equals(GlobalStaticVariablesAndMethods.currentTopicName))
                 {
 
-
-
                     quizQuestionListItem = new QuizQuestionListItem();
+
+                    quizQuestionListItem.TableRowId = null;
                     quizQuestionListItem.QuizSubject = GlobalStaticVariablesAndMethods.currentSubjectName;
                     quizQuestionListItem.QuizTitle = GlobalStaticVariablesAndMethods.currentTopicName;
                     quizQuestionListItem.QuizQuestionData = (string)dataTableReader[2];
                     quizQuestionListItem.TableRowId = dataTableReader[0]+"";
                     quizQuestionListItem.ListIndex = listIndex;
+                    quizQuestionListItem.DataSetIndex = dataSetIndex;
+                    dataSetIndex++;
                     listIndex++;
 
                     options = new ArrayList();

@@ -66,7 +66,13 @@ namespace Base_project
 
             return true;
         }
-        public static void deleteQuestion(int tableId)
+        public static void deleteQuestionFromDataSet(int dataSetIndex)
+        {
+        
+            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[dataSetIndex].Delete();
+        
+        }
+        public static void deleteQuestionFromDataBase(int tableId)
         {
             int taget  = getTheTargetIndexWithRespectToTableIndexing(tableId);
             if (taget != -1)
@@ -95,18 +101,28 @@ namespace Base_project
             }
 
         }
+        
         public static bool saveQuizToDatabase()
         {
 
-            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(GlobalStaticVariablesAndMethods.currentSqlDataAdapter);
+            try
+            {
 
-            GlobalStaticVariablesAndMethods.currentSqlDataAdapter.UpdateCommand = sqlCommandBuilder.GetUpdateCommand();
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(GlobalStaticVariablesAndMethods.currentSqlDataAdapter);
 
-            GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Update(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
+                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.UpdateCommand = sqlCommandBuilder.GetUpdateCommand();
 
-            
+                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Update(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
 
-            Console.WriteLine("Saved to database");
+
+
+                Console.WriteLine("Saved to database");
+
+            }
+            catch (Exception e)
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in deletion");
+            }
 
 
 

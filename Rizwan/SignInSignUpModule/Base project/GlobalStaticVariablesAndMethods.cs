@@ -15,6 +15,9 @@ namespace Base_project
 
         static public int currentQuectionNumber { get; set; }
 
+        static public int currentSizeOfDataSet { get; set; }
+
+
         static public bool isCurrentQuizTopicSaved { get; set; }
 
         static public DataSet currentDataSetUsedForHoldingQuestions { get; set; }

@@ -20,7 +20,7 @@ namespace Base_project
             while (sqlDataReader.Read())
             {
                 topics.Add(sqlDataReader["QuizTopicName"]);
-           }
+            }
 
 
             return topics;

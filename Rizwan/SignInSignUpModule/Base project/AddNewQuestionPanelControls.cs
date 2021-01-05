@@ -148,42 +148,90 @@ namespace Base_project
             }
             else if (comboBoxCOptionsType.SelectedIndex == 1)
             {
-                String asnwers = "";
-                String rightAnswer="";
-                foreach (var controls in flowLayoutPanelCQOptions.Controls)
-                {
+                bool isChec = true, isOneChecked = false;
+                int index = 0;
+              
+                    foreach (var controls in flowLayoutPanelCQOptions.Controls)
+                    {
+                    CheckBox checkBox;
                     if (controls is RadioButton)
                     {
-                        RadioButton radioButton = controls as RadioButton;
-                        //if options are true and false.
-                        asnwers += radioButton.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
-                        if(radioButton.Checked)
-                         rightAnswer = radioButton.Text;
+                        isChec = false;
+                        break;
                     }
                     else
                     {
-                        //if mcsqs
-                        CheckBox checkBox = controls as CheckBox;
-                        asnwers += checkBox.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
-                        if (checkBox.Checked)
-                            rightAnswer = checkBox.Text;
-                        
+                      checkBox  = controls as CheckBox;
                     }
-                }
+                        if (checkBox.Checked)
+                        {
+                            isChec = false;
+                            index++;
+                        }
+                        if (index >= 2)
+                        {
+                            isOneChecked = true;
+                            break;
+                        }
 
-                //Here we will store in dataset.
-
-              
+                    }
                 
+
+                if (flowLayoutPanelCQOptions.Controls.Count == 0)
+                {
+                    //this means no options are added
+                    GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NotAddedOptionsErrorMessage);
+                }
+                else if (isOneChecked)
+                {
+                    //this means more than one check box are selected.
+                    GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.MultipleOptionSelectedErrorMessage);
+                }
+                else if (isChec)
+                {
+                    //this means no option from list is selected;
+                    GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnSelectedErrorMessage);
+                }
+                else
+                {
+
+                    String asnwers = "";
+                    String rightAnswer = "";
+                    foreach (var controls in flowLayoutPanelCQOptions.Controls)
+                    {
+                        if (controls is RadioButton)
+                        {
+                            RadioButton radioButton = controls as RadioButton;
+                            //if options are true and false.
+                            asnwers += radioButton.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
+                            if (radioButton.Checked)
+                                rightAnswer = radioButton.Text;
+                        }
+                        else
+                        {
+                            //if mcsqs
+                            CheckBox checkBox = controls as CheckBox;
+                            asnwers += checkBox.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
+                            if (checkBox.Checked)
+                                rightAnswer = checkBox.Text;
+
+                        }
+                    }
+
+                    //Here we will store in dataset.
+
+
+
                     DatasetManager.insertRowInTable(textBoxQuestionText.Text, asnwers, rightAnswer);
 
                     CLEARALL();
 
-                    GlobalStaticVariablesAndMethods.currentQuectionNumber = GlobalStaticVariablesAndMethods.currentQuectionNumber+1;
+                    GlobalStaticVariablesAndMethods.currentQuectionNumber = GlobalStaticVariablesAndMethods.currentQuectionNumber + 1;
 
                     labelQuestionNumber.Text = "Question Number: " + GlobalStaticVariablesAndMethods.currentQuectionNumber;
-              
-               
+
+
+                }
 
             }
             else if (comboBoxCOptionsType.SelectedIndex < 0)
