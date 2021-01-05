@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Collections;
 namespace Base_project
 {
     public partial class GetQuizTopicNameWindow : Form
@@ -52,6 +52,20 @@ namespace Base_project
             this.Hide();
         }
 
-     
+        private void comboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxAlreadyCreatedTopics.Items.Clear();
+            String subjectName = comboBoxSubjects.SelectedItem.ToString();
+            ArrayList topics = DatabaseManager.GetAllQuizTopics(subjectName);
+            foreach (String topic in topics)
+            {
+                comboBoxAlreadyCreatedTopics.Items.Add(topic);
+            }
+        }
+
+        private void comboBoxAlreadyCreatedTopics_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxTopicNam.Text = comboBoxAlreadyCreatedTopics.SelectedItem.ToString();
+        }
     }
 }

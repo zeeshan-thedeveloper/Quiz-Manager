@@ -71,6 +71,7 @@
     <Compile Include="CreateQuizParentWindow.Designer.cs">
       <DependentUpon>CreateQuizParentWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="DatasetManager.cs" />
     <Compile Include="ErrorInforDialog.cs">
       <SubType>Form</SubType>
