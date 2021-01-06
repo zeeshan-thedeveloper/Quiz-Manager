@@ -9,7 +9,9 @@ namespace Base_project
 {
     class GlobalStaticVariablesAndMethods
     {
+        
         private static Char sepChar = ';';
+        static public string selectedPrinter { get; set; } 
         static public string currentTopicName{get;set;}
         static public string currentSubjectName { get; set; }
 

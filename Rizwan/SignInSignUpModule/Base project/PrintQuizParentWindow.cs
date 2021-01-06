@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing.Printing;
 namespace Base_project
 {
     public partial class PrintQuizParentWindow : Form
@@ -16,5 +16,7 @@ namespace Base_project
         {
             InitializeComponent();
         }
+
+    
     }
 }

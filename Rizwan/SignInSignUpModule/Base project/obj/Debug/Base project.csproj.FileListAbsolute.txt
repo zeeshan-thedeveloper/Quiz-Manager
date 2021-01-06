@@ -50,3 +50,8 @@ E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base 
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.exe
 E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.pdb
 >>>>>>> Stashed changes
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\BouncyCastle.Crypto.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\itextsharp.dll
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\bin\Debug\itextsharp.xml
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.TopicSelectorDialog.resources
+E:\CSharpJourney-main\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.PrintInfoDialog.resources
