@@ -88,6 +88,7 @@
             this.buttonPrint.TabIndex = 4;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonSaveAsPdf
             // 

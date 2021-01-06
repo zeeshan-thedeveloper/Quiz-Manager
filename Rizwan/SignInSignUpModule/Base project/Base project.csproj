@@ -110,6 +110,12 @@
     <Compile Include="OpenQuizParentWindow.Designer.cs">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintInfoDialog.Designer.cs">
+      <DependentUpon>PrintInfoDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpenQuizParentWindow.resx">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintInfoDialog.resx">
+      <DependentUpon>PrintInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintQuizParentWindow.resx">
       <DependentUpon>PrintQuizParentWindow.cs</DependentUpon>
