@@ -39,8 +39,10 @@
             // labelSubjectName
             // 
             this.labelSubjectName.AutoSize = true;
+            this.labelSubjectName.BackColor = System.Drawing.SystemColors.ControlText;
             this.labelSubjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubjectName.ForeColor = System.Drawing.Color.Yellow;
             this.labelSubjectName.Location = new System.Drawing.Point(857, 78);
             this.labelSubjectName.Name = "labelSubjectName";
             this.labelSubjectName.Size = new System.Drawing.Size(65, 22);
@@ -50,8 +52,10 @@
             // labelTopicName
             // 
             this.labelTopicName.AutoSize = true;
+            this.labelTopicName.BackColor = System.Drawing.SystemColors.ControlText;
             this.labelTopicName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTopicName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTopicName.ForeColor = System.Drawing.Color.Yellow;
             this.labelTopicName.Location = new System.Drawing.Point(857, 140);
             this.labelTopicName.Name = "labelTopicName";
             this.labelTopicName.Size = new System.Drawing.Size(49, 22);
@@ -60,8 +64,9 @@
             // 
             // richTextBoxContentdisplayer
             // 
-            this.richTextBoxContentdisplayer.BackColor = System.Drawing.Color.White;
-            this.richTextBoxContentdisplayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxContentdisplayer.BackColor = System.Drawing.SystemColors.WindowText;
+            this.richTextBoxContentdisplayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxContentdisplayer.ForeColor = System.Drawing.SystemColors.Menu;
             this.richTextBoxContentdisplayer.Location = new System.Drawing.Point(16, 52);
             this.richTextBoxContentdisplayer.Name = "richTextBoxContentdisplayer";
             this.richTextBoxContentdisplayer.Size = new System.Drawing.Size(810, 462);
@@ -71,8 +76,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlText;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(16, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 32);
@@ -82,6 +89,7 @@
             // buttonPrint
             // 
             this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonPrint.Location = new System.Drawing.Point(870, 282);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(176, 72);
@@ -93,6 +101,7 @@
             // buttonSaveAsPdf
             // 
             this.buttonSaveAsPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveAsPdf.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonSaveAsPdf.Location = new System.Drawing.Point(870, 442);
             this.buttonSaveAsPdf.Name = "buttonSaveAsPdf";
             this.buttonSaveAsPdf.Size = new System.Drawing.Size(176, 72);
@@ -105,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(1070, 526);
             this.Controls.Add(this.buttonSaveAsPdf);
             this.Controls.Add(this.buttonPrint);
@@ -112,6 +122,7 @@
             this.Controls.Add(this.richTextBoxContentdisplayer);
             this.Controls.Add(this.labelTopicName);
             this.Controls.Add(this.labelSubjectName);
+            this.ForeColor = System.Drawing.Color.Yellow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "OpenQuizParentWindow";
             this.Text = "OpenQuizParentWindow";

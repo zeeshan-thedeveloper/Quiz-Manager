@@ -104,11 +104,23 @@
     <Compile Include="InforMessageDialog.Designer.cs">
       <DependentUpon>InforMessageDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadingProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingProgressForm.Designer.cs">
+      <DependentUpon>LoadingProgressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenQuizParentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OpenQuizParentWindow.Designer.cs">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseWaitWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PleaseWaitWindow.Designer.cs">
+      <DependentUpon>PleaseWaitWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintInfoDialog.cs">
       <SubType>Form</SubType>
@@ -163,8 +175,14 @@
     <EmbeddedResource Include="InforMessageDialog.resx">
       <DependentUpon>InforMessageDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoadingProgressForm.resx">
+      <DependentUpon>LoadingProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpenQuizParentWindow.resx">
       <DependentUpon>OpenQuizParentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseWaitWindow.resx">
+      <DependentUpon>PleaseWaitWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintInfoDialog.resx">
       <DependentUpon>PrintInfoDialog.cs</DependentUpon>

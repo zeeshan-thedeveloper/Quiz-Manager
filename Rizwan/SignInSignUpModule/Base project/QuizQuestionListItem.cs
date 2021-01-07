@@ -1,52 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections;
+using System.ComponentModel;
+using System.Windows.Forms;
+
 namespace Base_project
 {
     public partial class QuizQuestionListItem : UserControl
     {
+        private int _dataSetIndex;
+
+        private int _listIndex;
+
+        private ArrayList _options;
+
+        private string _QuestionData;
+
+        private string _QuizSubject;
+
+        private string _Quiztitle;
+
+        private string _TableRowId;
+
         public QuizQuestionListItem()
         {
             InitializeComponent();
             richTextBoxListItemQuestion.Enabled = false;
-
-
         }
 
-        #region  
-        private string _Quiztitle;
-        private string _QuizSubject;
-        private string _QuestionData;
-        private ArrayList _options;
-        private string _TableRowId;
-        private int _listIndex;
-        private int _dataSetIndex;
+        #region
+
         [Category("Custom Prop")]
-        public string QuizSubject
+        public int DataSetIndex
         {
-            get { return _QuizSubject; }
-            set { _QuizSubject = value; labelQuizSubject.Text = value; }
+            get { return _dataSetIndex; }
+            set
+            {
+                _dataSetIndex = value;
+            }
         }
 
         [Category("Custom Prop")]
-        public string QuizTitle
+        public int ListIndex
         {
-            get { return _Quiztitle; }
-            set { _Quiztitle = value; labelQuizTitle.Text = value; }
-        }
-
-        [Category("Custom Prop")]
-        public String QuizQuestionData
-        {
-            get { return _QuestionData; }
-            set { _QuestionData = value; richTextBoxListItemQuestion.Text = value; }
+            get { return _listIndex; }
+            set
+            {
+                _listIndex = value;
+            }
         }
 
         [Category("Custom Prop")]
@@ -64,8 +64,28 @@ namespace Base_project
                     checkBox.Enabled = false;
                     flowLayoutPanelListoptionHolder.Controls.Add(checkBox);
                 }
-
             }
+        }
+
+        [Category("Custom Prop")]
+        public String QuizQuestionData
+        {
+            get { return _QuestionData; }
+            set { _QuestionData = value; richTextBoxListItemQuestion.Text = value; }
+        }
+
+        [Category("Custom Prop")]
+        public string QuizSubject
+        {
+            get { return _QuizSubject; }
+            set { _QuizSubject = value; labelQuizSubject.Text = value; }
+        }
+
+        [Category("Custom Prop")]
+        public string QuizTitle
+        {
+            get { return _Quiztitle; }
+            set { _Quiztitle = value; labelQuizTitle.Text = value; }
         }
 
         [Category("Custom Prop")]
@@ -79,38 +99,15 @@ namespace Base_project
             }
         }
 
-        [Category("Custom Prop")]
-        public int ListIndex
-        {
-            get { return _listIndex; }
-            set
-            {
-                _listIndex = value;
-
-            }
-        }
-        [Category("Custom Prop")]
-        public int DataSetIndex
-        {
-            get { return _dataSetIndex; }
-            set
-            {
-                _dataSetIndex = value;
-
-            }
-        }
-
-
         #endregion
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (_TableRowId == null || _TableRowId.Length==0)
+            if (_TableRowId == null || _TableRowId.Length == 0)
             {
                 DatasetManager.deleteQuestionFromDataSet(_listIndex);
                 CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.RemoveAt(_listIndex);//this will update the list.
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.QuestionDeletedInfoMessage);
-
             }
             else
             {
@@ -119,8 +116,6 @@ namespace Base_project
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.QuestionDeletedInfoMessage);
                 CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.RemoveAt(_listIndex);//this will update the list.
             }
-          
-
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -131,8 +126,6 @@ namespace Base_project
             {
                 checkBox.Enabled = true;
             }
-
-
         }
 
         private void buttonSaved_Click(object sender, EventArgs e)
@@ -153,7 +146,6 @@ namespace Base_project
                     isOneChecked = true;
                     break;
                 }
-
             }
 
             if (CreateQuizParentWindow.QuestionsListFlowLoayoutPanel.Controls.Count == 0)
@@ -171,7 +163,6 @@ namespace Base_project
                 //this means no option from list is selected;
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnSelectedErrorMessage);
             }
-
             else
             {
                 //Here we will add question in current dataset
@@ -208,11 +199,7 @@ namespace Base_project
                 //Here we will update dataset.
                 DatasetManager.upddateDataSet(richTextBoxListItemQuestion.Text, asnwers, rightAnswer, Int32.Parse(TableRowId));
                 GlobalStaticVariablesAndMethods.CreateInfoMesssage(GlobalStaticVariablesAndMethods.ChangesSavedInDataseInfoMessage);
-
-
             }
-
-
         }
     }
 }

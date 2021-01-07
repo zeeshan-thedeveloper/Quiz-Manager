@@ -42,6 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(194, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(343, 48);
@@ -50,6 +51,8 @@
             // 
             // richTextBoxTableName
             // 
+            this.richTextBoxTableName.BackColor = System.Drawing.SystemColors.WindowText;
+            this.richTextBoxTableName.ForeColor = System.Drawing.Color.Yellow;
             this.richTextBoxTableName.Location = new System.Drawing.Point(284, 150);
             this.richTextBoxTableName.Name = "richTextBoxTableName";
             this.richTextBoxTableName.Size = new System.Drawing.Size(178, 37);
@@ -60,6 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(150, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 22);
@@ -101,16 +105,21 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.Yellow;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(541, 186);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(164, 134);
+            this.listBox1.Size = new System.Drawing.Size(164, 124);
             this.listBox1.TabIndex = 7;
             // 
             // AddSubjectParentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(746, 335);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);

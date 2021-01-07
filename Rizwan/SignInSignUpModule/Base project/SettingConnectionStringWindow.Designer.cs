@@ -35,8 +35,10 @@
             // 
             // richTextBoxConnectionString
             // 
+            this.richTextBoxConnectionString.BackColor = System.Drawing.SystemColors.WindowText;
+            this.richTextBoxConnectionString.ForeColor = System.Drawing.Color.Yellow;
             this.richTextBoxConnectionString.Location = new System.Drawing.Point(192, 23);
-            this.richTextBoxConnectionString.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBoxConnectionString.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxConnectionString.Name = "richTextBoxConnectionString";
             this.richTextBoxConnectionString.Size = new System.Drawing.Size(694, 33);
             this.richTextBoxConnectionString.TabIndex = 0;
@@ -46,6 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(16, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -57,7 +60,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(915, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 49);
             this.button1.TabIndex = 2;
@@ -69,12 +72,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1067, 75);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBoxConnectionString);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SettingConnectionStringWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SettingConnectionStringWindow";

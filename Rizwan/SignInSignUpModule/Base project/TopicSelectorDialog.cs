@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections;
+using System.Windows.Forms;
+
 namespace Base_project
 {
     public partial class TopicSelectorDialog : Form
     {
+        private CreateQuizParentWindow createQuizParentWindow;
+        private Form1 form1;
+        private OpenQuizParentWindow openQuizParentWindow;
 
-        Form1 form1;
-        CreateQuizParentWindow createQuizParentWindow;
-        OpenQuizParentWindow openQuizParentWindow;
-        public TopicSelectorDialog(Form1 form1,CreateQuizParentWindow createQuizParentWindow,OpenQuizParentWindow openQuizParentWindow)
+        public TopicSelectorDialog(Form1 form1, CreateQuizParentWindow createQuizParentWindow, OpenQuizParentWindow openQuizParentWindow)
         {
             InitializeComponent();
             listBox1.SelectionMode = SelectionMode.One;
@@ -25,43 +19,14 @@ namespace Base_project
             this.openQuizParentWindow = openQuizParentWindow;
         }
 
-        private void TopicSelectorDialog_Load(object sender, EventArgs e)
-        {
-            foreach (String subject in GlobalStaticVariablesAndMethods.GetTableNames())
-            {
-                comboBoxSubjects.Items.Add(subject);
-            }
-
-        }
-
-        private void comboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            String subject = comboBoxSubjects.SelectedItem.ToString();
-            ArrayList  topics = DatabaseManager.GetAllQuizTopics(subject);
-
-            GlobalStaticVariablesAndMethods.currentSubjectName = subject;
-
-            foreach (String topic in topics)
-            {
-                listBox1.Items.Add(topic);
-            }
-
-
-        }
-
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItems.Count > 0)
             {
-                
-
                 createQuizParentWindow.MdiParent = form1;
                 createQuizParentWindow.Show();
                 createQuizParentWindow.BringToFront();
                 createQuizParentWindow.Dock = DockStyle.Top;
-
-
 
                 //setting the isQuizSavedflag;
 
@@ -76,8 +41,6 @@ namespace Base_project
 
                 //We will now use this gloabl variable to store questions.
                 this.Hide();
-
-
             }
             else
             {
@@ -85,22 +48,16 @@ namespace Base_project
             }
         }
 
-       
-
         private void buttonOpen_Click(object sender, EventArgs e)
         {
             if (listBox1.Items.Count > 0)
             {
-
-               GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);
+                GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions = DatasetManager.createDataSetForHoldingQuestions(GlobalStaticVariablesAndMethods.currentSubjectName);
 
                 openQuizParentWindow.MdiParent = form1;
-               openQuizParentWindow.Show();
-               openQuizParentWindow.BringToFront();
-               openQuizParentWindow.Dock = DockStyle.Top;
-
-              
-
+                openQuizParentWindow.Show();
+                openQuizParentWindow.BringToFront();
+                openQuizParentWindow.Dock = DockStyle.Top;
 
                 this.Hide();
             }
@@ -110,11 +67,33 @@ namespace Base_project
             }
         }
 
+        private void comboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            String subject = comboBoxSubjects.SelectedItem.ToString();
+            ArrayList topics = DatabaseManager.GetAllQuizTopics(subject);
+
+            GlobalStaticVariablesAndMethods.currentSubjectName = subject;
+
+            foreach (String topic in topics)
+            {
+                listBox1.Items.Add(topic);
+            }
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1.SelectedItems.Count > 0)
             {
                 GlobalStaticVariablesAndMethods.currentTopicName = listBox1.SelectedItem.ToString();
+            }
+        }
+
+        private void TopicSelectorDialog_Load(object sender, EventArgs e)
+        {
+            foreach (String subject in GlobalStaticVariablesAndMethods.GetTableNames())
+            {
+                comboBoxSubjects.Items.Add(subject);
             }
         }
     }

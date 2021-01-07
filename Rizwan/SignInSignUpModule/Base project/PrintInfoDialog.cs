@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing.Printing;
+using System.Windows.Forms;
+
 namespace Base_project
 {
     public partial class PrintInfoDialog : Form
@@ -25,19 +19,19 @@ namespace Base_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void PrintInfoDialog_Load(object sender, EventArgs e)
         {
-            //See if any printers are installed  
+            //See if any printers are installed
             if (PrinterSettings.InstalledPrinters.Count <= 0)
             {
                 MessageBox.Show("Printer not found!");
                 return;
             }
 
-            //Get all available printers and add them to the combo box  
+            //Get all available printers and add them to the combo box
             foreach (String printer in PrinterSettings.InstalledPrinters)
             {
                 comboBoxPrinterList.Items.Add(printer.ToString());

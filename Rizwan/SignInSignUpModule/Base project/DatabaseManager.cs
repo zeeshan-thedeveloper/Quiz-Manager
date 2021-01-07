@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
 using System.Data.SqlClient;
+
 namespace Base_project
 {
-    class DatabaseManager
+    internal class DatabaseManager
     {
         public static ArrayList GetAllQuizTopics(String subjectName)
         {
@@ -22,9 +19,7 @@ namespace Base_project
                 topics.Add(sqlDataReader["QuizTopicName"]);
             }
 
-
             return topics;
-
         }
     }
 }

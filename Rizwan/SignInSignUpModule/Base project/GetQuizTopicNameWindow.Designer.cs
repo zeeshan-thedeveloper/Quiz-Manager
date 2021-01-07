@@ -42,6 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 31);
@@ -50,7 +51,9 @@
             // 
             // textBoxTopicNam
             // 
+            this.textBoxTopicNam.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBoxTopicNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTopicNam.ForeColor = System.Drawing.Color.Yellow;
             this.textBoxTopicNam.Location = new System.Drawing.Point(225, 209);
             this.textBoxTopicNam.Name = "textBoxTopicNam";
             this.textBoxTopicNam.Size = new System.Drawing.Size(244, 27);
@@ -60,6 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(135, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
@@ -79,8 +83,10 @@
             // 
             // comboBoxSubjects
             // 
+            this.comboBoxSubjects.BackColor = System.Drawing.Color.Black;
             this.comboBoxSubjects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSubjects.ForeColor = System.Drawing.Color.Yellow;
             this.comboBoxSubjects.FormattingEnabled = true;
             this.comboBoxSubjects.Location = new System.Drawing.Point(527, 12);
             this.comboBoxSubjects.Name = "comboBoxSubjects";
@@ -92,6 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(446, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
@@ -100,8 +107,10 @@
             // 
             // comboBoxAlreadyCreatedTopics
             // 
+            this.comboBoxAlreadyCreatedTopics.BackColor = System.Drawing.Color.Black;
             this.comboBoxAlreadyCreatedTopics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAlreadyCreatedTopics.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxAlreadyCreatedTopics.ForeColor = System.Drawing.Color.Yellow;
             this.comboBoxAlreadyCreatedTopics.FormattingEnabled = true;
             this.comboBoxAlreadyCreatedTopics.Location = new System.Drawing.Point(527, 79);
             this.comboBoxAlreadyCreatedTopics.Name = "comboBoxAlreadyCreatedTopics";
@@ -113,6 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Yellow;
             this.label4.Location = new System.Drawing.Point(351, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 20);
@@ -123,6 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(774, 279);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxAlreadyCreatedTopics);

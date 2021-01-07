@@ -40,6 +40,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(24, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
@@ -48,8 +49,10 @@
             // 
             // comboBoxSubjects
             // 
+            this.comboBoxSubjects.BackColor = System.Drawing.SystemColors.MenuText;
             this.comboBoxSubjects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSubjects.ForeColor = System.Drawing.Color.Yellow;
             this.comboBoxSubjects.FormattingEnabled = true;
             this.comboBoxSubjects.Location = new System.Drawing.Point(118, 59);
             this.comboBoxSubjects.Name = "comboBoxSubjects";
@@ -61,6 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(485, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 31);
@@ -69,7 +73,9 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.WindowText;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.Yellow;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(28, 105);
@@ -104,6 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.buttonEdit);

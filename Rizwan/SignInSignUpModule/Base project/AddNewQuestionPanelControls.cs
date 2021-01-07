@@ -1,52 +1,61 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
+
 namespace Base_project
 {
-   partial class CreateQuizParentWindow
+    partial class CreateQuizParentWindow
     {
-       
-        private void panelAddNewQuestion_Paint(object sender, PaintEventArgs e)
-        {
-           
-            labelQuestionNumber.Text = "Question  Number: " + GlobalStaticVariablesAndMethods.currentQuectionNumber;
 
-     
+        //UnderLine Function
+        public void UnderLine_Function(RichTextBox richTextbox_text_processor)
+        {
+            richTextbox_text_processor.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, SystemFonts.DefaultFont.Size, FontStyle.Underline);
         }
 
-        private void CQBold_BTN_Click(object sender, EventArgs e)
+        private void buttonCQAddoption_Click(object sender, EventArgs e)
         {
+            if (richTextBoxOptiontext.Text.Length <= 0 && comboBoxCOptionsType.SelectedIndex == 0)
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoTextFoundInOptionTextBoxErrorMessage);
 
-        }
+                return;
+            }
 
-        private void CQUnderLine_BTN_Click(object sender, EventArgs e)
-        {
+            //Here we will add choice options
+            if (comboBoxCOptionsType.SelectedIndex == 0 && !doesFlowLayoutContainRadioButton())
+            {
+                //Mcqs
+                CheckBox checkBox = new CheckBox();
+                checkBox.Text = richTextBoxOptiontext.Text;
+                checkBox.Width = ((checkBox.Text).Length) * 50;
+                checkBox.Height = 30;
+                flowLayoutPanelCQOptions.Controls.Add(checkBox);
+            }
+            else if (flowLayoutPanelCQOptions.Controls.Count == 0 && comboBoxCOptionsType.SelectedIndex == 1)
+            {
+                //True/False
+                RadioButton rbTrue = new RadioButton();
+                RadioButton rbFalse = new RadioButton();
 
-        }
+                rbTrue.Width = 100;
+                rbTrue.Height = 30;
+                rbTrue.Text = "True";
+                rbTrue.Checked = radioButtonTrueOption.Checked;
 
-        private void CQItalic_BTN_Click(object sender, EventArgs e)
-        {
+                flowLayoutPanelCQOptions.Controls.Add(rbTrue);
 
-        }
+                rbFalse.Width = 100;
+                rbFalse.Height = 30;
+                rbFalse.Text = "False";
+                rbFalse.Checked = radioButtonFalseOption.Checked;
 
-        private void CQHighLight_BTN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxCQFontSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxFontFaimily_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+                flowLayoutPanelCQOptions.Controls.Add(rbFalse);
+            }
+            else
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.CantAddMultipleTrueFalseErrorMessage);
+            }
         }
 
         private void buttonCQSaveQuestion_Click(object sender, EventArgs e)
@@ -56,7 +65,7 @@ namespace Base_project
             //2. is only one option is selected.
 
             //Accessing the collection of objects from flow panel.
-            if(doesFlowLayoutContainRadioButton() && comboBoxCOptionsType.SelectedIndex==0)
+            if (doesFlowLayoutContainRadioButton() && comboBoxCOptionsType.SelectedIndex == 0)
             {
                 comboBoxCOptionsType.SelectedIndex = 1;
             }
@@ -80,7 +89,6 @@ namespace Base_project
                             isOneChecked = true;
                             break;
                         }
-
                     }
                 }
 
@@ -99,7 +107,6 @@ namespace Base_project
                     //this means no option from list is selected;
                     GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.UnSelectedErrorMessage);
                 }
-
                 else
                 {
                     //Here we will add question in current dataset
@@ -108,7 +115,7 @@ namespace Base_project
                     //1. generate a string having all options seprated with ';'
 
                     String asnwers = "";
-                    String rightAnswer = ""; 
+                    String rightAnswer = "";
                     foreach (var controls in flowLayoutPanelCQOptions.Controls)
                     {
                         if (controls is RadioButton)
@@ -137,22 +144,17 @@ namespace Base_project
 
                     DatasetManager.insertRowInTable(textBoxQuestionText.Text, asnwers, rightAnswer);
 
-
                     //Here we will store in dataset.
-                        CLEARALL();
-
-                   
-
+                    CLEARALL();
                 }
-
             }
             else if (comboBoxCOptionsType.SelectedIndex == 1)
             {
                 bool isChec = true, isOneChecked = false;
                 int index = 0;
-              
-                    foreach (var controls in flowLayoutPanelCQOptions.Controls)
-                    {
+
+                foreach (var controls in flowLayoutPanelCQOptions.Controls)
+                {
                     CheckBox checkBox;
                     if (controls is RadioButton)
                     {
@@ -161,21 +163,19 @@ namespace Base_project
                     }
                     else
                     {
-                      checkBox  = controls as CheckBox;
+                        checkBox = controls as CheckBox;
                     }
-                        if (checkBox.Checked)
-                        {
-                            isChec = false;
-                            index++;
-                        }
-                        if (index >= 2)
-                        {
-                            isOneChecked = true;
-                            break;
-                        }
-
+                    if (checkBox.Checked)
+                    {
+                        isChec = false;
+                        index++;
                     }
-                
+                    if (index >= 2)
+                    {
+                        isOneChecked = true;
+                        break;
+                    }
+                }
 
                 if (flowLayoutPanelCQOptions.Controls.Count == 0)
                 {
@@ -194,7 +194,6 @@ namespace Base_project
                 }
                 else
                 {
-
                     String asnwers = "";
                     String rightAnswer = "";
                     foreach (var controls in flowLayoutPanelCQOptions.Controls)
@@ -214,13 +213,10 @@ namespace Base_project
                             asnwers += checkBox.Text + GlobalStaticVariablesAndMethods.seperatorCharactor;
                             if (checkBox.Checked)
                                 rightAnswer = checkBox.Text;
-
                         }
                     }
 
                     //Here we will store in dataset.
-
-
 
                     DatasetManager.insertRowInTable(textBoxQuestionText.Text, asnwers, rightAnswer);
 
@@ -229,69 +225,12 @@ namespace Base_project
                     GlobalStaticVariablesAndMethods.currentQuectionNumber = GlobalStaticVariablesAndMethods.currentQuectionNumber + 1;
 
                     labelQuestionNumber.Text = "Question Number: " + GlobalStaticVariablesAndMethods.currentQuectionNumber;
-
-
                 }
-
             }
             else if (comboBoxCOptionsType.SelectedIndex < 0)
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoOptionTypeSelectedErrorMessage);
-
             }
-
-
-        }
-
-        private void buttonCQAddoption_Click(object sender, EventArgs e)
-        {
-            if (richTextBoxOptiontext.Text.Length <= 0 && comboBoxCOptionsType.SelectedIndex==0)
-            {
-                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.NoTextFoundInOptionTextBoxErrorMessage);
-
-                return;
-            }
-
-            //Here we will add choice options
-            if (comboBoxCOptionsType.SelectedIndex == 0 && ! doesFlowLayoutContainRadioButton())
-            {
-
-                //Mcqs
-                CheckBox checkBox = new CheckBox();
-                checkBox.Text = richTextBoxOptiontext.Text;
-                checkBox.Width = ((checkBox.Text).Length) * 50;
-                checkBox.Height = 30;
-                flowLayoutPanelCQOptions.Controls.Add(checkBox);
-
-            }
-            else if (flowLayoutPanelCQOptions.Controls.Count == 0 && comboBoxCOptionsType.SelectedIndex == 1)
-            {
-
-                //True/False
-                RadioButton rbTrue = new RadioButton();
-                RadioButton rbFalse = new RadioButton();
-
-                rbTrue.Width = 100;
-                rbTrue.Height = 30;
-                rbTrue.Text = "True";
-                rbTrue.Checked = radioButtonTrueOption.Checked;
-
-                flowLayoutPanelCQOptions.Controls.Add(rbTrue);
-
-
-                rbFalse.Width = 100;
-                rbFalse.Height = 30;
-                rbFalse.Text = "False";
-                rbFalse.Checked = radioButtonFalseOption.Checked;
-
-                flowLayoutPanelCQOptions.Controls.Add(rbFalse);
-
-            }
-            else
-            {
-                GlobalStaticVariablesAndMethods.CreateErrorMessage(GlobalStaticVariablesAndMethods.CantAddMultipleTrueFalseErrorMessage);
-            }
-
         }
 
         private void buttonRemoveOptionsFromlist_Click(object sender, EventArgs e)
@@ -316,6 +255,12 @@ namespace Base_project
             }
         }
 
+        private void CLEARALL()
+        {
+            flowLayoutPanelCQOptions.Controls.Clear();
+            textBoxQuestionText.Text = "";
+        }
+
         private void comboBoxCOptionsType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxCOptionsType.SelectedIndex == 0)
@@ -325,7 +270,6 @@ namespace Base_project
                 panelMsqsTypeOptions.Location = new Point(19, 73);
                 panelMsqsTypeOptions.BringToFront();
                 panelMsqsTypeOptions.Visible = true;
-
             }
             else if (comboBoxCOptionsType.SelectedIndex == 1)
             {
@@ -335,57 +279,31 @@ namespace Base_project
                 panelTrueFalseOptions.BringToFront();
                 panelTrueFalseOptions.Visible = true;
             }
-
-
         }
 
-        //Functions of Test editor
-        public void Bold_Function(RichTextBox richTextbox_text_processor)
+        private void comboBoxCQFontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextbox_text_processor.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, SystemFonts.DefaultFont.Size, FontStyle.Bold);
         }
 
-        //HighLight Function
-        public void HighLight_Function(RichTextBox richTextbox_text_processor)
+        private void comboBoxFontFaimily_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextbox_text_processor.SelectionBackColor = Color.Yellow;
         }
 
-        // Italic Function
-        public void Italic_Function(RichTextBox richTextbox_text_processor)
+        private void CQBold_BTN_Click(object sender, EventArgs e)
         {
-            richTextbox_text_processor.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, SystemFonts.DefaultFont.Size, FontStyle.Italic);
         }
 
-        //UnderLine Function
-        public void UnderLine_Function(RichTextBox richTextbox_text_processor)
+        private void CQHighLight_BTN_Click(object sender, EventArgs e)
         {
-            richTextbox_text_processor.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, SystemFonts.DefaultFont.Size, FontStyle.Underline);
         }
 
-        // there function are passed to to combo box event to get selected value from combo box and edit rich text box according to that
-        //font type  Set Functions
-        public void SetFont_Function(RichTextBox richTextbox1)
+        private void CQItalic_BTN_Click(object sender, EventArgs e)
         {
-            string Font = comboBoxFontFaimily.SelectedItem.ToString();
-            richTextbox1.SelectionFont = new System.Drawing.Font(Font, SystemFonts.DefaultFont.Size, SystemFonts.DefaultFont.Style);
         }
 
-        //Text size Set Function
-        public void SetSize_Function(RichTextBox richTextBox)
+        private void CQUnderLine_BTN_Click(object sender, EventArgs e)
         {
-            if (comboBoxCQFontSize.SelectedItem != null)
-            {
-                int size = Int32.Parse(comboBoxCQFontSize.SelectedItem.ToString());
-                richTextBox.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, size, SystemFonts.DefaultFont.Style);
-            }
-            else
-            {
-                richTextBox.SelectionFont = new Font(SystemFonts.DefaultFont.FontFamily, SystemFonts.DefaultFont.Size, SystemFonts.DefaultFont.Style);
-            }
         }
-
-        //Utiliy funtions...
 
         private bool doesFlowLayoutContainRadioButton()
         {
@@ -399,11 +317,11 @@ namespace Base_project
             return false;
         }
 
-        private void CLEARALL()
+        private void panelAddNewQuestion_Paint(object sender, PaintEventArgs e)
         {
-            flowLayoutPanelCQOptions.Controls.Clear();
-            textBoxQuestionText.Text = "";
-
+            labelQuestionNumber.Text = "Question  Number: " + GlobalStaticVariablesAndMethods.currentQuectionNumber;
         }
+
+        //Utiliy funtions...
     }
 }

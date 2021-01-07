@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections;
+using System.Windows.Forms;
+
 namespace Base_project
 {
     public partial class GetQuizTopicNameWindow : Form
@@ -16,13 +10,7 @@ namespace Base_project
         {
             InitializeComponent();
         }
-        private void GetQuizTopicNameWindow_Load(object sender, EventArgs e)
-        {
-            foreach (String tables in GlobalStaticVariablesAndMethods.GetTableNames())
-            {
-                comboBoxSubjects.Items.Add(tables);
-            }
-        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBoxTopicNam.Text.Length <= 0)
@@ -36,13 +24,11 @@ namespace Base_project
                 GlobalStaticVariablesAndMethods.currentSubjectName = comboBoxSubjects.SelectedItem.ToString();
 
                 this.Hide();
-
             }
             else
             {
                 ErrorInforDialog errorInforDialog = new ErrorInforDialog("Please select any subject...!!");
                 errorInforDialog.ShowDialog();
-
             }
         }
 
@@ -50,6 +36,11 @@ namespace Base_project
         {
             GlobalStaticVariablesAndMethods.currentTopicName = null;
             this.Hide();
+        }
+
+        private void comboBoxAlreadyCreatedTopics_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxTopicNam.Text = comboBoxAlreadyCreatedTopics.SelectedItem.ToString();
         }
 
         private void comboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,9 +54,12 @@ namespace Base_project
             }
         }
 
-        private void comboBoxAlreadyCreatedTopics_SelectedIndexChanged(object sender, EventArgs e)
+        private void GetQuizTopicNameWindow_Load(object sender, EventArgs e)
         {
-            textBoxTopicNam.Text = comboBoxAlreadyCreatedTopics.SelectedItem.ToString();
+            foreach (String tables in GlobalStaticVariablesAndMethods.GetTableNames())
+            {
+                comboBoxSubjects.Items.Add(tables);
+            }
         }
     }
 }

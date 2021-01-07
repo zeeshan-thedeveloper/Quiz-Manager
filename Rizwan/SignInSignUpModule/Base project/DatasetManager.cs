@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
+
 namespace Base_project
 {
-    class DatasetManager
+    internal class DatasetManager
     {
         public static DataSet createDataSetForHoldingQuestions(String subjectName)
         {
@@ -24,43 +20,60 @@ namespace Base_project
             GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Fill(dataSet);
 
             return dataSet;
-
         }
-     
-        public static bool insertRowInTable( String question, String answers, String rightAnswer)
-        {
-            DataRow row = GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].NewRow();
-            row["QuizTopicName"] = GlobalStaticVariablesAndMethods.currentTopicName;
-            row["Question"] =question;
-            row["Answers"]=answers;
-            row["RightAnswer"] =rightAnswer;
 
-            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Add(row);
-
-            
-
-            return true;
-        }
-        public static void deleteQuestionFromDataSet(int dataSetIndex)
-        {
-        
-            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[dataSetIndex].Delete();
-        
-        }
         public static void deleteQuestionFromDataBase(int tableId)
         {
-            int taget  = getTheTargetIndexWithRespectToTableIndexing(tableId);
+            int taget = getTheTargetIndexWithRespectToTableIndexing(tableId);
             if (taget != -1)
             {
                 //Now we have the index where our target row wrt actual tbale indexing
                 GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[taget].Delete();
             }
-            else 
+            else
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage("There is error in deleting this question from dataset..!!");
             }
+        }
 
+        public static void deleteQuestionFromDataSet(int dataSetIndex)
+        {
+            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[dataSetIndex].Delete();
+        }
+
+        public static bool insertRowInTable(String question, String answers, String rightAnswer)
+        {
+            DataRow row = GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].NewRow();
+            row["QuizTopicName"] = GlobalStaticVariablesAndMethods.currentTopicName;
+            row["Question"] = question;
+            row["Answers"] = answers;
+            row["RightAnswer"] = rightAnswer;
+
+            GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows.Add(row);
+
+            return true;
+        }
+
+        public static bool saveQuizToDatabase()
+        {
+            try
+            {
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(GlobalStaticVariablesAndMethods.currentSqlDataAdapter);
+
+                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.UpdateCommand = sqlCommandBuilder.GetUpdateCommand();
+
+                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Update(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
+
+                Console.WriteLine("Saved to database");
             }
+            catch (Exception e)
+            {
+                GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in deletion");
+            }
+
+            return true;
+        }
+
         public static void upddateDataSet(String question, String answers, String rightAnswer, int index)
         {
             int target = getTheTargetIndexWithRespectToTableIndexing(index);
@@ -74,34 +87,6 @@ namespace Base_project
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage("There is error in updating question in this dataset..!!");
             }
-
-        }
-        
-        public static bool saveQuizToDatabase()
-        {
-
-            try
-            {
-
-                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(GlobalStaticVariablesAndMethods.currentSqlDataAdapter);
-
-                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.UpdateCommand = sqlCommandBuilder.GetUpdateCommand();
-
-                GlobalStaticVariablesAndMethods.currentSqlDataAdapter.Update(GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0]);
-
-
-
-                Console.WriteLine("Saved to database");
-
-            }
-            catch (Exception e)
-            {
-                GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in deletion");
-            }
-
-
-
-            return true;
         }
 
         private static int getTheTargetIndexWithRespectToTableIndexing(int tableId)
@@ -118,13 +103,9 @@ namespace Base_project
                     return targetIndex;
                 }
                 targetIndex++;
-
             }
 
             return -1;
-
         }
-
-
     }
 }
