@@ -1,5 +1,5 @@
-# Quiz-Manager
-Done in C#
+# Quiz-Manager ( Powerfull tool to create quizez)
+Done in C# (By RZWing)
 
 
 
