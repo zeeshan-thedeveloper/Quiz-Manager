@@ -28,3 +28,33 @@ F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignI
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base project.pdb
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.LoadingProgressForm.resources
 F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Rizwan\SignInSignUpModule\Base project\obj\Debug\Base_project.PleaseWaitWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\Base project.exe.config
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\Base project.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\Base project.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\BouncyCastle.Crypto.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\Custom Control liabrary.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\itextsharp.dll
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\Custom Control liabrary.pdb
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\bin\Debug\itextsharp.xml
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.csprojAssemblyReference.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.AddSubjectParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.AnalyticsParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.CreateQuizParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.ErrorInforDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.Form1.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.GetQuizTopicNameWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.InforMessageDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.LoadingProgressForm.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.OpenQuizParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.PleaseWaitWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.PrintInfoDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.PrintQuizParentWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.Properties.Resources.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.QuizQuestionListItem.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.SettingConnectionStringWindow.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base_project.TopicSelectorDialog.resources
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.csproj.GenerateResource.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.csproj.CoreCompileInputs.cache
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.csproj.CopyComplete
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.exe
+F:\xamp\XAMP\htdocs\Rizwan respositiries\OnlineQuizManageMentSystem\Base project\obj\Debug\Base project.pdb

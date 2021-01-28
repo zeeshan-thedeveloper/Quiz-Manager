@@ -31,6 +31,9 @@ namespace Base_project
 
                     labelMessage.Text = "Making Connection...!!";
 
+
+
+
                     break;
 
                 case 1:
@@ -71,6 +74,9 @@ namespace Base_project
 
         private void BackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
+            //
+
+
             for (int i = 0; i <=6; i++)
             {
                 Thread.Sleep(3000);
@@ -84,6 +90,7 @@ namespace Base_project
         {
             labelMessage.Text = GlobalStaticVariablesAndMethods.loadingMessage;
             backgroundWorker.RunWorkerAsync();
+            //start a progreess bar.....
         }
 
 

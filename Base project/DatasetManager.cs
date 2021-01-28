@@ -68,7 +68,7 @@ namespace Base_project
             }
             catch (Exception e)
             {
-                GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in deletion");
+                GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in saving chnages to database");
             }
 
             return true;

@@ -58,6 +58,8 @@ namespace Base_project
             {
                 HideChild();
 
+               
+
                 AddSubjectParentWindow addSubjectParentWindow = new AddSubjectParentWindow();
                 addSubjectParentWindow.ShowDialog();
             }
