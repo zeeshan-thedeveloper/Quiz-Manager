@@ -26,26 +26,12 @@ namespace Base_project
             
         }
 
-        private void TimerLoadingForm_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                Thread.Sleep(3000);
-                GlobalStaticVariablesAndMethods.loadingMessage = "jfldfjlkdsf";
-           //     GlobalStaticVariablesAndMethods.HideProgressDialog();
-                this.Visible = true;
-            }
-            catch (Exception d)
-            {
-                
-            }
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //Setting connection string // by loading from app config file.
             GlobalStaticVariablesAndMethods.loadingMessage = "Please wait we are setting up enviroment for you..!!";
-            GlobalStaticVariablesAndMethods.DisplayProgressDialog();
+           // GlobalStaticVariablesAndMethods.DisplayProgressDialog();
            
             GlobalStaticVariablesAndMethods.currentConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
@@ -57,9 +43,6 @@ namespace Base_project
             if (GlobalStaticVariablesAndMethods.isCurrentQuizTopicSaved)
             {
                 HideChild();
-
-               
-
                 AddSubjectParentWindow addSubjectParentWindow = new AddSubjectParentWindow();
                 addSubjectParentWindow.ShowDialog();
             }

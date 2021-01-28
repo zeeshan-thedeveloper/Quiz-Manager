@@ -20,6 +20,7 @@ namespace Base_project
         static public SqlDataAdapter currentSqlDataAdapter { get; set; }
         static public string currentSubjectName { get; set; }
         static public string currentTopicName { get; set; }
+        static public string currentStatus { get; set; }
         static public String FileavedAsPdfInfoMessage { set { } get { return "File saved..!!!"; } }
         static public bool isCurrentQuizTopicSaved { get; set; }
         static public String MultipleOptionSelectedErrorMessage { set { } get { return "Please only one option as right asnwer..!!"; } }
@@ -68,10 +69,11 @@ namespace Base_project
 
         public static void DisplayPleaseWaitWindow()
         {
-            waitWindow.Show();
+            waitWindow.ShowDialog();
         }
         public static void HideleaseWaitWindow()
         {
+            
             waitWindow.Hide();
         }
 
@@ -87,6 +89,13 @@ namespace Base_project
                 {
                     Console.WriteLine("Tabke name" + row);
                     TableNames.Add(row[2].ToString());
+
+                    try
+                    {
+                        GlobalStaticVariablesAndMethods.currentStatus ="Loading Subject : \n "+ row[2].ToString();
+                        System.Threading.Thread.Sleep(500);
+                    }
+                    catch { }
                 }
 
                 System.Threading.Thread.Sleep(3000);

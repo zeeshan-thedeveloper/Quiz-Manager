@@ -66,7 +66,7 @@ namespace Base_project
 
                 Console.WriteLine("Saved to database");
             }
-            catch (Exception e)
+            catch (Exception z)
             {
                 GlobalStaticVariablesAndMethods.CreateErrorMessage("Error in saving chnages to database");
             }
@@ -79,9 +79,11 @@ namespace Base_project
             int target = getTheTargetIndexWithRespectToTableIndexing(index);
             if (target != -1)
             {
+
                 GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[target]["Question"] = question;
                 GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[target]["Answers"] = answers;
                 GlobalStaticVariablesAndMethods.currentDataSetUsedForHoldingQuestions.Tables[0].Rows[target]["RightAnswer"] = rightAnswer;
+            
             }
             else
             {

@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PleaseWaitWindow));
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // label2
+            // labelInfo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label2.Location = new System.Drawing.Point(320, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Please wait....";
+            this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfo.ForeColor = System.Drawing.Color.Cornsilk;
+            this.labelInfo.Location = new System.Drawing.Point(320, 30);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(228, 77);
+            this.labelInfo.TabIndex = 3;
+            this.labelInfo.Text = "Please wait....";
             // 
             // label1
             // 
@@ -53,26 +54,31 @@
             this.label1.Size = new System.Drawing.Size(253, 133);
             this.label1.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            // 
             // PleaseWaitWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(560, 133);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PleaseWaitWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PleaseWaitWindow";
+            this.Load += new System.EventHandler(this.PleaseWaitWindow_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

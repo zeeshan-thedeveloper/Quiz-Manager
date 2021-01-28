@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
-
+using System.Collections.Generic;
+using System.ComponentModel;
 namespace Base_project
 {
     public partial class TopicSelectorDialog : Form
@@ -9,6 +10,9 @@ namespace Base_project
         private CreateQuizParentWindow createQuizParentWindow;
         private Form1 form1;
         private OpenQuizParentWindow openQuizParentWindow;
+        BackgroundWorker dataLoaderThread, tableCreatorThread;
+        List<String> names;
+        String tableName;
 
         public TopicSelectorDialog(Form1 form1, CreateQuizParentWindow createQuizParentWindow, OpenQuizParentWindow openQuizParentWindow)
         {
@@ -17,6 +21,12 @@ namespace Base_project
             this.form1 = form1;
             this.createQuizParentWindow = createQuizParentWindow;
             this.openQuizParentWindow = openQuizParentWindow;
+
+            dataLoaderThread = new BackgroundWorker();
+            dataLoaderThread.DoWork += DataLoaderThread_DoWork;
+            dataLoaderThread.ProgressChanged += DataLoaderThread_ProgressChanged;
+            dataLoaderThread.WorkerSupportsCancellation = true;
+            dataLoaderThread.WorkerReportsProgress = true;
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -70,15 +80,17 @@ namespace Base_project
         private void comboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+
             String subject = comboBoxSubjects.SelectedItem.ToString();
             ArrayList topics = DatabaseManager.GetAllQuizTopics(subject);
 
-            GlobalStaticVariablesAndMethods.currentSubjectName = subject;
 
             foreach (String topic in topics)
             {
                 listBox1.Items.Add(topic);
             }
+
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,10 +103,43 @@ namespace Base_project
 
         private void TopicSelectorDialog_Load(object sender, EventArgs e)
         {
-            foreach (String subject in GlobalStaticVariablesAndMethods.GetTableNames())
+            //Call background worker class.
+            dataLoaderThread.RunWorkerAsync();
+            GlobalStaticVariablesAndMethods.DisplayPleaseWaitWindow();
+
+        }
+
+
+        #region message loader thread
+        private void DataLoaderThread_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //this will be called when backround work willbe done.
+
+            GlobalStaticVariablesAndMethods.HideleaseWaitWindow();
+
+
+
+            foreach (String tables in names)
             {
-                comboBoxSubjects.Items.Add(subject);
+                comboBoxSubjects.Items.Add(tables);
             }
         }
+
+        private void DataLoaderThread_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //this will call the methods which are supposed to run on background.
+            try
+            {
+                names = GlobalStaticVariablesAndMethods.GetTableNames();
+                dataLoaderThread.ReportProgress(0);
+            }
+            catch (Exception m)
+            {
+
+            }
+        }
+
+        #endregion
+
     }
 }
