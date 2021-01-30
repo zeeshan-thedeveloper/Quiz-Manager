@@ -117,12 +117,11 @@ namespace Base_project
 
             GlobalStaticVariablesAndMethods.HideleaseWaitWindow();
 
-
-
             foreach (String tables in names)
             {
                 comboBoxSubjects.Items.Add(tables);
             }
+
         }
 
         private void DataLoaderThread_DoWork(object sender, DoWorkEventArgs e)

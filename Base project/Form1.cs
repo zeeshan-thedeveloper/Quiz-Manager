@@ -31,7 +31,7 @@ namespace Base_project
         {
             //Setting connection string // by loading from app config file.
             GlobalStaticVariablesAndMethods.loadingMessage = "Please wait we are setting up enviroment for you..!!";
-           // GlobalStaticVariablesAndMethods.DisplayProgressDialog();
+           GlobalStaticVariablesAndMethods.DisplayProgressDialog();
            
             GlobalStaticVariablesAndMethods.currentConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
